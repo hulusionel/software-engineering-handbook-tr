@@ -2,10 +2,6 @@
 
 Yazılım mühendisliği alanındaki en önemli kitapların **Türkçe kapsamlı rehberleri**, kariyer yol haritaları ve pratik notlar.
 
-> Kitapları okumak için vaktiniz mi yok? Her biri binlerce satırlık bu rehberler; örnekler, hikayeler ve pratik tavsiyelerle kitapların özünü Türkçe olarak sunuyor.
-
----
-
 ## 🗂️ İçindekiler
 
 ### 🗺️ Yol Haritası
