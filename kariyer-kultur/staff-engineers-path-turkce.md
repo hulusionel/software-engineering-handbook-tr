@@ -397,12 +397,12 @@ STAFF ENGINEER'ın ETKİ ALANI:
   │   │   │                   │       │     │
   │   │   └───────────────────┘       │     │
   │   │                               │     │
-  │   │   KOMŞU TAKIMLAR             │     │
+  │   │   KOMŞU TAKIMLAR              │     │
   │   │   (collaborate)               │     │
   │   │                               │     │
   │   └───────────────────────────────┘     │
   │                                         │
-  │   ORGANİZASYON GENELİ                  │
+  │   ORGANİZASYON GENELİ                   │
   │   (influence & guide)                   │
   │                                         │
   └─────────────────────────────────────────┘
@@ -909,17 +909,17 @@ Staff engineer olarak teknik borcu sadece "kötü şey" olarak GÖRME!
 
             BİLİNÇLİ              BİLİNÇSİZ
           ┌────────────────────┬────────────────────┐
-  İHTİYATLI│ "Bilerek basit    │ "Daha iyi bir yol │
-          │  yaptık, sonra    │  olduğunu ŞİMDİ   │
+  İHTİYATLI│ "Bilerek basit    │ "Daha iyi bir yol  │
+          │  yaptık, sonra     │  olduğunu ŞİMDİ    │
           │  refactor edeceğiz"│  öğrendik"         │
           │                    │                    │
-          │ → PLANLI teknik   │ → ÖğRENME borcu   │
-          │   borç ✅          │   (normal!) ✅      │
+          │ → PLANLI teknik    │ → ÖğRENME borcu    │
+          │   borç ✅          │   (normal!) ✅     │
           ├────────────────────┼────────────────────┤
-  İHTİYATSIZ│ "Vakit yok,       │ "Katmanlama ne?"  │
-          │  hızlı yapalım!"  │                    │
-          │                    │ → Bilgi EKSİKLİĞİ │
-          │ → ACELE borcu     │   borcu 😱          │
+  İHTİYATSIZ│ "Vakit yok,      │ "Katmanlama ne?"   │
+          │  hızlı yapalım!"   │                    │
+          │                    │ → Bilgi EKSİKLİĞİ  │
+          │ → ACELE borcu      │   borcu 😱         │
           │   (dikkatli ol!) ⚠️│   (eğitim lazım!)  │
           └────────────────────┴────────────────────┘
 
@@ -1116,23 +1116,23 @@ Brag Document örneği:
 │ MART 2025                                              │
 │                                                        │
 │ 🏗️ Mimari:                                             │
-│ → Sipariş servisini event-driven'a geçirdim           │
+│ → Sipariş servisini event-driven'a geçirdim            │
 │ → Latency %40 düştü, throughput 3x arttı               │
 │                                                        │
-│ 📝 Dokümantasyon:                                       │
+│ 📝 Dokümantasyon:                                      │
 │ → ADR-012: Event bus teknoloji seçimi yazdım           │
-│ → Onboarding guide'ı güncelledim (5 yeni başlayan!) │
+│ → Onboarding guide'ı güncelledim (5 yeni başlayan!)    │
 │                                                        │
 │ 🧑‍🏫 Mentorluk:                                          │
-│ → 2 junior developer ile haftalık 1:1                   │
+│ → 2 junior developer ile haftalık 1:1                  │
 │ → Ayşe'nin ilk production deploy'unu destekledim       │
 │                                                        │
-│ 🤝 Cross-team:                                          │
-│ → Platform takımıyla monitoring standartları belirledik │
+│ 🤝 Cross-team:                                         │
+│ → Platform takımıyla monitoring standartları belirledik│
 │ → 3 takımın kullandığı shared library'yi versiyonladım │
 │                                                        │
-│ 📊 Etki:                                                │
-│ → [Metric improvement] → [business impact]              │
+│ 📊 Etki:                                               │
+│ → [Metric improvement] → [business impact]             │
 └────────────────────────────────────────────────────────┘
 
 → Performans review'da: "Ne yaptım?" → LİSTE HAZIR! ✅

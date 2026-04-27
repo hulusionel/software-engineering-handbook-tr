@@ -644,7 +644,7 @@ Uygulaman:
 │  Controller → Service → Domain → Repository │
 │                                             │
 │  Bu sınıfları birbirine mock'lama! ❌       │
-│  Bunlar SİSTEMİN İÇİ!                      │
+│  Bunlar SİSTEMİN İÇİ!                       │
 │                                             │
 └──────────────────┬──────────────────────────┘
                    │ İŞLEM SINIRI (process boundary)

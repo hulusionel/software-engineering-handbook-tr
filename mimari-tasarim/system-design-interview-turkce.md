@@ -200,20 +200,20 @@ Amaç: Doğru mimari KARARLARI alabilmek!
 ```
 ┌─────────────────────────────────────────────────┐
 │ İŞLEM                          │ SÜRE           │
-├─────────────────────────────────┼────────────────┤
-│ L1 cache referans               │ 0.5 ns         │
-│ L2 cache referans               │ 7 ns           │
-│ RAM referans                    │ 100 ns         │
-│ Mutex lock/unlock               │ 25 ns          │
+├────────────────────────────────┼────────────────┤
+│ L1 cache referans              │ 0.5 ns         │
+│ L2 cache referans              │ 7 ns           │
+│ RAM referans                   │ 100 ns         │
+│ Mutex lock/unlock              │ 25 ns          │
 │ 1 KB sıkıştır (Zippy)          │ 10,000 ns (10μs)│
-│ 1 KB ağ üzerinden gönder       │ 10,000 ns      │
-│ SSD'den 4KB oku                 │ 150,000 ns     │
+│ 1 KB ağ üzerinden gönder       │ 10,000 ns       │
+│ SSD'den 4KB oku                │ 150,000 ns      │
 │ SSD'den 1MB sequential oku     │ 1,000,000 ns (1ms)│
 │ HDD'den 1MB sequential oku     │ 20,000,000 ns (20ms)│
-│ Aynı DC'de paket gönder        │ 500,000 ns     │
-│ Disk seek (HDD)                │ 10,000,000 ns  │
-│ California → Hollanda round trip│ 150,000,000 ns │
-│                                │ (150ms)        │
+│ Aynı DC'de paket gönder        │ 500,000 ns      │
+│ Disk seek (HDD)                │ 10,000,000 ns   │
+│ California→ Hollanda round trip│ 150,000,000 ns  │
+│                                │ (150ms)         │
 └─────────────────────────────────┴────────────────┘
 
 ÇIKARIMLAR:
@@ -286,26 +286,26 @@ Depolama (5 yıl):
 Her system design probleminde bu 4 adımı izle:
 
 ╔═══════════════════════════════════════════════════════╗
-║ ADIM 1: GEREKSİNİMLERİ ANLA (3-5 dk)                ║
-║   → Fonksiyonel: Sistem NE yapmalı?                  ║
-║   → Non-fonksiyonel: Ölçek, performans, tutarlılık?  ║
-║   → ASLA varsayma → SOR!                             ║
+║ ADIM 1: GEREKSİNİMLERİ ANLA (3-5 dk)                  ║
+║   → Fonksiyonel: Sistem NE yapmalı?                   ║
+║   → Non-fonksiyonel: Ölçek, performans, tutarlılık?   ║
+║   → ASLA varsayma → SOR!                              ║
 ║                                                       ║
-║ ADIM 2: ÜST DÜZEY TASARIM (10-15 dk)                ║
-║   → Ana bileşenler (API, DB, Cache, Queue)           ║
+║ ADIM 2: ÜST DÜZEY TASARIM (10-15 dk)                  ║
+║   → Ana bileşenler (API, DB, Cache, Queue)            ║
 ║   → Veri akışı diyagramı                              ║
 ║   → API endpoint'leri                                 ║
 ║                                                       ║
-║ ADIM 3: DERİN DALMA (10-15 dk)                       ║
-║   → Kritik bileşenleri detaylandır                   ║
-║   → Data model & schema                              ║
-║   → Darboğazları çöz                                 ║
+║ ADIM 3: DERİN DALMA (10-15 dk)                        ║
+║   → Kritik bileşenleri detaylandır                    ║
+║   → Data model & schema                               ║
+║   → Darboğazları çöz                                  ║
 ║   → Trade-off'ları tartış                             ║
 ║                                                       ║
-║ ADIM 4: ÖZET & TARTIŞMA (3-5 dk)                     ║
-║   → Bottleneck'ler nerede?                           ║
-║   → Daha da ölçeklenseydi ne yapardık?               ║
-║   → Hata senaryoları (failure modes)                 ║
+║ ADIM 4: ÖZET & TARTIŞMA (3-5 dk)                      ║
+║   → Bottleneck'ler nerede?                            ║
+║   → Daha da ölçeklenseydi ne yapardık?                ║
+║   → Hata senaryoları (failure modes)                  ║
 ╚═══════════════════════════════════════════════════════╝
 ```
 
@@ -1442,9 +1442,9 @@ YouTube gibi video streaming servisi tasarla:
 ```
 ┌────────┐     ┌────────────┐     ┌─────────────┐     ┌──────────┐
 │ Client │────→│ API Server │────→│ Transcoding │────→│ Object   │
-│        │     │             │     │ Service     │     │ Storage  │
+│        │     │            │     │ Service     │     │ Storage  │
 └────────┘     └────────────┘     └─────────────┘     │ (S3/GCS) │
-                     │                                 └──────┬───┘
+                     │                                └──────┬───┘
                      ▼                                        │
                ┌──────────┐                             ┌─────▼────┐
                │ Metadata │                             │ CDN      │
@@ -1552,8 +1552,8 @@ Google Drive / Dropbox gibi dosya depolama ve senkronizasyon servisi:
 ┌─────────┐     ┌────────────┐     ┌────────────┐     ┌───────────┐
 │ Client  │────→│ API Server │────→│ Metadata   │     │ Block     │
 │ (App)   │     │ (stateless)│     │ DB         │     │ Storage   │
-└────┬────┘     └────────────┘     └────────────┘     │ (S3)     │
-     │                                                 └───────────┘
+└────┬────┘     └────────────┘     └────────────┘     │ (S3)      │
+     │                                                └───────────┘
      │           ┌────────────┐     ┌────────────┐
      └──────────→│ Block      │────→│ Cloud      │
        upload    │ Server     │     │ Storage    │
@@ -1786,7 +1786,7 @@ ByteByteGo (Alex Xu'nun YouTube kanalı):
 ### Her Tasarımda Ortak Paternler
 
 ```
-┌──────────────────────────────────────────────────┐
+┌───────────────────────────────────────────────────┐
 │  PATTERN                 │ KULLANILDIĞI YER       │
 ├──────────────────────────┼────────────────────────┤
 │ Load Balancer            │ HER YERDE!             │

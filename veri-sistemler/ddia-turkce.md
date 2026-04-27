@@ -305,7 +305,7 @@ RETURN other.name, product.name
 │              │   (SQL)      │  (Document)  │  (Graph)     │
 ├──────────────┼──────────────┼──────────────┼──────────────┤
 │ Veri yapısı  │ Tablo/satır  │ JSON/BSON    │ Düğüm/Kenar  │
-│ İlişkiler    │ Güçlü (JOIN) │ Zayıf        │ ÇOK GÜÇLÜ   │
+│ İlişkiler    │ Güçlü (JOIN) │ Zayıf        │ ÇOK GÜÇLÜ    │
 │ Schema       │ Katı         │ Esnek        │ Esnek        │
 │ Ölçekleme    │ Dikey (↑)    │ Yatay (↔)    │ Zor          │
 │ Tutarlılık   │ Güçlü (ACID) │ Eventual     │ Değişir      │
@@ -313,8 +313,8 @@ RETURN other.name, product.name
 │ alan         │ ERP, finans  │ CMS, profil  │ Sosyal ağ    │
 ├──────────────┼──────────────┼──────────────┼──────────────┤
 │ Örnekler     │ PostgreSQL   │ MongoDB      │ Neo4j        │
-│              │ MySQL        │ CouchDB      │ Amazon        │
-│              │ Oracle       │ DynamoDB     │ Neptune       │
+│              │ MySQL        │ CouchDB      │ Amazon       │
+│              │ Oracle       │ DynamoDB     │ Neptune      │
 └──────────────┴──────────────┴──────────────┴──────────────┘
 ```
 

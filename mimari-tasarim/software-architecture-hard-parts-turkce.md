@@ -61,13 +61,13 @@ sistematik bir FRAMEWORK sunar. 🧭
 
 ```
 ╔════════════════════════════════════════════════════════════╗
-║  "Yazılım mimarisinde her şey bir trade-off'tur."        ║
+║  "Yazılım mimarisinde her şey bir trade-off'tur."          ║
 ║                                                            ║
-║  "Eğer bir mimar 'trade-off değil' dediği bir şey        ║
-║   bulduğunu düşünüyorsa, muhtemelen trade-off'u           ║
-║   henüz KEŞFETMEMİŞTİR."                                 ║
+║  "Eğer bir mimar 'trade-off değil' dediği bir şey          ║
+║   bulduğunu düşünüyorsa, muhtemelen trade-off'u            ║
+║   henüz KEŞFETMEMİŞTİR."                                   ║
 ║                                                            ║
-║  — Neal Ford & Mark Richards, Birinci Yasa                ║
+║  — Neal Ford & Mark Richards, Birinci Yasa                 ║
 ╚════════════════════════════════════════════════════════════╝
 
 Her seçimin BEDELI vardır:
@@ -88,10 +88,10 @@ Her seçimin BEDELI vardır:
 
 ```
 ╔════════════════════════════════════════════════════════════╗
-║  "NEDEN, NASIL'dan daha önemlidir."                       ║
+║  "NEDEN, NASIL'dan daha önemlidir."                        ║
 ║                                                            ║
-║  Mimari kararın KENDİSİ değil,                            ║
-║  kararın ARKASINDAKI GEREKÇE önemlidir.                   ║
+║  Mimari kararın KENDİSİ değil,                             ║
+║  kararın ARKASINDAKI GEREKÇE önemlidir.                    ║
 ║                                                            ║
 ║  — İkinci Yasa                                             ║
 ╚════════════════════════════════════════════════════════════╝
@@ -141,13 +141,13 @@ MONOLITH TÜRLERİ:
 
 2. KÖTÜ MONOLITH (Big Ball of Mud) ❌
    ┌──────────────────────────────────┐
-   │     BIG BALL OF MUD 🧶          │
+   │     BIG BALL OF MUD 🧶           │
    │                                  │
-   │  HER ŞEY ────── HER ŞEYE ───→  │
-   │    ←──── BAĞIMLI ────→          │
+   │  HER ŞEY ────── HER ŞEYE ───→    │
+   │    ←──── BAĞIMLI ────→           │
    │                                  │
-   │  "Bir yere dokunsan her yer     │
-   │   KIRILIR!" 💀                  │
+   │  "Bir yere dokunsan her yer      │
+   │   KIRILIR!" 💀                   │
    └──────────────────────────────────┘
    → Sınır yok, bağımlılık çorbası
    → Microservice'e bölmek İMKANSIZA YAKIN
@@ -261,15 +261,15 @@ GEÇERSİZ NEDENLER ❌:
 Kitap, ayrışma kararını veren 7 SÜRÜCü tanımlar:
 
 ┌────────────────────────────────────────────────────────────────┐
-│                    AYRIŞMA SÜRÜCÜLERİ                         │
+│                    AYRIŞMA SÜRÜCÜLERİ                          │
 ├──────────────────────┬─────────────────────────────────────────┤
 │ 1. Hız (Agility)     │ Deployment, değişiklik hızı             │
-│ 2. Performans        │ Gecikme, throughput gereksinimleri       │
-│ 3. Ölçeklenebilirlik │ Elastik veya hedefli ölçekleme         │
+│ 2. Performans        │ Gecikme, throughput gereksinimleri      │
+│ 3. Ölçeklenebilirlik │ Elastik veya hedefli ölçekleme          │
 │ 4. Hata Toleransı    │ Bir servisin çökmesi diğerini etkiler mi│
 │ 5. Güvenlik          │ Farklı güvenlik gereksinimleri          │
 │ 6. Genişletilebilirlik│ Yeni özellik ekleme kolaylığı          │
-│ 7. Takım Yapısı      │ Conway's Law, takım bağımsızlığı       │
+│ 7. Takım Yapısı      │ Conway's Law, takım bağımsızlığı        │
 └──────────────────────┴─────────────────────────────────────────┘
 
 HER SÜRÜCÜyü puan ver (1-5):
@@ -604,13 +604,13 @@ VERİ X birden fazla servis tarafından kullanılıyor:
 ### İletişim Stilleri
 
 ```
-┌──────────────────────────────────────────────────────────────┐
-│                İLETİŞİM MATRİSİ                              │
+┌───────────────────────────────────────────────────────────────┐
+│                İLETİŞİM MATRİSİ                               │
 ├──────────────┬────────────────────┬───────────────────────────┤
-│              │ SENKRON             │ ASENKRON                  │
+│              │ SENKRON            │ ASENKRON                  │
 ├──────────────┼────────────────────┼───────────────────────────┤
 │ İSTEK-YANIT  │ REST, gRPC         │ Async Request-Reply       │
-│ (1:1)        │ "Bekliyorum!"      │ "Yanıtı sonra al"        │
+│ (1:1)        │ "Bekliyorum!"      │ "Yanıtı sonra al"         │
 ├──────────────┼────────────────────┼───────────────────────────┤
 │ OLAY ODAKLI  │ (nadir)            │ Event, Message Queue      │
 │ (1:N)        │                    │ "İlgilenen dinlesin!"     │
@@ -745,11 +745,11 @@ Bu akışı KİM yönetecek?
 ├──────────────────┼──────────────────┼────────────────────────┤
 │ Coupling         │ ❌ YÜKSEK        │ ✅ DÜŞÜK               │
 │                  │ Orkestratör HE-  │ Servisler birbirini    │
-│                  │ PİSİNE bağımlı   │ BİLMİYOR bile!        │
+│                  │ PİSİNE bağımlı   │ BİLMİYOR bile!         │
 ├──────────────────┼──────────────────┼────────────────────────┤
 │ Hata yönetimi    │ ✅ KOLAY         │ ❌ ZOR                 │
 │                  │ Orkestratör      │ Her servis kendi       │
-│                  │ hepsini YÖNETİR │ hatasını yönetMELİ     │
+│                  │ hepsini YÖNETİR │ hatasını yönetMELİ      │
 ├──────────────────┼──────────────────┼────────────────────────┤
 │ Ölçeklenebilirlik│ ❌ SINIRLI       │ ✅ YÜKSEK              │
 │                  │ Orkestratör      │ Her servis bağımsız    │
@@ -757,11 +757,11 @@ Bu akışı KİM yönetecek?
 ├──────────────────┼──────────────────┼────────────────────────┤
 │ Yeni adım ekleme │ ✅ KOLAY         │ ❌ ZOR                 │
 │                  │ Orkestratöre     │ Hangi servis hangi     │
-│                  │ yeni adım ekle   │ event'i dinleMELİ? 🤔│
+│                  │ yeni adım ekle   │ event'i dinleMELİ? 🤔  │
 ├──────────────────┼──────────────────┼────────────────────────┤
 │ Tek Nokta Arızası│ ❌ EVET          │ ✅ HAYIR               │
-│ (SPOF)           │ Orkestratör çö-  │ Merkezi bileşen       │
-│                  │ kerse HEPSİ çöker│ YOK!                  │
+│ (SPOF)           │ Orkestratör çö-  │ Merkezi bileşen        │
+│                  │ kerse HEPSİ çöker│ YOK!                   │
 └──────────────────┴──────────────────┴────────────────────────┘
 ```
 
@@ -786,8 +786,8 @@ HİBRİT (gerçek dünya!) 🌍:
 
   ┌────── Sipariş Context ───────┐   Event   ┌──── Kargo Context ────┐
   │ [Orchestrator]               │ ────────→ │ [Orchestrator]        │
-  │   ↓       ↓        ↓        │           │   ↓      ↓            │
-  │ Validate  Stock   Payment   │           │ Route  Dispatch       │
+  │   ↓       ↓        ↓         │           │   ↓      ↓            │
+  │ Validate  Stock   Payment    │           │ Route  Dispatch       │
   └──────────────────────────────┘           └───────────────────────┘
 
   → Context İÇİ→ orkestrasyon (akış net, hata yönetimi kolay)
@@ -1249,13 +1249,13 @@ GÜN 180+: KADEMELI BÜYÜME
 │ BAĞLAM                 │ Monolith │ Modüler  │ Microservice │
 │                        │          │ Monolith │              │
 ├────────────────────────┼──────────┼──────────┼──────────────┤
-│ Takım: 1-5 kişi        │ ✅       │ 🟡      │ ❌ overkill  │
-│ Takım: 5-20 kişi       │ 🟡      │ ✅       │ 🟡          │
-│ Takım: 20+ kişi        │ ❌       │ 🟡      │ ✅           │
+│ Takım: 1-5 kişi        │ ✅       │ 🟡       │ ❌ overkill  │
+│ Takım: 5-20 kişi       │ 🟡       │ ✅       │ 🟡           │
+│ Takım: 20+ kişi        │ ❌       │ 🟡       │ ✅           │
 ├────────────────────────┼──────────┼──────────┼──────────────┤
 │ Ölçek: düşük           │ ✅       │ ✅       │ ❌ overkill  │
-│ Ölçek: orta            │ 🟡      │ ✅       │ 🟡          │
-│ Ölçek: yüksek/elastic  │ ❌       │ 🟡      │ ✅           │
+│ Ölçek: orta            │ 🟡       │ ✅       │ 🟡           │
+│ Ölçek: yüksek/elastic  │ ❌       │ 🟡       │ ✅           │
 ├────────────────────────┼──────────┼──────────┼──────────────┤
 │ Domain karmaşıklığı: ↓ │ ✅       │ ✅       │ ❌           │
 │ Domain karmaşıklığı: ↑ │ ❌       │ ✅       │ ✅           │
@@ -1402,14 +1402,14 @@ Reddit r/softwarearchitecture:
 │         SOFTWARE ARCHITECTURE: THE HARD PARTS                │
 │                   CHEAT SHEET                                │
 ├──────────────────────────────────────────────────────────────┤
-│ YASALAR:                                                      │
+│ YASALAR:                                                     │
 │  1. Her şey bir trade-off'tur                                │
 │  2. NEDEN, NASIL'dan önemlidir                               │
 │                                                              │
 │ AYRIŞMA:                                                     │
-│  → Sürücüler: hız, performans, ölçek, hata tol., güvenlik   │
-│  → Domain bazlı (teknik katman DEĞİL!)                      │
-│  → Modüler monolith → en iyi başlangıç                      │
+│  → Sürücüler: hız, performans, ölçek, hata tol., güvenlik    │
+│  → Domain bazlı (teknik katman DEĞİL!)                       │
+│  → Modüler monolith → en iyi başlangıç                       │
 │                                                              │
 │ VERİ:                                                        │
 │  → Veri ayrışması en ZOR kısımdır                            │
@@ -1423,7 +1423,7 @@ Reddit r/softwarearchitecture:
 │                                                              │
 │ KOORDİNASYON:                                                │
 │  → Orkestrasyon: görünür akış, merkezi kontrol               │
-│  → Koreografi: bağımsız, ölçeklenebilir                     │
+│  → Koreografi: bağımsız, ölçeklenebilir                      │
 │  → Saga: dağıtık transaction → kompanzasyon ile              │
 │                                                              │
 │ KARAR:                                                       │

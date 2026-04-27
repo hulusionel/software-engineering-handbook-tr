@@ -663,10 +663,10 @@ PR Boyutu    →  Review Kalitesi
 ### Test Piramidi 🔺
 
 ```
-        ╱  ╲
-       ╱ E2E ╲            Yavaş, pahalı, az sayıda
-      ╱────────╲
-     ╱Integration╲        Orta hız, orta maliyet
+        ╱      ╲
+       ╱  E2E   ╲            Yavaş, pahalı, az sayıda
+      ╱ ──────── ╲
+     ╱Integration ╲        Orta hız, orta maliyet
     ╱──────────────╲
    ╱   Unit Tests   ╲     Hızlı, ucuz, çok sayıda
   ╱══════════════════╲
@@ -920,7 +920,7 @@ Sunucu 3: [v1] → [v2] ✅
 ```
                  Kullanıcılar
                       │
-Load Balancer ───────┼───────
+Load Balancer ────────┼───────
                       │
 Blue  (v1) ← aktif    │    Green (v2) ← hazırlanıyor
                       │
@@ -1186,24 +1186,24 @@ Bu doküman, [X problemi] için önerilen çözümü anlatır.
 ### Mühendislik Seviyeleri (Kariyer Merdiveni) 🪜
 
 ```
-                                ┌──────────────┐
-                               │ Distinguished │ Çok nadir
-                               │   Engineer    │
+                               ┌──────────────┐
+                               │ Distinguished│ Çok nadir
+                               │   Engineer   │
                                └──────┬───────┘
                           ┌───────────┴───────────┐
-                         │    Principal Engineer   │ Şirket çapında etki
+                          │    Principal Engineer │ Şirket çapında etki
                          └───────────┬────────────┘
                     ┌────────────────┴────────────────┐
-                   │         Staff Engineer            │ Org çapında etki
+                   │         Staff Engineer           │ Org çapında etki
                    └────────────────┬─────────────────┘
               ┌─────────────────────┴─────────────────────┐
-             │              Senior Engineer                │ Takım çapı
+             │              Senior Engineer               │ Takım çapı
              └─────────────────────┬──────────────────────┘
         ┌──────────────────────────┴──────────────────────────┐
-       │                    Mid-Level Engineer                  │
+       │                    Mid-Level Engineer                │
        └──────────────────────────┬───────────────────────────┘
   ┌───────────────────────────────┴───────────────────────────────┐
- │                        Junior Engineer                          │ 🫵 Başlangıç
+ │                        Junior Engineer                         │ 🫵 Başlangıç
  └─────────────────────────────────────────────────────────────────┘
 ```
 

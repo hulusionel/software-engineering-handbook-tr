@@ -96,17 +96,17 @@ AMA! Mimar kod yazmayı BIRAKMAMALI!
         Bilgi
     ┌──────────────────────────────────┐
     │                                  │
-    │  BİLDİĞİN (Things you know)     │ ← Derinlik
-    │  ▓▓▓▓▓▓▓▓▓▓▓▓▓▓                │
+    │  BİLDİĞİN (Things you know)      │ ← Derinlik
+    │  ▓▓▓▓▓▓▓▓▓▓▓▓▓▓                  │
     │                                  │
-    │  BİLDİĞİN AMA UNUTTUĞUN         │
-    │  ░░░░░░░░░░░░░░░░░░░░░          │
+    │  BİLDİĞİN AMA UNUTTUĞUN          │
+    │  ░░░░░░░░░░░░░░░░░░░░░           │
     │                                  │
-    │  BİLMEDİĞİNİ BİLDİĞİN          │ ← Genişlik!
-    │  ╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬  │
+    │  BİLMEDİĞİNİ BİLDİĞİN            │ ← Genişlik!
+    │  ╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬    │
     │                                  │
-    │  BİLMEDİĞİNİ BİLMEDİĞİN        │ ← TEHLİKE!
-    │  ??????????????????????????????????│
+    │  BİLMEDİĞİNİ BİLMEDİĞİN          │ ← TEHLİKE!
+    │  ????????????????????????????????│
     └──────────────────────────────────┘
 
 Geliştirici: Derinlik artır → "Java'yı çok iyi biliyorum"
@@ -128,7 +128,7 @@ EN TEHLİKELİ alan: "Bilmediğini bilmediğin" şeyler!
 Richards'ın İlk Yazılım Mimarisi Yasası:
 
     ╔════════════════════════════════════════╗
-    ║ "Yazılım mimarisinde HER ŞEY          ║
+    ║ "Yazılım mimarisinde HER ŞEY           ║
     ║  bir trade-off'tur."                   ║
     ╚════════════════════════════════════════╝
 
@@ -282,28 +282,28 @@ Mimar: "1000 kişi aynı anda giriş yapabilmeli" ← sistem tasarımı
 ### Temel Karakteristikler Kataloğu
 
 ```
-┌─────────────────────────────────────────────────────────────────────┐
-│ KATEGORİ           │ KARAKTERİSTİK        │ AÇIKLAMA               │
-├─────────────────────┼──────────────────────┼────────────────────────┤
-│ Operasyonel         │ Availability         │ Çalışma süresi (%99.9) │
+┌──────────────────────────────────────────────────────────────────────┐
+│ KATEGORİ           │ KARAKTERİSTİK        │ AÇIKLAMA                 │
+├─────────────────────┼──────────────────────┼─────────────────────────┤
+│ Operasyonel         │ Availability         │ Çalışma süresi (%99.9)  │
 │                     │ Performance          │ Yanıt süresi (latency)  │
 │                     │ Scalability          │ Yük artışına dayanma    │
 │                     │ Elasticity           │ Ani yük artışına adapte │
 │                     │ Reliability          │ Hatasız çalışma         │
 │                     │ Recoverability       │ Hatadan kurtulma hızı   │
-├─────────────────────┼──────────────────────┼────────────────────────┤
+├─────────────────────┼──────────────────────┼─────────────────────────┤
 │ Yapısal             │ Modularity           │ Parçalara ayrılabilirlik│
 │                     │ Extensibility        │ Yeni özellik ekleme     │
 │                     │ Maintainability      │ Bakım ve güncelleme     │
 │                     │ Deployability        │ Deploy kolaylığı        │
 │                     │ Testability          │ Test edilebilirlik      │
-├─────────────────────┼──────────────────────┼────────────────────────┤
+├─────────────────────┼──────────────────────┼─────────────────────────┤
 │ Cross-Cutting       │ Security             │ Güvenlik                │
 │                     │ Observability        │ İzlenebilirlik          │
 │                     │ Interoperability     │ Sistemler arası uyum    │
 │                     │ Accessibility        │ Erişilebilirlik         │
 │                     │ Agility              │ Hızlı değişim yeteneği  │
-└─────────────────────┴──────────────────────┴────────────────────────┘
+└─────────────────────┴──────────────────────┴─────────────────────────┘
 ```
 
 ### Trade-off Gerçeği: Hepsini Seçemezsin!
@@ -361,18 +361,18 @@ Mimari karakteristikler 3 kaynaktan gelir:
 ### Domain Endişesi → Karakteristik Eşleştirme
 
 ```
-┌─────────────────────────┬──────────────────────────────────┐
-│ Domain Endişesi          │ Mimari Karakteristik              │
-├─────────────────────────┼──────────────────────────────────┤
+┌──────────────────────────┬──────────────────────────────────┐
+│ Domain Endişesi          │ Mimari Karakteristik             │
+├──────────────────────────┼──────────────────────────────────┤
 │ "Müşteri kaybetmeyelim"  │ Availability, Fault Tolerance    │
-│ "Hızlı büyüyoruz"       │ Scalability, Elasticity          │
+│ "Hızlı büyüyoruz"        │ Scalability, Elasticity          │
 │ "Yasal uyumluluk"        │ Security, Auditability           │
 │ "Birleşme/satın alma"    │ Interoperability, Extensibility  │
 │ "Pazar zamanı kritik"    │ Agility, Deployability           │
-│ "Bütçe kısıtlı"         │ Simplicity, Feasibility          │
+│ "Bütçe kısıtlı"          │ Simplicity, Feasibility          │
 │ "Küresel kullanıcılar"   │ Performance, Internationalization│
 │ "Kısa süreli kampanyalar"│ Elasticity, Scalability          │
-└─────────────────────────┴──────────────────────────────────┘
+└──────────────────────────┴──────────────────────────────────┘
 
 UYARI: Her endişe birden fazla karakteristiğe MAP olabilir!
 Mimar, HANGİSİNİN daha kritik olduğunu KARAR VERIR.
@@ -646,17 +646,17 @@ UYARI: %20-30 sinkhole NORMAL! Her request iş mantığı gerektirmez.
 ### Puan Kartı
 
 ```
-┌─────────────────────┬─────────┐
-│ Karakteristik        │ Puan    │
-├─────────────────────┼─────────┤
-│ Deployability       │ ⭐      │  → Tüm sistemi deploy etmek ZORUNLU
-│ Testability         │ ⭐⭐    │  → Katmanlar test edilebilir AMA izolasyon zor
-│ Scalability         │ ⭐      │  → Tüm katmanlar birlikte ölçeklenir
-│ Performance         │ ⭐⭐    │  → Katmanlar arası overhead
-│ Fault Tolerance     │ ⭐      │  → Bir katman çökerse HER ŞEY çöker
-│ Overall Cost        │ ⭐⭐⭐⭐⭐│  → Ucuz! Basit!
-│ Simplicity          │ ⭐⭐⭐⭐⭐│  → En basit mimari
-└─────────────────────┴─────────┘
+┌───────────────────┬─────────┐
+│ Karakteristik     │ Puan    │
+├───────────────────┼─────────┤
+│ Deployability     │ ⭐      │  → Tüm sistemi deploy etmek ZORUNLU
+│ Testability       │ ⭐⭐    │  → Katmanlar test edilebilir AMA izolasyon zor
+│ Scalability       │ ⭐      │  → Tüm katmanlar birlikte ölçeklenir
+│ Performance       │ ⭐⭐    │  → Katmanlar arası overhead
+│ Fault Tolerance   │ ⭐      │  → Bir katman çökerse HER ŞEY çöker
+│ Overall Cost      │ ⭐⭐⭐⭐⭐│  → Ucuz! Basit!
+│ Simplicity        │ ⭐⭐⭐⭐⭐│  → En basit mimari
+└───────────────────┴─────────┘
 
 Ne zaman kullan?
   ✅ Küçük/orta projeler, tek takım
@@ -732,7 +732,7 @@ const result = processOrder({ items: [{ price: 500, quantity: 3 }] });
 
 ```
 ┌─────────────────────┬─────────┐
-│ Karakteristik        │ Puan    │
+│ Karakteristik       │ Puan    │
 ├─────────────────────┼─────────┤
 │ Simplicity          │ ⭐⭐⭐⭐⭐│  → Çok basit konsept
 │ Testability         │ ⭐⭐⭐⭐⭐│  → Her filtre izole test edilir
@@ -759,10 +759,10 @@ Ne zaman kullan?
 │              CORE SYSTEM               │
 │    (minimal, kararlı, nadiren değişir) │
 │                                        │
-│    ┌──────┐  ┌──────┐  ┌──────┐       │
-│    │Plugin│  │Plugin│  │Plugin│       │
-│    │  A   │  │  B   │  │  C   │       │
-│    └──────┘  └──────┘  └──────┘       │
+│    ┌──────┐  ┌──────┐  ┌──────┐        │
+│    │Plugin│  │Plugin│  │Plugin│        │
+│    │  A   │  │  B   │  │  C   │        │
+│    └──────┘  └──────┘  └──────┘        │
 └────────────────────────────────────────┘
 
 Core: Temel iş mantığı (değişmez)
@@ -860,7 +860,7 @@ engine.registerPlugin('FR', new FranceTaxPlugin());
   │ Sipariş│ Ödeme  │ Envanter│ Müşteri   │
   │ Servisi│ Servisi│ Servisi │ Servisi   │
   ├────────┴────────┴────────┴────────────┤
-  │           Ortak Veritabanı             │
+  │           Ortak Veritabanı            │
   └───────────────────────────────────────┘
 
   vs Microservices:
@@ -876,7 +876,7 @@ engine.registerPlugin('FR', new FranceTaxPlugin());
 
 ```
 ┌──────────────────┬──────────────────┬──────────────────┐
-│                  │ Service-Based     │ Microservices    │
+│                  │ Service-Based     │ Microservices   │
 ├──────────────────┼──────────────────┼──────────────────┤
 │ Servis sayısı    │ 4-12              │ 10-100+          │
 │ Servis boyutu    │ Büyük (domain)    │ Küçük (fonksiyon)│
@@ -896,16 +896,16 @@ Microservices'e "hype" yüzünden değil, GERÇEK ihtiyaç varsa geç.
 ### Puan Kartı
 
 ```
-┌─────────────────────┬─────────┐
-│ Karakteristik        │ Puan    │
-├─────────────────────┼─────────┤
-│ Deployability       │ ⭐⭐⭐⭐  │  → Servis bazında deploy
-│ Testability         │ ⭐⭐⭐⭐  │  → Servis izole test edilir
+┌─────────────────────┬──────────┐
+│ Karakteristik       │ Puan     │
+├─────────────────────┼──────────┤
+│ Deployability       │ ⭐⭐⭐⭐ │  → Servis bazında deploy
+│ Testability         │ ⭐⭐⭐⭐ │  → Servis izole test edilir
 │ Scalability         │ ⭐⭐⭐   │  → Servis bazında ölçekleme
-│ Fault Tolerance     │ ⭐⭐⭐⭐  │  → Bir servis çökse diğerleri yaşar
+│ Fault Tolerance     │ ⭐⭐⭐⭐ │  → Bir servis çökse diğerleri yaşar
 │ Simplicity          │ ⭐⭐⭐   │  → Microservices'ten basit
-│ Overall Cost        │ ⭐⭐⭐⭐  │  → Microservices'ten ucuz
-└─────────────────────┴─────────┘
+│ Overall Cost        │ ⭐⭐⭐⭐ │  → Microservices'ten ucuz
+└─────────────────────┴──────────┘
 ```
 
 ---

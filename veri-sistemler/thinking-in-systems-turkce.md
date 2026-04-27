@@ -87,7 +87,7 @@ Bir microservices mimarisi:
         amacı değiştirmek DEVRİMDİR!
 
   ┌──────────────────────────────────────────┐
-  │  DEĞİŞTİRME ZORLUK MERDİVENİ:          │
+  │  DEĞİŞTİRME ZORLUK MERDİVENİ:            │
   │                                          │
   │  Kolay:  Eleman değiştir (Redis → Memcached)
   │  Orta:   Bağlantı değiştir (sync → async)
@@ -137,8 +137,8 @@ AKIŞ = Stok'u DEĞİŞTİREN süreç
 
 BANYO KÜVET METAForu:
 
-  ┌──── musluk (giriş akışı) ────┐
-  │          💧💧💧                │
+  ┌──── musluk (giriş akışı) ─────┐
+  │          💧💧💧               │
   │    ┌──────────────────┐       │
   │    │                  │       │
   │    │   KÜVET          │       │
@@ -149,8 +149,8 @@ BANYO KÜVET METAForu:
   │    │                  │       │
   │    └──────┬───────────┘       │
   │           │                   │
-  │    ───── tıkaç (çıkış) ──── │
-  │          💧💧                  │
+  │    ───── tıkaç (çıkış) ────   │
+  │          💧💧                 │
   └───────────────────────────────┘
 
   Musluk açık + tıkaç kapalı → su artıyor (stok büyür)
@@ -296,12 +296,12 @@ TERMOSTAT ÖRNEĞİ:
 
   ┌────────────────────────────────────────┐
   │                                        │
-  │   Oda 18°C ──→ Fark: -4°C ──→ ISIT!  │
+  │   Oda 18°C ──→ Fark: -4°C ──→ ISIT!    │
   │       ↑                         │      │
   │       │                         │      │
   │       └────── Oda ısınır ───────┘      │
   │                                        │
-  │   Oda 25°C ──→ Fark: +3°C ──→ SOĞUT! │
+  │   Oda 25°C ──→ Fark: +3°C ──→ SOĞUT!   │
   │       ↑                         │      │
   │       │                         │      │
   │       └────── Oda soğur ────────┘      │
@@ -321,12 +321,12 @@ TERMOSTAT ÖRNEĞİ:
 
   ┌────────────────────────────────────────────┐
   │                                            │
-  │  CPU %90 ──→ Fark: +20% ──→ POD EKLE!    │
+  │  CPU %90 ──→ Fark: +20% ──→ POD EKLE!      │
   │     ↑                          │           │
   │     │                          │           │
   │     └──── Yük/pod azalır ──────┘           │
   │                                            │
-  │  CPU %40 ──→ Fark: -30% ──→ POD KALDIR!  │
+  │  CPU %40 ──→ Fark: -30% ──→ POD KALDIR!    │
   │     ↑                          │           │
   │     │                          │           │
   │     └──── Yük/pod artar ───────┘           │
@@ -346,13 +346,13 @@ TERMOSTAT ÖRNEĞİ:
 
   ┌────────────────────────────────────────────┐
   │                                            │
-  │  Hata %60 ──→ eşik aşıldı ──→ DEVRE KES! │
+  │  Hata %60 ──→ eşik aşıldı ──→ DEVRE KES!   │
   │     ↑                            │         │
   │     │                            │         │
   │     └──── İstekler durur ────────┘         │
   │            (downstream rahatlar)           │
   │                                            │
-  │  (30sn sonra) ──→ YARIM AÇ ──→ DENE!     │
+  │  (30sn sonra) ──→ YARIM AÇ ──→ DENE!       │
   │     ↑                            │         │
   │     │                            │         │
   │     └──── Başarılı → AÇIK ───────┘         │
@@ -371,7 +371,7 @@ TERMOSTAT ÖRNEĞİ:
 
   ┌────────────────────────────────────────────┐
   │                                            │
-  │  Kalitesiz PR ──→ Review ──→ DÜZELT!      │
+  │  Kalitesiz PR ──→ Review ──→ DÜZELT!       │
   │       ↑                        │           │
   │       │                        │           │
   │       └──── Düzeltilmiş PR ────┘           │
@@ -397,7 +397,7 @@ GÜÇLENDİRİCİ DÖNGÜ (Reinforcing Loop):
 İYI YÖNDE (Virtuous Cycle):
   ┌───────────────────────────────────────────┐
   │                                           │
-  │  İyi kod → Daha az bug → Daha çok zaman  │
+  │  İyi kod → Daha az bug → Daha çok zaman   │
   │    ↑         yeni feature'a →             │
   │    │                   │                  │
   │    └── Daha iyi kod ───┘                  │
@@ -407,7 +407,7 @@ GÜÇLENDİRİCİ DÖNGÜ (Reinforcing Loop):
 KÖTÜ YÖNDE (Vicious Cycle):
   ┌───────────────────────────────────────────┐
   │                                           │
-  │  Acele kod → Daha çok bug → Daha az      │
+  │  Acele kod → Daha çok bug → Daha az       │
   │    ↑         zaman, firefighting →        │
   │    │                   │                  │
   │    └── Daha acele kod ─┘                  │
@@ -517,10 +517,10 @@ NE YAPMALIYDIN:
   Mühendis işe alındı → GERÇEK verimlilik: 3-6 AY sonra!
 
   ┌──────────────────────────────────────────────┐
-  │  Ay 1-2: Onboarding → NET NEGATİF verimlilik│
+  │  Ay 1-2: Onboarding → NET NEGATİF verimlilik │
   │          (senior'ların zamanını ALIR!)       │
-  │  Ay 3-4: Küçük tasklar → BREAK EVEN         │
-  │  Ay 5-6: Bağımsız iş → POZİTİF katkı       │
+  │  Ay 3-4: Küçük tasklar → BREAK EVEN          │
+  │  Ay 5-6: Bağımsız iş → POZİTİF katkı         │
   │  Ay 6+:  Tam verimlilik                      │
   └──────────────────────────────────────────────┘
 
@@ -535,8 +535,8 @@ NE YAPMALIYDIN:
 
   ┌───────────────────────────────────────────────────┐
   │  Hafta 1-2: Hız DÜŞER! (refactoring sırasında     │
-  │             yeni feature yavaşlar)                 │
-  │  Hafta 3-4: Eski hıza DÖNÜŞ                      │
+  │             yeni feature yavaşlar)                │
+  │  Hafta 3-4: Eski hıza DÖNÜŞ                       │
   │  Hafta 5+:  Hız ARTAR (borç ödendi, daha temiz!)  │
   └───────────────────────────────────────────────────┘
 
@@ -654,8 +654,8 @@ KALIP:
   AMA: "hızlı çözüm"ün YAN ETKİSİ → daha büyük semptom!
 
   ┌────────────────────────────────────────┐
-  │  Sorun → Hızlı çözüm → Sorun geçici  │
-  │   ↑         KAYBOLUR                  │
+  │  Sorun → Hızlı çözüm → Sorun geçici    │
+  │   ↑         KAYBOLUR                   │
   │   │           AMA                      │
   │   │            ↓                       │
   │   └── Yan etki → DAHA BÜYÜK sorun ────┘
@@ -689,11 +689,11 @@ KALIP:
   Tepki: "Hedefi 200ms'e ÇEKELİM" → hedef DÜŞÜRÜldü! 📉
 
   ┌────────────────────────────────────────────┐
-  │  Hedef yüksek → gerçek düşük → BOŞLUK    │
+  │  Hedef yüksek → gerçek düşük → BOŞLUK      │
   │      ↑                            │        │
   │      │         İKI yol:           │        │
-  │      │  A: Gerçeği hedefe çek ✅   │        │
-  │      │  B: Hedefi gerçeğe çek ❌   │        │
+  │      │  A: Gerçeği hedefe çek ✅  │        │
+  │      │  B: Hedefi gerçeğe çek ❌  │        │
   │      └────────────────────────────┘        │
   └────────────────────────────────────────────┘
 
@@ -805,7 +805,7 @@ YÜKSEK KALDIRAÇ (Staff engineer yapar!):
 
 ┌────────────────────────────────────────────────────┐
 │                                                    │
-│  "Düşük kaldıraçlı işlere çok zaman harcamak      │
+│  "Düşük kaldıraçlı işlere çok zaman harcamak       │
 │   = tekerleğe yama yapıp yol sorunu olduğunu       │
 │   GÖRMEMEK!"                                       │
 │                                                    │
@@ -954,8 +954,8 @@ DENGe:
 
   ┌──────────────────────────────────────────────┐
   │  "Verimlilik = işler İYİYKEN kazandırır.     │
-  │   Dayanıklılık = işler KÖTÜYken kurtarır.  │
-  │   İkisi DENGEde olmalı."                    │
+  │   Dayanıklılık = işler KÖTÜYken kurtarır.    │
+  │   İkisi DENGEde olmalı."                     │
   └──────────────────────────────────────────────┘
 ```
 
@@ -1303,13 +1303,13 @@ TEK DÖNGÜ ÖĞRENME (Single Loop):
 
   ┌─────────────┐
   │ TEK DÖNGÜ   │  Eylem → Sonuç → Düzelt → Eylem...
-  │  (termostat) │  (hep aynı seviyede!)
+  │  (termostat)│  (hep aynı seviyede!)
   └─────────────┘
 
   ┌─────────────┐
   │ ÇİFTE DÖNGÜ │  Eylem → Sonuç → Düzelt → 
-  │  (öğrenme)   │  "NEDEN böyle?" → KURALI değiştir
-  │              │  → tamamen YENI davranış! 📈
+  │  (öğrenme)  │  "NEDEN böyle?" → KURALI değiştir
+  │             │  → tamamen YENI davranış! 📈
   └─────────────┘
 
 PRATIKTE:
@@ -1459,44 +1459,44 @@ Reddit r/SystemsThinking:
 │         THINKING IN SYSTEMS — CHEAT SHEET                  │
 ├────────────────────────────────────────────────────────────┤
 │                                                            │
-│ 📦 SİSTEM = Elemanlar + Bağlantılar + Amaç               │
+│ 📦 SİSTEM = Elemanlar + Bağlantılar + Amaç                 │
 │    → Bağlantılar > elemanlar (yapıyı değiştir, parçayı değil)
 │                                                            │
-│ 📊 STOK & AKIŞ                                            │
-│    → Stoklar değişimin TAMPONUDUR                         │
-│    → Giriş > Çıkış → stok BİRİKİR (sorun!)              │
+│ 📊 STOK & AKIŞ                                             │
+│    → Stoklar değişimin TAMPONUDUR                          │
+│    → Giriş > Çıkış → stok BİRİKİR (sorun!)                 │
 │                                                            │
 │ 🔄 FEEDBACK LOOPS                                          │
 │    → Dengeleyici = istikrar (termostat, HPA, circuit breaker)
 │    → Güçlendirici = büyüme VEYA çöküş (erdem veya kısır döngü)
 │                                                            │
 │ ⏳ GECİKMELER                                              │
-│    → Gecikme varsa → SABIR + küçük adımlar                │
-│    → Aşırı tepkiden KAÇIN → salınım yaratır!             │
+│    → Gecikme varsa → SABIR + küçük adımlar                 │
+│    → Aşırı tepkiden KAÇIN → salınım yaratır!               │
 │                                                            │
 │ 🎯 KALDIRAC NOKTALARI                                      │
-│    → Parametreler (zayıf) → Kurallar → Hedefler →        │
+│    → Parametreler (zayıf) → Kurallar → Hedefler →          │
 │      Paradigmalar (güçlü)                                  │
-│    → YÜKSEK kaldıraca ODAKLAN!                            │
+│    → YÜKSEK kaldıraca ODAKLAN!                             │
 │                                                            │
-│ 🧠 SINIRLI RASYONELLİK                                    │
+│ 🧠 SINIRLI RASYONELLİK                                     │
 │    → Herkes kendi açısından haklı                          │
-│    → İnsanları suçlama, SİSTEMİ düzelt!                  │
+│    → İnsanları suçlama, SİSTEMİ düzelt!                    │
 │                                                            │
-│ 🛡️ DAYANIKLILIK                                           │
-│    → Çeşitlilik + yedeklilik + feedback + modülerlik      │
-│    → Verimlilik ↔ dayanıklılık DENGE'de olmalı!           │
+│ 🛡️ DAYANIKLILIK                                            │
+│    → Çeşitlilik + yedeklilik + feedback + modülerlik       │
+│    → Verimlilik ↔ dayanıklılık DENGE'de olmalı!            │
 │                                                            │
-│ 🌿 KENDİNİ ORGANİZE ETME                                  │
-│    → Basit kurallar → karmaşık davranış                   │
-│    → Mikro yönetim DEĞİL, çerçeve ÇİZ!                   │
+│ 🌿 KENDİNİ ORGANİZE ETME                                   │
+│    → Basit kurallar → karmaşık davranış                    │
+│    → Mikro yönetim DEĞİL, çerçeve ÇİZ!                     │
 │                                                            │
-│ 🪤 SİSTEM TUZAKLARI                                       │
-│    → Tanı: politika direnci, eskalasyon, erozyon...       │
-│    → Root cause'u bul, semptomla savaşma!                 │
+│ 🪤 SİSTEM TUZAKLARI                                        │
+│    → Tanı: politika direnci, eskalasyon, erozyon...        │
+│    → Root cause'u bul, semptomla savaşma!                  │
 │                                                            │
-│ 🔄 ÇİFTE DÖNGÜ ÖĞRENME                                    │
-│    → Sorunu çöz + sorunun OLUŞTUĞU sistemi düzelt!       │
+│ 🔄 ÇİFTE DÖNGÜ ÖĞRENME                                     │
+│    → Sorunu çöz + sorunun OLUŞTUĞU sistemi düzelt!         │
 │                                                            │
 └────────────────────────────────────────────────────────────┘
 ```
