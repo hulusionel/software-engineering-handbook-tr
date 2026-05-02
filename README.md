@@ -55,12 +55,35 @@ Yazılım mühendisliği alanındaki en önemli kitapların **Türkçe kapsamlı
 | [Senior Backend Developer Yol Haritası](ileri-duzey-rehberler/senior-backend-developer-roadmap.md) | Cloud, K8s, event-driven architecture, microservices, API design, security, observability ve daha fazlası |
 | [Advanced Backend Engineering](ileri-duzey-rehberler/advanced-backend-engineering.md) | Staff/Principal Engineer seviyesi için ileri düzey backend mühendislik rehberi |
 
+### 🛠️ [Pratik — Saha Kılavuzu](pratik/)
+
+Kitap özetlerinin ötesinde, üretim odaklı, sayısal ve karar-verme kılavuzları.
+
+| Doküman | İçerik |
+|--------|--------|
+| [Latency Numaraları & Kapasite Matematiği](pratik/latency-numbers-ve-kapasite-matematigi.md) | Jeff Dean tablosu, Little's Law, p99 tail-at-scale, sizing |
+| [Postmortem Arşivi](pratik/postmortem-arsivi.md) | 20 ünlü kesinti yapılandırılmış (Knight Capital → CrowdStrike 2024) |
+| [Karar Çerçevesi Matrisleri](pratik/karar-cercevesi-matrisleri.md) | DB, sync/async, monolith/microservice, build/buy, cache, vb. 12 matris |
+| [API Tasarım Derinliği](pratik/api-tasarim-derinligi.md) | Idempotency, pagination, RFC 9457, rate limiting, webhook |
+| [Staff+ Yazma Kültürü](pratik/staff-yazma-kulturu.md) | Design Doc, ADR, RFC, 6-pager, PRFAQ, postmortem disiplini |
+| [Anti-Pattern Kataloğu](pratik/anti-pattern-katalogu.md) | 60+ anti-pattern (mimari, veri, API, dağıtık, ops, kod, test, güvenlik) |
+
+### 📐 [Şablonlar](templates/) · 📚 [Terim Sözlüğü](glossary/terim-sozlugu.md) · 🔬 [Kaynakça](kaynakca.md)
+
+| Şablon | Kullanım |
+|--------|----------|
+| [ADR](templates/adr-sablon.md) | Mimari karar kaydı (Michael Nygard formatı) |
+| [RFC / Design Doc](templates/rfc-design-doc-sablon.md) | Sistem/özellik tasarım dokümanı |
+| [6-Pager](templates/6-pager-sablon.md) | Amazon yönetici karar memo'su |
+| [Postmortem](templates/postmortem-sablon.md) | Blameless olay sonrası analizi |
+
 ---
 
 ## 📊 İstatistikler
 
-- **21** kapsamlı rehber
-- **~48.000+** satır içerik
+- **21** kapsamlı kitap/yol haritası rehberi
+- **6** pratik saha dokümanı + 4 yazım şablonu + terim sözlüğü + kaynakça
+- **~50.000+** satır içerik
 - **17** farklı kitap özeti
 - **3** kariyer yol haritası
 - **%100** Türkçe
