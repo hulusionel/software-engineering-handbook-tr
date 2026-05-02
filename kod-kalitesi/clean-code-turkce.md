@@ -594,7 +594,7 @@ function isPremiumMembershipExpired(user) {
 
 ### İyi Yorumlar ✅
 
-Her yorum kötü değil! İşte YAZILMASIgerekli yorum türleri:
+Her yorum kötü değil! İşte YAZILMASI GEREKLİ yorum türleri:
 
 #### 1. Yasal Yorumlar (Legal Comments)
 ```javascript

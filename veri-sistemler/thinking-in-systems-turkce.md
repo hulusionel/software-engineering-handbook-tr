@@ -16,7 +16,7 @@ Ama "sistem NEDİR?" sorusunu hiç gerçekten sordun mu?
 Donella Meadows, sistem biliminin en önemli isimlerinden biri.
 Bu kitap 1972'deki "Limits to Growth" çalışmasından doğdu
 ve yazılımla HIÇBIR ilgisi yok gibi görünür —
-ama okuduktan sonra HER ŞEYİ farklı GÖRürsün. 🔭
+ama okuduktan sonra HER ŞEYİ farklı GÖRÜRSÜN. 🔭
 
 ---
 
@@ -482,7 +482,7 @@ Her iki yöne de çalışır! Aynı döngü!
 ### Sistemlerin Sessiz Katili
 
 ```
-GECİKME = Bir eylemin ETKİSİNİN göRÜNMESİ arasındaki ZAMAN
+GECİKME = Bir eylemin ETKİSİNİN GÖRÜNMESİ arasındaki ZAMAN
 
 "Duş başlığı problemi":
   → Duşu açtın → su soğuk → musluğu sıcağa çevirdin
@@ -597,7 +597,7 @@ Kalıbı TANIRSAN, çözümü de BİLİRSİN!
 
 ```
 KALIP:
-  Güçlendirici döngü → büyüme başlar → AAAA artıyor!
+  Güçlendirici döngü → büyüme başlar → HER ŞEY artıyor!
   AMA sonra bir SINIR devreye girer → dengeleyici döngü → büyüme DURUR!
 
   ┌──────┐     ┌──────────┐     ┌──────────┐

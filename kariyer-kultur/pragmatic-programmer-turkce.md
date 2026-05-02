@@ -117,7 +117,7 @@ Bilgin = finansal portföy gibi yönetilmeli.
 - ✅ Her ay bir teknik kitap oku
 - ✅ Teknik olmayan kitaplar da oku (insan psikolojisi, iletişim)
 - ✅ Kurslar al, konferanslara katıl
-- ✅ Yerel kullanıcı gruplarına ve toplulukklara katıl
+- ✅ Yerel kullanıcı gruplarına ve topluluklara katıl
 - ✅ Farklı ortamları dene (Windows kullanıyorsan Linux'u dene, vb.)
 - ✅ Akımın dışında kal — mainstream'den farklı şeyler de öğren
 
@@ -139,7 +139,7 @@ Harika bir fikrin var ama anlatamıyorsan, **yokmuş gibidir.**
 
 | İlke | Açıklama |
 |---|---|
-| **Dinleyiciyi tanı** | CEO'ya teknik detay anlatma, geliştiriciye iş stratejisi anlama |
+| **Dinleyiciyi tanı** | CEO'ya teknik detay anlatma, geliştiriciye iş stratejisi anlatma |
 | **Ne söylemek istediğini bil** | Konuşmadan/yazmadan önce ana mesajını netleştir |
 | **Zamanı seç** | "Deployment sırasında refactoring önerme" 😅 |
 | **Bir stil seç** | Bazıları görsel ister, bazıları data ister |
@@ -450,7 +450,7 @@ Doğru yaklaşım: "Bir bakmam lazım, yarına döneyim"
 
 #### Tahmin Hassasiyeti 🎯
 
-Tahminin **hassasiyet derecesin** duruma göre ayarla:
+Tahminin **hassasiyet dereceni** duruma göre ayarla:
 
 | Tahmin | Müşterinin Algısı |
 |---|---|
@@ -468,6 +468,8 @@ Tahminin **hassasiyet derecesin** duruma göre ayarla:
 | 6+ ay | "Kesin söyleyemem, bölelim" |
 
 #### PERT Tahmini 📐
+
+**PERT** (Program Evaluation and Review Technique) — ABD Donanması'nın 1950'lerde geliştirdiği proje yönetimi tekniğidir. Üç noktalı tahmin formülüyle belirsizliği azaltır.
 
 Üç tahmin yap ve ortala:
 
@@ -539,7 +541,7 @@ cache:
 
 ### 3.2 Shell Oyunları 🐚
 
-> **"GUI sınırlar, Shell özgürleştirrir."**
+> **"GUI sınırlar, Shell özgürleştirir."**
 
 GUI (grafiksel arayüz) ile yapabileceklerin sınırlıdır. Komut satırı ise **sınırsız kombinasyon** sunar.
 
@@ -567,7 +569,7 @@ cat access.log | grep "500" | awk '{print $7}' | sort | uniq -c | sort -rn | hea
 # → En çok 500 hatası veren endpoint'ler!
 ```
 
-> **Her gün 5 dakikanı yeni bir komut öğrenmeye ayır.** 1 yıl sonra komut satırı ninjiası olursun! 🥷
+> **Her gün 5 dakikanı yeni bir komut öğrenmeye ayır.** 1 yıl sonra komut satırı ninjası olursun! 🥷
 
 ### 3.3 Versiyon Kontrolü (Version Control) 📚
 
@@ -641,7 +643,7 @@ test('bakiye negatife düşmemeli (bug #1234)', () => {
 Bir lastik ördeğe (veya herhangi birine) **sorunu baştan anlatmak.** Anlatırken genellikle sorunun cevabını kendin bulursun!
 
 ```
-"Bakk ördek, şimdi burda kullanıcı oluşturuyor,
+"Bak ördek, şimdi burda kullanıcı oluşturuyor,
 sonra şifresini hashliyor, sonra... Dur bir dakika. 
 Hashlemeden ÖNCE kaydediyorum! İşte bug burada!" 🎉🦆
 ```

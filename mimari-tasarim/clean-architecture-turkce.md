@@ -7,7 +7,7 @@
 > — Robert C. Martin (Uncle Bob)
 
 Bu kitap, yazılım mimarisinin **evrensel prensiplerini** anlatır.
-Hangi dili, framework'ü veya teknolojiy kullanırsan kullan — bu kurallar geçerlidir.
+Hangi dili, framework'ü veya teknolojiyi kullanırsan kullan — bu kurallar geçerlidir.
 İşte mesaj: **"Detayları ertele, politikaları koru, bağımlılıkları içe doğru yönlendir."**
 
 ---
