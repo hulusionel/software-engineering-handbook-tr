@@ -105,6 +105,7 @@ Kitap özetlerinin ötesinde, üretim odaklı, sayısal ve karar-verme kılavuzl
 | [ADR](templates/adr-sablon.md) | Mimari karar kaydı (Michael Nygard formatı) |
 | [RFC / Design Doc](templates/rfc-design-doc-sablon.md) | Sistem/özellik tasarım dokümanı |
 | [6-Pager](templates/6-pager-sablon.md) | Amazon yönetici karar memo'su |
+| [PRFAQ](templates/prfaq-sablon.md) | Amazon working backwards — yeni ürün/girişim vizyonu |
 | [Postmortem](templates/postmortem-sablon.md) | Blameless olay sonrası analizi |
 
 ---
@@ -112,8 +113,8 @@ Kitap özetlerinin ötesinde, üretim odaklı, sayısal ve karar-verme kılavuzl
 ## 📊 İstatistikler
 
 - **21** kapsamlı kitap/yol haritası rehberi
-- **24** pratik saha dokümanı + 4 yazım şablonu + terim sözlüğü + kaynakça
-- **~63.000+** satır içerik
+- **24** pratik saha dokümanı + 5 yazım şablonu + terim sözlüğü + kaynakça
+- **~64.000+** satır içerik
 - **17** farklı kitap özeti
 - **3** kariyer yol haritası
 - **%100** Türkçe

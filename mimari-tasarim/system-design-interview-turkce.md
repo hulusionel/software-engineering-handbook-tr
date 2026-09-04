@@ -1649,7 +1649,7 @@ KORUMA KATMANLARI:
 
 ---
 
-## 16. � Büyük Şirketlerde System Design Gerçekleri
+## 16. 🏢 Büyük Şirketlerde System Design Gerçekleri
 
 ### Google — Borg, MapReduce ve Ölçek
 
@@ -1781,7 +1781,7 @@ ByteByteGo (Alex Xu'nun YouTube kanalı):
 
 ---
 
-## 18. �🎯 Sonuç ve Bağlantılar
+## 18. 🎯 Sonuç ve Bağlantılar
 
 ### Her Tasarımda Ortak Paternler
 

@@ -93,7 +93,7 @@ Will Larson'ın tanımladığı 4 archetype:
 
 HANGISI SEN?
   → Çoğu Staff engineer birden fazla arketipi KARIŞTIRIR
-  → Bağlamına göre şapka DEĞIŞTIR
+  → Bağlamına göre şapka DEĞİŞTİR
   → "Bu hafta Tech Lead'im, gelecek ay Solver'ım" → normal!
 ```
 
@@ -762,7 +762,7 @@ BİLMEN GEREKENLER:
    → VP A: "Cost cutting" öncelliği → ÖNERİNİ maliyete göre ÇERÇEVEle!
    → VP B: "Innovation" öncelliği → ÖNERİNİ yeniliğe göre ÇERÇEVEle!
    → AYNI ÖNERİ → FARKLI çerçeve → FARKLI tepki!
-   → Bu manipülasyon DEĞİL, İLETIŞIM BECERİSİDİR!
+   → Bu manipülasyon DEĞİL, İLETİŞİM BECERİSİDİR!
 
 4. TAKVİM
    → Q4'te bütçe kesilir → yeni proje önerme ZAMANI DEĞİL!

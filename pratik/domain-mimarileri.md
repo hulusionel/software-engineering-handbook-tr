@@ -15,7 +15,7 @@
 5. [Multi-Tenancy](#5-multi-tenancy)
 6. [Anti-Pattern'ler](#6-anti-patternler)
 7. [Staff+ Kontrol Listesi](#-staff-domain-mimarisi-kontrol-listesi)
-8. [İleri Okuma](#-ileri-okuma)
+8. [İleri Okuma](#-i̇leri-okuma)
 
 ---
 

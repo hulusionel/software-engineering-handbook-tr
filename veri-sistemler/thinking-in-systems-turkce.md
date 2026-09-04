@@ -29,8 +29,8 @@ ama okuduktan sonra HER ŞEYİ farklı GÖRÜRSÜN. 🔭
 5. [Güçlendirici Döngüler (Reinforcing Loops)](#5--güçlendirici-döngüler)
 6. [Gecikmeler (Delays)](#6--gecikmeler-delays)
 7. [Sistem Davranış Kalıpları (Archetypes)](#7--sistem-davranış-kalıpları)
-8. [Kaldıraç Noktaları (Leverage Points)](#8--kaldıraç-noktaları)
-9. [Sınırlı Rasyonellik (Bounded Rationality)](#9--sınırlı-rasyonellik)
+8. [Kaldıraç Noktaları (Leverage Points)](#8--kaldıraç-noktaları-leverage-points)
+9. [Sınırlı Rasyonellik (Bounded Rationality)](#9--sınırlı-rasyonellik-bounded-rationality)
 10. [Dayanıklılık (Resilience)](#10--dayanıklılık-resilience)
 11. [Kendini Organize Etme (Self-Organization)](#11--kendini-organize-etme)
 12. [Hiyerarşi](#12--hiyerarşi)
@@ -713,6 +713,102 @@ YAZILIM ÖRNEĞİ:
   → Error budget: "Hedefe ulaşamadığımızda panik değil, aksiyon!"
 ```
 
+### Archetype 5: Yükü Kaydırma / Bağımlılık (Shifting the Burden / Addiction)
+
+```
+KALIP:
+  Semptom var → İKI çözüm mümkün:
+    A) Semptomatik "kolay" çözüm (bağımlılık yaratır)
+    B) Temel "zor" çözüm (kök nedeni giderir)
+  Kolay çözüm semptomu bastırır AMA temel çözme YETENEĞİNİ köreltir.
+  Zamanla sisteme "bağımlı" olursun; B artık YAPILAMAZ hale gelir.
+
+  ┌─────────┐   A: semptomatik  ┌──────────┐
+  │ Semptom │──────────────────→│ Rahatlama│──┐
+  └─────────┘                   └──────────┘  │ (bağımlılık ↑)
+      ↑  │   B: temel çözüm                     │
+      │  └──────────────────→ Kök neden ↓      │
+      └───────── temel çözme yeteneği ↓ ←──────┘
+
+YAZILIM ÖRNEĞİ:
+  Semptom: Prod'da sürekli acil bug
+  A (bağımlılık): Kıdemli "itfaiyeci" her seferinde manuel düzeltir →
+     ekip öğrenmez, kişiye bağımlılık artar (bus factor = 1)
+  B (temel): Test/observability/onboarding'e yatır → ekip kendi çözer
+  → A kısa vadede hızlı, uzun vadede ekibi ZAYIFLATIR!
+
+ÇÖZÜM:
+  → Semptomatik çözümü GEÇİCİ ilan et, temel çözüme kaynak ayır
+  → "İtfaiyeciyi" sistemleştir: runbook, otomasyon, bilgi paylaşımı
+  → "Balık verme, balık tutmayı öğret!"
+```
+
+### Archetype 6: Eskalasyon (Escalation)
+
+```
+KALIP:
+  İki taraf birbirine göre konum alır → her hamle karşı hamleyi tetikler →
+  güçlendirici döngü → SİLAHLANMA YARIŞI (ikisi de kaybeder).
+  → Bkz. Bölüm 13, Tuzak 4 (aynı kalıbın tuzak çerçevesi)
+
+  ┌────────┐   tepki   ┌────────┐
+  │ Taraf A│──────────→│ Taraf B│
+  │ hamle  │←──────────│ hamle  │  (her ikisi de yükseltir!)
+  └────────┘   tepki   └────────┘
+
+YAZILIM ÖRNEĞİ:
+  → İki ekip "SLA" savaşı: A servisi timeout'u düşürür → B retry'ı artırır →
+     A rate-limit koyar → B daha agresif retry → retry storm → ikisi de çöker
+  → Mikroservisler arası "kim daha çok cache'ler" yarışı → tutarlılık kaybı
+
+ÇÖZÜM:
+  → Yarıştan tek taraflı çekil (de-escalation), ortak hedefe geç
+  → Rekabeti işbirliğine çevir: ortak SLO, paylaşılan hata bütçesi
+  → Sistem düzeyinde optimize et, lokal "kazanmayı" bırak
+```
+
+### Archetype 7: Ortakların Trajedisi (Tragedy of the Commons)
+
+```
+KALIP:
+  Paylaşılan, sınırlı bir kaynak → her aktör kendi çıkarına SÖMÜRÜR →
+  kaynak tükenir → HERKES kaybeder. Bireysel akılcılık, ortak felaket.
+  → Bkz. Bölüm 13, Tuzak 2 (tuzak çerçevesi)
+
+YAZILIM ÖRNEĞİ:
+  → Paylaşılan DB / Kubernetes cluster: her ekip "biraz daha" kaynak alır →
+     noisy neighbor → herkesin p99'u patlar
+  → Ortak CI runner havuzu: herkes ağır job atar → kuyruk saatlerce bekler
+
+ÇÖZÜM:
+  → Kaynağı görünür kıl (kota, chargeback, dashboard) — geri bildirim ekle
+  → Kullanımı fiyatlandır/limitle (resource quota, namespace limitleri)
+  → Ortak yönetişim: paylaşılan kaynağın bir "sahibi" ve kuralları olsun
+```
+
+### Archetype 8: Büyüme ve Yetersiz Yatırım (Growth and Underinvestment)
+
+```
+KALIP:
+  Büyüme kapasiteyi zorlar → performans düşer → AMA "yatırım pahalı" denir →
+  kapasiteye yatırılmaz → performans daha da düşer → büyüme durur.
+  Standart (yükü kaydırma + büyümenin sınırları kombinasyonu).
+
+  Talep ↑ → Kapasite yetersiz → Performans ↓ → Yatırım kararı
+                                                  ├─ ✅ kapasiteye yatır → büyüme sürer
+                                                  └─ ❌ "şimdi değil" → çöküş
+
+YAZILIM ÖRNEĞİ:
+  → Kullanıcı artıyor → DB yavaşlıyor → "sharding pahalı, sonra" →
+     daha da yavaşlıyor → kullanıcı kaçıyor → "artık büyüme yok, gerek de yok" 😬
+  → Teknik borç: "refactor için zaman yok" → hız düşer → daha az zaman
+
+ÇÖZÜM:
+  → Kapasite/altyapı yatırımını BÜYÜMEDEN ÖNCE planla (öncü gösterge izle)
+  → Performans hedefini SABİT tut (bkz. Archetype 4) — düşüşe izin verme
+  → "Yavaşlama sinyalini" yatırım tetikleyicisi yap, mazeret değil
+```
+
 ---
 
 ## 8. 🎯 Kaldıraç Noktaları (Leverage Points)
@@ -1242,7 +1338,7 @@ BU KİTAPTAN ALINACAK PRATİK ARAÇLAR:
 
 4. KALDIRAC NOKTALARINI BUL 🎯
    → En AZ eforla en BÜYÜK etkiyi nereden sağlarsın?
-   → Parametrelerle oynama → kuralları DEĞIŞTIR!
+   → Parametrelerle oynama → kuralları DEĞİŞTİR!
    → Kuralları değiştirME → HEDEFI DEĞİŞTIR!
 
 5. SİSTEM SINIRLARINI SORGULA 🔲
@@ -1324,7 +1420,7 @@ PRATIKTE:
 
 ---
 
-## 16. � Büyük Şirketlerde Sistem Düşüncesi
+## 16. 🏢 Büyük Şirketlerde Sistem Düşüncesi
 
 ### Toyota — Lean'in Doğuşu = Sistem Düşüncesi
 
@@ -1450,7 +1546,7 @@ Reddit r/SystemsThinking:
 
 ---
 
-## 18. �🎬 Son Sözler
+## 18. 🎬 Son Sözler
 
 ### Kitabın Altın Kuralları Özeti
 

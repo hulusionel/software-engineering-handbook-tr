@@ -1,0 +1,19 @@
+{
+  // Türkçe el kitabı için makul markdownlint yapılandırması.
+  // Uzun düz yazı satırları, gömülü HTML (<details>) ve emoji başlıklar
+  // bilinçli tercihlerdir; ilgili gürültülü kurallar kapatıldı.
+  "config": {
+    "default": true,
+    "MD013": false, // satır uzunluğu — uzun Türkçe cümleler serbest
+    "MD033": false, // gömülü HTML — <details>/<summary> kullanılıyor
+    "MD041": false, // ilk satır başlık olmak zorunda değil
+    "MD024": { "siblings_only": true }, // aynı başlık farklı bölümlerde olabilir
+    "MD029": false, // sıralı liste numaralandırma stili karışık olabilir
+    "MD036": false, // vurguyu başlık gibi kullanma (stilistik)
+    "MD040": false, // bazı kod blokları dil belirteci içermeyebilir
+    "MD045": false, // görsel alt metni (repoda görsel yok denecek kadar az)
+    "MD001": false  // başlık seviyesi atlanabiliyor (## -> ####)
+  },
+  "globs": ["**/*.md"],
+  "ignores": [".git", "node_modules"]
+}

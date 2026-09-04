@@ -8,12 +8,12 @@
 
 ## 📑 İçindekiler
 
-1. [Glue Work — Görünmez İş](#1-glue-work--görünmez-iş)
+1. [Glue Work — Görünmez İş](#1-glue-work--görünmez-i̇ş)
 2. [Promotion & Staff Impact](#2-promotion--staff-impact)
 3. [Executive Communication](#3-executive-communication)
 4. [Anti-Pattern'ler](#4-anti-patternler)
 5. [Staff+ Kontrol Listesi](#-staff-soft-skills-kontrol-listesi)
-6. [İleri Okuma](#-ileri-okuma)
+6. [İleri Okuma](#-i̇leri-okuma)
 
 ---
 

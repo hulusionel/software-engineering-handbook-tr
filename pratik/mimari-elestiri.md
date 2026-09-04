@@ -13,8 +13,8 @@
 3. [Clean / Hexagonal Over-Engineering](#3-clean--hexagonal-over-engineering)
 4. [Event Sourcing Maliyetleri](#4-event-sourcing-maliyetleri)
 5. [Anti-Pattern'ler](#5-anti-patternler)
-6. [Staff+ Kontrol Listesi](#staff-mimari-eleştiri-kontrol-listesi)
-7. [İleri Okuma](#-ileri-okuma)
+6. [Staff+ Kontrol Listesi](#-staff-mimari-eleştiri-kontrol-listesi)
+7. [İleri Okuma](#-i̇leri-okuma)
 
 ---
 

@@ -1,7 +1,7 @@
 # 🚀 Senior Backend Developer Yol Haritası
 
 ## 📋 İçindekiler
-1. [Giriş](#giriş)
+1. [Giriş](#-giriş)
 2. [Cloud Infrastructure & DevOps](#-cloud-infrastructure--devops)
 3. [Kubernetes & Container Orchestration](#-kubernetes--container-orchestration)
 4. [Event-Driven Architecture](#-event-driven-architecture)
@@ -28,6 +28,8 @@
 ## 🎯 Giriş
 
 Bu doküman, mevcut bir backend developer'dan senior seviyeye geçiş için gerekli bilgi ve becerileri kapsamaktadır. Lambda, cron job, consumer/producer gibi araçları kullanmış olsanız da, bunların altyapısını, neden ve nasıl çalıştıklarını, ne zaman kullanılacaklarını derinlemesine anlamak senior seviyeye geçişin anahtarıdır.
+
+> 📝 **Kod örnekleri hakkında:** Bu rehberdeki kod örnekleri ağırlıklı olarak **Node.js / TypeScript** ekosistemini kullanır (bkz. bölüm 17 — *Node.js Internals & Performance*). Ancak anlatılan **kavramlar dilden bağımsızdır**; event loop, backpressure, connection pooling, circuit breaker gibi konular Go, Java, Python veya Rust backend'lerinde de aynı prensiplerle geçerlidir. Test disiplini için ayrıca bkz. [Unit Testing rehberi](../kod-kalitesi/unit-testing-turkce.md) ve [Test Stratejileri](../pratik/test-stratejileri.md).
 
 ---
 

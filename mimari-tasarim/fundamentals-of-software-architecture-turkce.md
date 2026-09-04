@@ -183,12 +183,12 @@ Neden?
   → Yeniden kullanım: Parçaları başka yerlerde kullanma
 
 Modülerlik ölçütleri:
-  1. Cohesion (Bağdaşıklık)
+  1. Cohesion (Bağlaşıklık)
   2. Coupling (Bağlanma)
   3. Connascence (Birlikte Değişim)
 ```
 
-### Cohesion (Bağdaşıklık) 🧲
+### Cohesion (Bağlaşıklık) 🧲
 
 ```
 "Bir modül içindeki elemanlar ne kadar İLGİLİ?"
@@ -908,6 +908,54 @@ Microservices'e "hype" yüzünden değil, GERÇEK ihtiyaç varsa geç.
 └─────────────────────┴──────────┘
 ```
 
+### Tarihsel Bağlam: Orchestration-Driven SOA (Neden Terk Edildi?)
+
+> Kitap, dağıtık stilleri anlatırken **Orchestration-Driven Service-Oriented Architecture (SOA)** stilini de tarihsel bir ders olarak ele alır. Bugün nadiren yeni sistemlerde tercih edilir; ama *neden* başarısız olduğunu bilmek, Microservices kararlarını anlamlandırır.
+
+```
+NE İDİ?
+  → 2000'lerin kurumsal mimarisi: servisler bir merkezi
+    ORCHESTRATION ENGINE (genelde bir ESB — Enterprise Service Bus)
+    üzerinden konuşur.
+  → Servisler "reuse" (yeniden kullanım) etrafında, teknik katmanlara göre
+    sınıflandırılırdı:
+      • Business services   → soyut iş süreçleri (WSDL ile tanımlı)
+      • Enterprise services → somut, atomik implementasyonlar
+      • Application services → tek uygulamaya özel, paylaşılmayan
+      • Infrastructure services → logging, auth, audit gibi çapraz kesen
+
+TEMEL FİKİR: "Maksimum yeniden kullanım" ve merkezi orkestrasyon.
+
+  [İstemci] → [ESB: yönlendirme, dönüşüm, orkestrasyon, protokol köprüsü]
+                 ├→ Business service
+                 ├→ Enterprise service
+                 └→ Infrastructure service
+```
+
+```
+NEDEN TERK EDİLDİ?
+  1. ESB TEK NOKTA KADERİ: Tüm mantık ESB'ye kaydı → dev bir dağıtık
+     monolit; ESB darboğaz + tek hata noktası oldu.
+  2. YENİDEN KULLANIM İLLÜZYONU: "Her şey paylaşılsın" → aşırı coupling.
+     Bir enterprise service'i değiştirmek onlarca tüketiciyi kırardı.
+  3. DOMAIN DEĞİL, TEKNİK KATMAN: Servisler iş sınırlarına (bounded context)
+     göre değil, teknik katmanlara göre bölündü → değişiklik birçok servise
+     yayılırdı (düşük domain cohesion).
+  4. TEST/DEPLOY KÂBUSU: Uçtan uca bir akış birçok servis + ESB config'i
+     gerektirdiği için test ve deploy çok pahalıydı.
+
+MICROSERVICES İLE KONTRAST:
+  → SOA: merkezi orkestrasyon (smart pipes, dumb endpoints), teknik bölme,
+    maksimum reuse.
+  → Microservices: koreografi (dumb pipes, smart endpoints), domain (bounded
+    context) bölme, "paylaşılan hiçbir şey"e yakın, bağımsız deploy.
+
+STAFF DERSİ:
+  "Yeniden kullanımı maksimize et" bir hedef DEĞİL; doğru hedef
+  **değişim kolaylığı** ve **domain sınırlarına saygı**dır. SOA'nın ölümü,
+  merkezi bir 'akıllı boru'nun coupling'i nasıl gizlice biriktirdiğinin dersidir.
+```
+
 ---
 
 ## 13. ⚡ Event-Driven Architecture
@@ -1467,7 +1515,7 @@ PERFORMING (Performans):
 
 ---
 
-## 20. � Büyük Şirketlerde Mimari Kararlar
+## 20. 🏢 Büyük Şirketlerde Mimari Kararlar
 
 ### Netflix — Event-Driven + Microservices Hibrit
 
@@ -1611,7 +1659,7 @@ Sam Newman (Building Microservices yazarı):
 
 ---
 
-## 22. �🎬 Son Sözler
+## 22. 🎬 Son Sözler
 
 ### Mimari Stil Karşılaştırma Tablosu 🏆
 

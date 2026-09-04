@@ -9,7 +9,7 @@ Bu doküman staff/principal mühendisin yazma araç kutusunu kapsar: design doc,
 
 ## 📑 İçindekiler
 
-1. [Yazma Niçin Staff+ İşinin %50'sidir?](#1--yazma-niçin-staff-işinin-50sidir)
+1. [Yazma Niçin Staff+ İşinin %50'sidir?](#1--yazma-niçin-staff-i̇şinin-50sidir)
 2. [Doküman Tipleri ve Kullanım Yeri](#2--doküman-tipleri-ve-kullanım-yeri)
 3. [Design Doc / RFC](#3--design-doc--rfc)
 4. [ADR — Architecture Decision Record](#4--adr--architecture-decision-record)
