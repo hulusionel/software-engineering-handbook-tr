@@ -1500,7 +1500,7 @@ Yeni test yazmadan önce sor:
     → Evet ise: Testi değiştir, implementation detail'den kurtul
   □ Bu test gerçekten DEĞER üretiyor mu?
     → Getter/setter testi mi? → YAZMA
-  □ Mock kullandıysan: Bu bir diş bağımlılık mı?
+  □ Mock kullandıysan: Bu bir dış bağımlılık mı?
     → İç bağımlılık mock'ladıysan → Kaldır, gerçeğini kullan
   □ Stub'ları assert ettin mi?
     → Evet ise → Kaldır, sadece mock'ları assert et

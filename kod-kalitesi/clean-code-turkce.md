@@ -549,6 +549,19 @@ function createUser(data) {
 > **İyi fonksiyon** = Küçük + Tek iş yapan + Anlamlı isimli + Az parametreli + Yan etkisiz
 > Fonksiyonlar **iyi yazılmış bir hikayenin cümleleri** gibi olmalı — her biri net, kısa ve yerinde.
 
+### 📊 Araştırma Verileri: Kod Kalitesi Rakamları
+
+**Fonksiyon uzunluğu ve hata korelasyonu:**
+- IBM araştırması (2008): 20 satırı aşan fonksiyonlarda hata oranı **3-4× artar**.
+- Microsoft (Nagappan et al. 2006): Kod karmaşıklığı (cyclomatic complexity > 10) ile post-release defect arasında **0.7+ korelasyon**.
+- Fonksiyon başına 4-10 satır: en düşük hata oranı bölgesi.
+
+**Code review etkinliği:**
+- Cisco (2006, 2500 review): En etkili review hızı **200-400 satır/saat**. Daha hızlı review'da bug bulma oranı %50+ düşer.
+- Microsoft (2013): Code review, birim test ile birlikte kullanıldığında defect yoğunluğunu **%60-90** azaltır.
+- SmartBear (2009): Tek oturumda **400+ satır** review edildiğinde bug tespit oranı %70'ten %20'ye düşer.
+- Öneri: PR başına **200-300 satır**, review süresi **30-60 dakika** ideal.
+
 ---
 
 ## 4. 💬 Yorumlar (Comments)
@@ -2270,6 +2283,19 @@ Clean Code hakkında yazılım dünyasının önemli tartışmaları:
                  ↓
 ⭐ Ustalık: "Ne zaman kural geçerli, ne zaman kırılmalı biliyorum"
 ```
+
+### ⚠️ Clean Code'un Aşırıya Kaçması
+
+| Kural | Aşırıya Kaçış | Gerçek |
+|---|---|---|
+| **Kısa fonksiyon** | Her 3 satırı ayrı fonksiyona çıkarma → over-extraction; 15 dosya, 15 fonksiyon, 1 iş | 4-20 satır ideal; "tek seviye soyutlama" kuralı dogma değil rehberdir |
+| **Anlamlı isim** | `AbstractSingletonProxyFactoryBeanDefinitionParser` (gerçek Java sınıfı!) | İsim uzunluğu scope ile orantılı olmalı; kısa scope = kısa isim OK |
+| **Yorum yazma** | "Kod kendini açıklamalı" diye hiç yorum yazmama | Neden (why) yorumları değerlidir; ne (what) yorumları gereksizdir |
+| **Tek sorumluluk** | Her sınıf 1 method, 1 satır → class explosion | SRP = "değişmek için tek bir neden", "tek bir şey yapmak" değil |
+| **Flag argüman yok** | Boolean parametre var diye fonksiyonu ikiye bölme | Eğer iki davranış gerçekten farklıysa böl; küçük varyasyonsa flag OK |
+| **Erken return** | Her koşulu guard clause yapma → fonksiyon başı 10 return | Guard clause = hata/sınır durumları için; happy path net kalmalı |
+
+> **Özet:** Clean Code kuralları **başlangıç noktasıdır**, hedef değil. Ustalık, kuralları ne zaman **uygulayacağını** ve ne zaman **kıracağını** bilmektir.
 
 ### Son Söz 🎤
 

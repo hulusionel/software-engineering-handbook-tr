@@ -637,4 +637,4 @@ Content-Type: application/json
 - **Stripe API** — pratisyenin görmesi gereken referans
 - *Designing Web APIs* — Brenda Jin (O'Reilly)
 
-> [⬅️ Pratik klasörü](README.md) · [📐 ADR şablonu](../templates/adr-sablon.md)
+> [⬅️ Pratik klasörü](README.md) · [📚 Sözlük](../glossary/terim-sozlugu.md) · [🔬 Kaynakça](../kaynakca.md) · [📐 ADR şablonu](../templates/adr-sablon.md)

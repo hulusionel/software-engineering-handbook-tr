@@ -423,6 +423,43 @@ RS256 (RSA-2048): ~0.3 ms/verify → ~3000 verify/sec/core. HS256: ~5 µs → ~2
 
 ---
 
+## ⚠️ Kapasite Planlama Anti-Pattern'leri
+
+| Anti-Pattern | Neden Tehlikeli | Doğru Yaklaşım |
+|---|---|---|
+| **Ortalama (mean) ile planlama** | p99 spike'larını gizler; kuyruk gecikmeleri görünmez olur | p50 + p99 + p99.9 ile planla; **p99 ≈ 10× p50** kuralını unut-ma |
+| **Peak'i hesaplamama** | Steady-state'te yeterli kaynak → Black Friday'de çöküş | Peak/baseline oranını ölç (genellikle 3-10×); headroom bırak |
+| **Headroom bırakmama** | %80+ utilization → kuyruk teorisi gereği latency eksponansiyel artar | %60-70 CPU ceiling target; auto-scale trigger %70'te |
+| **Tek boyutlu kapasite bakışı** | Sadece CPU izlenir; memory/disk/network/connection pool darboğazı kaçırılır | USE method: her kaynak için Utilization, Saturation, Errors |
+| **Coordinated omission** | Load test aracı yavaş yanıtlarda bekler → gerçek p99'u ölçemez | Closed-loop yerine open-loop test (wrk2, Gatling constant-rate) |
+| **"Daha fazla instance ekleriz"** | Stateful bileşen (DB, cache) scale etmez; Amdahl yasası | Vertical limit + sharding planı; DB connection pool = darboğaz |
+
+---
+## 🎯 Staff+ Kapasite Kontrol Listesi
+
+### Yeni servis launch öncesi
+
+- [ ] Peak traffic tahmini yapıldı mı? (Baseline × peak factor; genellikle 3-10×)
+- [ ] Little's Law ile minimum instance sayısı hesaplandı mı?
+- [ ] p99 latency SLO tanımlandı mı? (p50 değil, p99 hedef)
+- [ ] Darboğaz noktası belirlendi mi? (CPU, memory, DB connection, network)
+- [ ] Auto-scale trigger'ları ve ceiling'ler tanımlı mı? (Scale-up %70, scale-down %30)
+
+### Kapasite review (çeyreklik)
+
+- [ ] Utilization trendleri incelendi mi? (6 aylık projeksiyon)
+- [ ] DB connection pool utilization %70 altında mı?
+- [ ] Disk growth rate ile provisioned storage uyumlu mu?
+- [ ] Load test son 3 ayda yapıldı mı? (Open-loop, coordinated omission'sız)
+- [ ] Cost-per-request trendi izleniyor mu? (Efficiency metriği)
+
+### Incident sonrası
+
+- [ ] Capacity-related root cause varsa headroom artırıldı mı?
+- [ ] Cascading failure senaryosu simüle edildi mi?
+- [ ] Back-of-envelope hesap postmortem'e eklendi mi?
+
+---
 ## 📚 İleri Okuma
 
 - Jeff Dean — *Numbers Everyone Should Know* (Stanford 2009 sunumu)
@@ -433,4 +470,4 @@ RS256 (RSA-2048): ~0.3 ms/verify → ~3000 verify/sec/core. HS256: ~5 µs → ~2
 - Aleksey Shipilёv — *Nanotrusting the Nanotime* (JMH talk)
 - HdrHistogram — github.com/HdrHistogram/HdrHistogram
 
-> [⬅️ Pratik klasörü](README.md) · [📖 Glossary](../glossary/terim-sozlugu.md) · [📚 Kaynakça](../kaynakca.md)
+> [⬅️ Pratik klasörü](README.md) · [📚 Sözlük](../glossary/terim-sozlugu.md) · [🔬 Kaynakça](../kaynakca.md)

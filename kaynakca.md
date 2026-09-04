@@ -164,6 +164,9 @@ Bu repodaki kavramların **birincil kaynaklarına** yönlendirme. Staff/Principa
 - **The Site Reliability Workbook** (2018) — sre.google/workbook
 - **Building Secure & Reliable Systems** (2020)
 
+### Cluster Management
+- Verma et al. 2015 — *Large-scale cluster management at Google with Borg* (EuroSys) — Kubernetes'in öncüsü
+
 ### Incident Management
 - *PagerDuty Incident Response Documentation*
 - *FEMA ICS-100* — Incident Command System

@@ -463,4 +463,4 @@ Ne istiyorum: PR review (3 satır değişiklik) bugün son.
 - ThoughtWorks — *Technology Radar* methodology
 - Michael Nygard 2011 — *Documenting Architecture Decisions* (orijinal ADR makalesi)
 
-> [⬅️ Pratik klasörü](README.md) · [📐 Şablonlar](../templates/README.md)
+> [⬅️ Pratik klasörü](README.md) · [📚 Sözlük](../glossary/terim-sozlugu.md) · [🔬 Kaynakça](../kaynakca.md) · [📐 Şablonlar](../templates/README.md)

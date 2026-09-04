@@ -734,6 +734,32 @@ Senior+ mühendis aşağıdaki sinyallerden birini gördüğünde **alarm**a ge�
 
 ---
 
+## 🎯 Staff+ Anti-Pattern Farkındalık Listesi
+
+### Code review'da
+
+- [ ] God class / god service belirtileri var mı? (tek dosya 1000+ satır, 10+ bağımlılık)
+- [ ] Distributed monolith sinyali: servisler arasında senkron çağrı zinciri 3+ hop mu?
+- [ ] Shared mutable state var mı? (global singleton, static cache)
+- [ ] Retry logic: exponential backoff + jitter + circuit breaker üçlüsü tam mı?
+- [ ] Magic number / hardcoded config production'a mı gidiyor?
+
+### Mimari review'da
+
+- [ ] Yeni servis ekleme motivasyonu teknik mi, organizasyonel mi? (Conway check)
+- [ ] Data ownership net mi? Aynı tablo 2+ servisten yazılıyor mu?
+- [ ] Eventual consistency kabul edilmiş mi, yoksa "sonra düzeltiriz" mi?
+- [ ] Golden path dışına çıkılıyor mu? (Yeni DB, yeni dil, yeni message broker)
+- [ ] Anti-pattern tespitinde "biz farklıyız" argümanı kullanılıyor mu? (Red flag)
+
+### Kültürel
+
+- [ ] Postmortem'ler blameless mi? Action item'lar takip ediliyor mu?
+- [ ] "Sadece X bilir" durumu var mı? (Bus factor 1 = anti-pattern)
+- [ ] Tech debt backlog ölçülüyor mu? Sprint'lere %20 tech debt ayrılıyor mu?
+
+---
+
 ## 📚 İleri Okuma
 
 - *AntiPatterns: Refactoring Software, Architectures, and Projects in Crisis* — Brown et al. (1998)
@@ -744,4 +770,4 @@ Senior+ mühendis aşağıdaki sinyallerden birini gördüğünde **alarm**a ge�
 - Microsoft Cloud Design Patterns — antipatterns docs (learn.microsoft.com)
 - AWS Well-Architected — anti-pattern bölümleri
 
-> [⬅️ Pratik klasörü](README.md)
+> [⬅️ Pratik klasörü](README.md) · [📚 Sözlük](../glossary/terim-sozlugu.md) · [🔬 Kaynakça](../kaynakca.md)

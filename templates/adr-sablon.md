@@ -47,7 +47,7 @@ Her alternatif için kısa blok:
 #### B) [Alternatif adı]
 ...
 
-> **En az 2 reddedilen alternatif olmalı.** "Tek seçenek vardı" dedi diyen ADR, ADR değildir.
+> **En az 2 reddedilen alternatif olmalı.** "Tek seçenek vardı" diyen ADR, ADR değildir.
 
 ### Sonuçlar
 

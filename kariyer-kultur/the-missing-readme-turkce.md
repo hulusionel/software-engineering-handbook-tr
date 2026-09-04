@@ -1341,7 +1341,7 @@ Gerçek:
 1. Öğrendiklerini kaydet → Geriye bak, ne kadar geliştiğini gör
 2. Başkalarına yardım et → Sen de biliyorsun, kanıtla
 3. Konuş → Başkaları da aynı şeyi hissediyor, paylaş
-4. Mükemmeliyetçiliği bırak → "Yeterince iyi" YETERLidir
+4. Mükemmeliyetçiliği bırak → "Yeterince iyi" YETERLİDİR
 ```
 
 ### Dunning-Kruger Etkisi 📉📈
@@ -1415,7 +1415,7 @@ Kurallar:
   - Uyku düzenini koru (kötü uyku = kötü kod!)
 
 ❌ Yapılmaması gerekenler:
-  - Hero culture: "Ben gece 3'e kadar çalışıp yetiştirdim!" → TUTARSI!
+  - Hero culture: "Ben gece 3'e kadar çalışıp yetiştirdim!" → TUTARSIZ!
   - Burnout belirtilerini görmezden gelme
   - Sürekli acil moddda çalışma
   - "Bu benim değil" deme ama "Her şey benim" de deme

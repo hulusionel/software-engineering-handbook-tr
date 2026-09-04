@@ -914,7 +914,7 @@ GELENeksel yapı:
                           DUVAR
                         DESTRUCTİVE CONFLICT!
 
-  Dev hedefi: DEĞİŞİNKLİK (hızlı feature)
+  Dev hedefi: DEĞİŞİKLİK (hızlı feature)
   Ops hedefi: İSTİKRAR (hiç bozulmasın)
   → Bu hedefler ÇELİŞİYOR → çatışma KAÇINILMAZ!
 ```
@@ -1095,7 +1095,7 @@ DevSecOps: Güvenlik HER ADIMDA
   → Container scan → base image'da vulnerability?
   → Runtime protection → anormal davranış?
 
-  GÜVENLIK = OTOMATIK → İŞİ ENGELLMEZ → GÜVENLİK ARTAR!
+  GÜVENLIK = OTOMATIK → İŞİ ENGELLEMEZ → GÜVENLİK ARTAR!
 
 John'un dönüşümü:
   "Güvenlik bir kapı değil, bir RAYDIR."
@@ -1300,7 +1300,7 @@ ADIM 6: KÜLTÜRÜ DEĞİŞTİR
 
 ---
 
-## 19. � Büyük Şirketlerde Üç Yol Uygulamaları
+## 19. 🏢 Büyük Şirketlerde Üç Yol Uygulamaları
 
 ### Amazon — Birinci Yol Champion'u
 
@@ -1424,7 +1424,7 @@ Reddit r/devops:
 
 ---
 
-## 21. �🎬 Son Sözler
+## 21. 🎬 Son Sözler
 
 ### Tüm Kitaplarla Bağlantı 🔗
 

@@ -13,7 +13,7 @@ Okulda eksik kalan temeli buradan sağlamlaştırırsın.
 |---|---|
 | **"Introduction to Algorithms" (CLRS)** — Cormen, Leiserson, Rivest, Stein | Algoritma ve veri yapılarının kutsal kitabı. Tamamını okumak şart değil, temel bölümleri (sorting, graph, dynamic programming) sindirmek yeterli. |
 | **"Grokking Algorithms"** — Aditya Bhargava | CLRS çok ağır geliyorsa, görsel ve sade bir giriş. |
-| **"Computer Systems: A Programmer's Perspective" (CS:APP)** — Bryant & O'Hallaron | Bellek, CPU, OS, networking — kodunuzun aslında makinede nasıl çalıştığını anlamak için. |
+| **"Computer Systems: A Programmer's Perspective" (CS:APP)** — Bryant & O'Hallaron | Bellek, CPU, OS, networking — kodunun aslında makinede nasıl çalıştığını anlamak için. |
 | **"Operating Systems: Three Easy Pieces" (OSTEP)** — Arpaci-Dusseau | Process, thread, concurrency, memory management. Ücretsiz online: [pages.cs.wisc.edu/~remzi/OSTEP](https://pages.cs.wisc.edu/~remzi/OSTEP/) |
 | **"Networking: A Top-Down Approach"** — Kurose & Ross | TCP/IP, HTTP, DNS — her gün kullandığın şeylerin altını anlarsın. |
 

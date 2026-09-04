@@ -605,6 +605,42 @@ class Manager {
 | **Comments** | Kötü kodu açıklamak için yorum | Kodu iyileştir, yorum gereksiz kalır |
 | **Refused Bequest** | Alt sınıf üst sınıfın özelliklerini kullanmıyor | Replace Inheritance with Delegation |
 
+### Code Smell → Refactoring Tekniği Eşleme
+
+```mermaid
+flowchart LR
+  subgraph "Kod Kokuları"
+    LM[Long Method]
+    LC[Large Class]
+    FE[Feature Envy]
+    DC[Data Clumps]
+    SC[Shotgun Surgery]
+    PM[Primitive Obsession]
+    MC[Message Chains]
+    MM[Middle Man]
+  end
+
+  subgraph "Refactoring Teknikleri"
+    EF[Extract Function]
+    EC[Extract Class]
+    MF[Move Function]
+    IP[Introduce Parameter Object]
+    II[Inline Function / Class]
+    RV[Replace with Value Object]
+    HD[Hide Delegate]
+    RM[Remove Middle Man]
+  end
+
+  LM --> EF
+  LC --> EC
+  FE --> MF
+  DC --> IP
+  SC --> II
+  PM --> RV
+  MC --> HD
+  MM --> RM
+```
+
 ---
 
 ## 5. 🛠️ Temel Refactoring Teknikleri
@@ -858,7 +894,7 @@ class GPSTracker {
 ```javascript
 // ÖNCE: İlgili satırlar dağınık
 const pricingPlan = retrievePricingPlan();
-const order = retreiveOrder();
+const order = retrieveOrder();
 let charge;
 const chargePerUnit = pricingPlan.unit;
 
@@ -866,7 +902,7 @@ const chargePerUnit = pricingPlan.unit;
 const pricingPlan = retrievePricingPlan();
 const chargePerUnit = pricingPlan.unit; // pricingPlan ile ilgili → yanına kaydır
 
-const order = retreiveOrder();
+const order = retrieveOrder();
 let charge;
 ```
 
@@ -1355,7 +1391,7 @@ Doğru yaklaşım:
   5. Yoksa geri al! (Refactoring güvenli geri alınır)
 
 Cleaner code = Easier optimization!
-  → Temiz kod, darboğazı BULMAYAMI kolaylaştırır
+  → Temiz kod, darboğazı BULMAYI MI kolaylaştırır
   → Temiz kod, darboğazı DÜZELTMEYİ kolaylaştırır
 ```
 
@@ -1713,6 +1749,17 @@ FAZ 3 (İleri Seviye):
   📙 Release It!                     → Production mühendisliği
   📗 Staff Engineer                  → Teknik liderlik
 ```
+
+### ⚠️ Refactoring Anti-Pattern'leri
+
+| Anti-Pattern | Neden Tehlikeli | Doğru Yaklaşım |
+|---|---|---|
+| **Big-bang refactoring** | "Her şeyi bir seferde düzelteceğim" → haftalarca sürer, merge conflict, regresyon | Küçük adımlar; her commit çalışır durumda; strangler fig pattern |
+| **Test olmadan refactoring** | "Basit değişiklik, test gerekmiyor" → sessiz regresyon | Refactoring öncesi karakterizasyon testi yaz; test yoksa önce test ekle |
+| **Refactoring-as-procrastination** | Yeni feature yerine sürekli refactoring → iş değeri üretilmiyor | Refactoring = feature ile birlikte; boy scout rule, ayrı "refactoring sprint" değil |
+| **İzinsiz büyük refactoring** | Sessizce major refactoring → ekip şoke, code review kabus | Büyük refactoring için RFC/ADR yaz, ekip onayı al |
+| **Premature abstraction** | "DRY" diyerek ilk tekrarda soyutlama → yanlış soyutlama | Rule of Three: 3. tekrarda soyutla; öncesinde biraz tekrar kabul edilebilir |
+| **Refactoring scope creep** | "Burasını düzeltirken şurayı da düzelteyim" → PR 2000 satır | Bir PR = bir refactoring. Yeni keşif = yeni ticket |
 
 ---
 

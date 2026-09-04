@@ -219,7 +219,7 @@ Neden stoklar ÖNEMLİ:
   → Giriş ve çıkış akışlarını BAĞIMSIZLAŞTIRIR!
   → Giriş DURSA BİLE çıkış bir süre DEVAM EDEBİLİR!
 
-YAZILIM ANALOJISİ:
+YAZILIM ANALOJİSİ:
 
   Message Queue (Kafka, RabbitMQ) = STOK!
 
@@ -232,7 +232,7 @@ YAZILIM ANALOJISİ:
   → Producer 100 mesaj/sn üretiyor
   → Consumer 80 mesaj/sn işliyor
   → Queue'daki stok her saniye +20 ARTIYOR
-  → AMA queue OLMASAYDI? Consumer çökerdİ!
+  → AMA queue OLMASAYDI? Consumer çökerdi!
 
   Queue = TAMPON = Üretici ve tüketiciyi BAĞIMSIZLAŞTIRIR
   → Üretici hızlanabilir → queue biriktir
@@ -378,7 +378,7 @@ TERMOSTAT ÖRNEĞİ:
   │                                            │
   └────────────────────────────────────────────┘
 
-  → Code review = KALİTE termosatatı!
+  → Code review = KALİTE termostatı!
   → Standarttan sapma varsa → geri bildirim → düzeltme
 ```
 
@@ -608,7 +608,7 @@ KALIP:
 YAZILIM ÖRNEĞİ: Monolith büyümesi
   → Başta çok HIZLI geliştiriyorsun (reinforcing: hız → feature → kullanıcı)
   → Sonra kod karmaşıklaşıyor (SINIR!)
-  → Geliştirme yavaşlıyor → yeni feature YAPAMIyorsun
+  → Geliştirme yavaşlıyor → yeni feature YAPAMIYORSUN
   → SINIR: karmaşıklık, coupling, test zorluğu
 
 ÇÖZÜM:
@@ -916,7 +916,7 @@ MEADOWS'IN DAYANIKLILIK PRENSİPLERİ:
 3. FEEDBACK LOOP'LAR
    → Sorunları ERKEN tespit → erken MÜDAHALE
    → Monitoring, alerting, health check = feedback loop!
-   → Feedback yoksa → sorun büyür → GEÇGEÇ tespit → çok geç!
+   → Feedback yoksa → sorun büyür → GEÇ tespit → çok geç!
 
 4. MODÜLERLIK
    → Sıkı bağlı (tightly coupled) → bir parça kırılsa HER YER kırılır
@@ -948,7 +948,7 @@ DAYANIKLI SİSTEM:
 
 DENGe:
   → Production = DAYANIKLILIK öncelikli! (kullanıcı etkisi)
-  → Dev/test = VERiMLİLİK öncelikli! (maliyet)
+  → Dev/test = VERİMLİLİK öncelikli! (maliyet)
   → "Yedek, gerekmediğinde İSRAF gibi görünür.
      GEREKTİĞİNDE ise HAYAt kurtarır."
 
@@ -1203,7 +1203,7 @@ Thomas Kuhn: "Bilimsel Devrimlerin Yapısı"
   1. Sunk cost: "Bu sisteme 3 yıl yatırım yaptık!"
   2. Identity: "Ben Java geliştiricisiyim!" (değişime direnç)
   3. Fear: "Yeni sistem başarısız olursa?"
-  4. Competence: "Eski sistemi BİLİYORUM, yenisini bilMIYORUM"
+  4. Competence: "Eski sistemi BİLİYORUM, yenisini BİLMİYORUM"
   5. Power: "Eski sistemin uzmanıYIM → yeni sistemde değersizleşirim"
 
   STAFF ENGINEER OLARAK:
@@ -1330,7 +1330,7 @@ PRATIKTE:
 
 ```
 Toyota Production System (TPS):
-  → Meadows'ın feedback loop kavramı FARBİKADA:
+  → Meadows'ın feedback loop kavramı FABRİKADA:
   → Andon kordu: İşçi hata görünce DURDURUR (balancing loop)
   → Kaizen: Sürekli küçük iyileştirme (reinforcing loop)
   → Jidoka: Otomasyon + insan zekası
@@ -1395,7 +1395,7 @@ ML/AI sistemleri Meadows'ın TÜM kavramlarını barındırır:
   3. EMERGENT BEHAVIOR:
      → GPT-4'ün "reasoning" yeteneği PLANLANMADI
      → Milyarlarca parametre → önceden tahmin edilemeyen davranış
-     → Meadows: "Sistem davranışı parçalardan ÇIKARIlAMAZ"
+     → Meadows: "Sistem davranışı parçalardan ÇIKARILAMAZ"
 
   4. UNINTENDED CONSEQUENCES:
      → Recommendation AI → kullanıcı bağımlılığı
@@ -1552,9 +1552,9 @@ FAZ 4 — Ustalık (18+ ay):
 🔬 Building Microservices → SINIRLARI öğretir
 🔥 Phoenix Project → KÜLTÜRÜ öğretir
 🏗️ System Design → ÖLÇEĞİ öğretir
-🔵 DDD → DOMaINI öğretir
+🔵 DDD → DOMAIN'İ öğretir
 🧩 Hard Parts → TRADE-OFFLARI öğretir
-🧭 Staff Path → LİDERLIĞÎ öğretir
+🧭 Staff Path → LİDERLİĞİ öğretir
 🌀 Thinking in Systems → HER ŞEYİ BAĞLAR!
 
 "Thinking in Systems son kitap çünkü:
