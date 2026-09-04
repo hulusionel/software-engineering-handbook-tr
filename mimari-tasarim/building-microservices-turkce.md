@@ -709,6 +709,8 @@ Microservice:
 
 ### Saga: Orkestrasyon vs Koreografi
 
+> 📖 **Ayrıca bkz.:** Saga desenlerinin sistematik matrisi (8 desen: Epic → Anthology) için [Software Architecture: The Hard Parts — 8 Transaksiyonel Saga Deseni](software-architecture-hard-parts-turkce.md#8-transaksiyonel-saga-deseni-kitabın-i̇mza-katkısı); üretim/kod perspektifi için [Advanced Backend Engineering — Saga Pattern](../ileri-duzey-rehberler/advanced-backend-engineering.md#saga-pattern-modern-approach).
+
 ```
 ORKESTRASYON (Merkezi yönetim) 🎼
 
