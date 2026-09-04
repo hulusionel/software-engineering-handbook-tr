@@ -228,7 +228,7 @@ SEVİYE 4 — Agentic iş akışları
 - Stanford — *AI Index Report* (benimseme, yetenek, maliyet trendleri)
 - OWASP — *Top 10 for LLM Applications* (üretim güvenliği)
 - AB — *Artificial Intelligence Act* (risk-temelli düzenleme)
-- Bu repo: [Agentic Mühendislik](agentic-muhendislik.md) · [Otonom & Öz-Gelişen Sistemler](otonom-ve-oz-gelisen-sistemler.md) · [AI/ML Mühendislik Pratiği](../pratik/ai-ml-muhendisligi.md) · [FinOps](../pratik/finops-cloud-maliyet.md) · [Hukuk/Uyumluluk/Etik](../pratik/hukuk-uyumluluk-etik.md)
+- Bu repo: [Agentic Mühendislik](agentic-muhendislik.md) · [En İyi Pratikler](en-iyi-pratikler.md) · [AI ile Neler Yapılabiliyor](ai-ile-neler-yapilabilir.md) · [Otonom & Öz-Gelişen Sistemler](otonom-ve-oz-gelisen-sistemler.md) · [Gelecek ve Pozisyon](gelecek-ve-pozisyon.md) · [AI/ML Mühendislik Pratiği](../pratik/ai-ml-muhendisligi.md) · [FinOps](../pratik/finops-cloud-maliyet.md) · [Hukuk/Uyumluluk/Etik](../pratik/hukuk-uyumluluk-etik.md)
 
 ---
 

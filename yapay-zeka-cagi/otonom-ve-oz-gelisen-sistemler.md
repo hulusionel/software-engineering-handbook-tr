@@ -304,7 +304,7 @@ Dürüst bir rehber, sınırları da yazar. Abartı, kötü mühendislik kararla
 - Madaan et al. 2023 — *Self-Refine: Iterative Refinement with Self-Feedback*
 - Wang et al. 2023 — *Voyager: An Open-Ended Embodied Agent* (kendi becerisini yazan/biriktiren agent)
 - OWASP — *Top 10 for LLM Applications* (prompt injection, aşırı yetki, güvenlik)
-- Bu repo: [Agentic Mühendislik](agentic-muhendislik.md) · [Dünyada AI Kullanımı](dunyada-ai-kullanimi.md) · [Dağıtık Sistemler](../pratik/dagitik-sistemler-derinlemesine.md) · [Güvenlik](../pratik/guvenlik-derinlemesine.md)
+- Bu repo: [Agentic Mühendislik](agentic-muhendislik.md) · [En İyi Pratikler](en-iyi-pratikler.md) · [AI ile Neler Yapılabiliyor](ai-ile-neler-yapilabilir.md) · [Gelecek ve Pozisyon](gelecek-ve-pozisyon.md) · [Dünyada AI Kullanımı](dunyada-ai-kullanimi.md) · [Dağıtık Sistemler](../pratik/dagitik-sistemler-derinlemesine.md) · [Güvenlik](../pratik/guvenlik-derinlemesine.md)
 
 ---
 

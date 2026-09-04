@@ -9,7 +9,10 @@ Artık yapay zeka çağındayız. Bu bölüm, "AI nedir, hayatımıza nasıl gir
 | Doküman | İçerik |
 |---|---|
 | [Agentic Mühendislik](agentic-muhendislik.md) | Token ekonomisi, context mühendisliği, agent anatomisi (agentic loop), tool/skill tasarımı, MCP, compaction & bellek, AI ile kodlama pratiği |
+| [AI ile Doğru Çalışma — En İyi Pratikler](en-iyi-pratikler.md) | Workflow vs agent (5 desen), prompt mühendisliği, reasoning modelleri & extended thinking, "doğru irtifa" system prompt + tool tasarımı, eval-driven development, model routing |
+| [AI ile Neler Yapılabiliyor](ai-ile-neler-yapilabilir.md) | Yetenek kataloğu: kod, RAG, computer use, multimodal, iş akışı otomasyonu, veri analizi; "ne inşa edilebilir" + olgunluk & sınırlar |
 | [Otonom & Öz-Gelişen Sistemler](otonom-ve-oz-gelisen-sistemler.md) | Çoklu-agent orkestrasyon, gece/arka-plan çalışan otonom agent'ler, öz-düzelten/öğrenen yapılar, guardrail'ler, agent değerlendirmesi (eval) |
+| [Geleceğe Bakış ve Pozisyon Alma](gelecek-ve-pozisyon.md) | Nereye evriliyor (üç kayma), senaryolar, mühendisin değişen rolü, ne öğrenmeli, ekip/org pozisyonu, pişman olmayacağın hamleler |
 | [Dünyada AI Nasıl Kullanılıyor](dunyada-ai-kullanimi.md) | Benimseme gerçekliği, kullanım kalıpları, üretim mimarileri, ekip pratikleri, ekonomi (build vs buy), riskler & yönetişim, olgunluk modeli |
 
 ## 🎯 Bu bölüm neyi kapsıyor?
