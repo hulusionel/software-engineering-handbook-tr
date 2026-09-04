@@ -20,6 +20,7 @@ Yazılım mühendisliği alanındaki en önemli kitapların **Türkçe kapsamlı
 | [Building Microservices](mimari-tasarim/building-microservices-turkce.md) | Sam Newman — *Building Microservices* |
 | [Domain-Driven Design (DDD)](mimari-tasarim/ddd-turkce.md) | Eric Evans — *Domain-Driven Design* |
 | [System Design Interview](mimari-tasarim/system-design-interview-turkce.md) | Alex Xu — *System Design Interview Vol 1* |
+| [Release It!](mimari-tasarim/release-it-turkce.md) | Michael Nygard — *Release It!* (üretim dayanıklılığı, circuit breaker, bulkhead) |
 
 ### 🧹 [Kod Kalitesi & Pratikler](kod-kalitesi/)
 
@@ -47,6 +48,8 @@ Yazılım mühendisliği alanındaki en önemli kitapların **Türkçe kapsamlı
 | [The Pragmatic Programmer](kariyer-kultur/pragmatic-programmer-turkce.md) | David Thomas & Andrew Hunt — *The Pragmatic Programmer* |
 | [The Missing README](kariyer-kultur/the-missing-readme-turkce.md) | Chris Riccomini & Dmitriy Ryaboy — *The Missing README* |
 | [The Phoenix Project](kariyer-kultur/the-phoenix-project-turkce.md) | Gene Kim, Kevin Behr & George Spafford — *The Phoenix Project* |
+| [Team Topologies](kariyer-kultur/team-topologies-turkce.md) | Matthew Skelton & Manuel Pais — *Team Topologies* (org tasarımı, bilişsel yük) |
+| [Accelerate](kariyer-kultur/accelerate-turkce.md) | Forsgren, Humble & Kim — *Accelerate* (DORA metrikleri) |
 
 ### 🚀 [İleri Düzey Kapsamlı Rehberler](ileri-duzey-rehberler/)
 
@@ -122,11 +125,11 @@ Kitap özetlerinin ötesinde, üretim odaklı, sayısal ve karar-verme kılavuzl
 
 ## 📊 İstatistikler
 
-- **21** kapsamlı kitap/yol haritası rehberi
+- **24** kapsamlı kitap/yol haritası rehberi
 - **24** pratik saha dokümanı + 5 yazım şablonu + terim sözlüğü + kaynakça
 - **3** yapay zeka çağı rehberi (agentic mühendislik, otonom sistemler, dünyada AI kullanımı)
 - **~65.000+** satır içerik
-- **17** farklı kitap özeti
+- **20** farklı kitap özeti
 - **3** kariyer yol haritası
 - **%100** Türkçe
 

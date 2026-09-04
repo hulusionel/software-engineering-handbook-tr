@@ -8,13 +8,18 @@
 
 Repoda kapsanan 18 kitabın ötesinde, bir backend/staff mühendisinin kütüphanesinde bulunması gereken, henüz rehberi yazılmamış kitaplar:
 
-### En öncelikli (gerçek boşluk)
+### ✅ Artık bu repoda rehberi olanlar (yeni eklendi)
+
+| Kitap | Yazar | Rehber |
+|---|---|---|
+| **Release It!** (2nd ed.) | Michael Nygard | [📖 Türkçe rehber](mimari-tasarim/release-it-turkce.md) — üretim dayanıklılığı, circuit breaker, bulkhead, backpressure |
+| **Team Topologies** | Skelton & Pais | [📖 Türkçe rehber](kariyer-kultur/team-topologies-turkce.md) — org tasarımı, bilişsel yük, ters Conway |
+| **Accelerate** | Forsgren, Humble, Kim | [📖 Türkçe rehber](kariyer-kultur/accelerate-turkce.md) — DORA metrikleri, hız+istikrar |
+
+### Hâlâ eksik (rehber bekleyen)
 
 | Kitap | Yazar | Neden mutlaka |
 |---|---|---|
-| **Release It!** (2nd ed.) | Michael Nygard | Üretim dayanıklılığının İncili: circuit breaker, bulkhead, timeout, backpressure, stability & anti-stability pattern'leri. Backend'de en kritik eksik. |
-| **Team Topologies** | Skelton & Pais | Modern organizasyon tasarımı: cognitive load, stream-aligned / platform / enabling team'ler, Conway yasasını *tersine* kullanmak. |
-| **Accelerate** | Forsgren, Humble, Kim | DORA metrikleri (deploy frequency, lead time, MTTR, change fail rate). "Hız mı kalite mi?" tartışmasını **veriyle** kapatır. |
 | **Database Internals** | Alex Petrov | DDIA'nın storage-engine ve dağıtık-DB tarafını derinleştirir (B-tree/LSM, replikasyon, konsensüs implementasyonu). |
 | **Working Effectively with Legacy Code** | Michael Feathers | Gerçek işin %90'ı legacy'dir: seam kavramı, karakterizasyon testi, testsiz kodu güvenle değiştirme. |
 | **Fundamentals of Data Engineering** | Reis & Housley | Modern veri mühendisliğinin kanonik kitabı; veri yaşam döngüsü, lakehouse, orkestrasyon. |
