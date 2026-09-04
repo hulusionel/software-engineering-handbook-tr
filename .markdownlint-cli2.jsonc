@@ -1,18 +1,40 @@
 {
-  // Türkçe el kitabı için makul markdownlint yapılandırması.
-  // Uzun düz yazı satırları, gömülü HTML (<details>) ve emoji başlıklar
-  // bilinçli tercihlerdir; ilgili gürültülü kurallar kapatıldı.
+  // Türkçe, düz yazı + ASCII diyagram + emoji ağırlıklı bir el kitabı için
+  // markdownlint yapılandırması. Reponun BİLİNÇLİ stiliyle çatışan kozmetik
+  // kurallar kapatıldı; geriye kalan kurallar gerçek bozulmaları yakalar.
+  //
+  // Not: Kırık link/anchor ve bozuk karakter denetimi ayrı ve daha doğru bir
+  // araçla yapılır: .github/scripts/check_links.py (GitHub slug uyumlu).
+  // Bu yüzden MD051 (link-fragments) burada KAPALI — aksi hâlde Türkçe "İ"
+  // ve emoji başlıklarda yanlış pozitif üretir.
   "config": {
     "default": true,
-    "MD013": false, // satır uzunluğu — uzun Türkçe cümleler serbest
-    "MD033": false, // gömülü HTML — <details>/<summary> kullanılıyor
-    "MD041": false, // ilk satır başlık olmak zorunda değil
+
+    // — Uzunluk / gömülü içerik (bilinçli) —
+    "MD013": false, // satır uzunluğu (uzun Türkçe cümleler)
+    "MD033": false, // gömülü HTML (<details>/<summary>)
+    "MD041": false, // ilk satır H1 olmak zorunda değil
+
+    // — Boşluk/hizalama kozmetiği (ASCII diyagram + yoğun içerik) —
+    "MD022": false, // başlık etrafı boş satır
+    "MD031": false, // kod bloğu (fence) etrafı boş satır
+    "MD032": false, // liste etrafı boş satır
+    "MD058": false, // tablo etrafı boş satır
+    "MD060": false, // tablo sütun stili (2000+ yanlış pozitif)
+    "MD009": false, // satır sonu boşlukları
+
+    // — Yapı/stil (bilinçli tercihler) —
+    "MD001": false, // başlık seviyesi atlanabiliyor (## -> ####)
     "MD024": { "siblings_only": true }, // aynı başlık farklı bölümlerde olabilir
-    "MD029": false, // sıralı liste numaralandırma stili karışık olabilir
-    "MD036": false, // vurguyu başlık gibi kullanma (stilistik)
-    "MD040": false, // bazı kod blokları dil belirteci içermeyebilir
-    "MD045": false, // görsel alt metni (repoda görsel yok denecek kadar az)
-    "MD001": false  // başlık seviyesi atlanabiliyor (## -> ####)
+    "MD025": false, // çok H1: ddia "# BÖLÜM I/II/III" bölücüleri bilinçli
+    "MD026": false, // başlıkta sonda noktalama ("...?" başlıkları)
+    "MD028": false, // ardışık blockquote arası boş satır
+    "MD029": false, // sıralı liste numaralandırma stili
+    "MD034": false, // çıplak URL (repoda yaygın ve kabul edilir)
+    "MD036": false, // vurguyu başlık gibi kullanma
+    "MD040": false, // bazı kod bloklarında dil belirteci yok (ASCII diyagram)
+    "MD045": false, // görsel alt metni
+    "MD051": false  // link-fragment — check_links.py bunu doğru yapar
   },
   "globs": ["**/*.md"],
   "ignores": [".git", "node_modules"]
