@@ -17,7 +17,7 @@
 
 ### Bağlam
 
-Sorunu, çevresel kısıtları ve karar gereksinimini **kararın alındığı andaki gerçeklikle** anlat. Bağlam **olgudur**, opinion değil. Şunlar olmalı:
+Sorunu, çevresel kısıtları ve karar gereksinimini **kararın alındığı andaki gerçeklikle** anlat. Bağlam **olgudur**, görüş (opinion) değil. Şunlar olmalı:
 
 - Sorun cümlesi (1-2 cümle).
 - Mevcut durum / status quo'nun zayıflığı.
