@@ -9,7 +9,7 @@ Temel bilgisayar bilimlerinden mimari düşünceye, kod kalitesinden kariyer gel
 Okulda eksik kalan temeli buradan sağlamlaştırırsın.
 
 ### Kitaplar
-| Kitap | Neden Önemli |
+| Kitap | Açıklama |
 |---|---|
 | **"Introduction to Algorithms" (CLRS)** — Cormen, Leiserson, Rivest, Stein | Algoritma ve veri yapılarının kutsal kitabı. Tamamını okumak şart değil, temel bölümleri (sorting, graph, dynamic programming) sindirmek yeterli. |
 | **"Grokking Algorithms"** — Aditya Bhargava | CLRS çok ağır geliyorsa, görsel ve sade bir giriş. · 📖 [Türkçe rehber](../veri-sistemler/grokking-algorithms-turkce.md) |
@@ -26,7 +26,7 @@ Okulda eksik kalan temeli buradan sağlamlaştırırsın.
 ## 2. Temiz Kod Yazmak & Yazılım Zanaatkarlığı
 
 ### Kitaplar (Sırasıyla)
-| # | Kitap | Özet |
+| # | Kitap | Açıklama |
 |---|---|---|
 | 1 | **"Clean Code"** — Robert C. Martin | İsimlendirme, fonksiyon tasarımı, yorum yazma, hata yönetimi. İlk okunacak kitap. · 📖 [Türkçe rehber](../kod-kalitesi/clean-code-turkce.md) |
 | 2 | **"The Pragmatic Programmer"** — Hunt & Thomas (20th Anniversary Edition) | Mühendislik mindset'i. DRY, orthogonality, tracer bullets. Her bölüm bağımsız okunabilir. · 📖 [Türkçe rehber](../kariyer-kultur/pragmatic-programmer-turkce.md) |
@@ -50,7 +50,7 @@ Okulda eksik kalan temeli buradan sağlamlaştırırsın.
 ## 4. Yazılım Mimarisi
 
 ### Kitaplar
-| Kitap | Odak |
+| Kitap | Açıklama |
 |---|---|
 | **"Clean Architecture"** — Robert C. Martin | Dependency Rule, Use Case driven design, katmanlı mimari. · 📖 [Türkçe rehber](../mimari-tasarim/clean-architecture-turkce.md) |
 | **"Fundamentals of Software Architecture"** — Richards & Ford | Mimari stilleri (monolith, microservices, event-driven, vb.) karşılaştırmalı anlatır. **Çok güncel ve pratik.** · 📖 [Türkçe rehber](../mimari-tasarim/fundamentals-of-software-architecture-turkce.md) |
@@ -102,7 +102,7 @@ Okulda eksik kalan temeli buradan sağlamlaştırırsın.
 
 ## 8. Düşünce Yapısı, Kariyer & Soft Skills
 
-| Kitap | Neden |
+| Kitap | Açıklama |
 |---|---|
 | **"The Staff Engineer's Path"** — Tanya Reilly | IC track'te yükselmenin yol haritası. · 📖 [Türkçe rehber](../kariyer-kultur/staff-engineers-path-turkce.md) |
 | **"The Manager's Path"** — Camille Fournier | Yönetici olmasan bile, yöneticini ve organizasyonu anlamak için. |

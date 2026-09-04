@@ -1207,6 +1207,8 @@ SAĞ SEÇ:
 
 ### Saga Pattern 📜
 
+> 📖 **Ayrıca bkz.:** Saga desenlerinin tam matrisi için [Software Architecture: The Hard Parts — 8 Transaksiyonel Saga Deseni](software-architecture-hard-parts-turkce.md#8-transaksiyonel-saga-deseni-kitabın-i̇mza-katkısı); orkestrasyon vs koreografi karşılaştırması için [Building Microservices — Workflow ve Saga](building-microservices-turkce.md#7--workflow-ve-saga).
+
 ```
 Dağıtık transaction nasıl yönetilir?
 

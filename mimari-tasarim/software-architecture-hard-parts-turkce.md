@@ -953,6 +953,8 @@ SEMANTIC LOCK:
 
 ### 8 Transaksiyonel Saga Deseni (Kitabın İmza Katkısı)
 
+> 📖 **Ayrıca bkz.:** Orkestrasyon vs koreografi temel karşılaştırması için [Building Microservices — Workflow ve Saga](building-microservices-turkce.md#7--workflow-ve-saga); üretim/kod uygulaması ve saga state persist etme için [Advanced Backend Engineering — Saga Pattern](../ileri-duzey-rehberler/advanced-backend-engineering.md#saga-pattern-modern-approach).
+
 > "The Hard Parts"ın en özgün fikri: "Saga" tek bir şey değildir. Üç eksenin kombinasyonu **8 farklı saga deseni** üretir. Yazarlar bunlara akılda kalıcı isimler verir. Doğru olanı seçmek, üç sorunun cevabına bağlıdır:
 
 ```

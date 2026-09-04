@@ -55,6 +55,16 @@ Yazılım mühendisliği alanındaki en önemli kitapların **Türkçe kapsamlı
 | [Senior Backend Developer Yol Haritası](ileri-duzey-rehberler/senior-backend-developer-roadmap.md) | Cloud, K8s, event-driven architecture, microservices, API design, security, observability ve daha fazlası |
 | [Advanced Backend Engineering](ileri-duzey-rehberler/advanced-backend-engineering.md) | Staff/Principal Engineer seviyesi için ileri düzey backend mühendislik rehberi |
 
+### 🤖 [Yapay Zeka Çağında Mühendislik](yapay-zeka-cagi/)
+
+Bir developer'ın el kitabında olması gereken **niş, uygulayıcı odaklı** AI konuları — "AI nedir" değil, agent mühendisliği.
+
+| Doküman | İçerik |
+|--------|--------|
+| [Agentic Mühendislik](yapay-zeka-cagi/agentic-muhendislik.md) | Token ekonomisi, context mühendisliği, agentic loop, tool/skill tasarımı, MCP, compaction, AI ile kodlama |
+| [Otonom & Öz-Gelişen Sistemler](yapay-zeka-cagi/otonom-ve-oz-gelisen-sistemler.md) | Çoklu-agent orkestrasyon, gece çalışan otonom agent'ler, öz-düzelten/öğrenen yapılar, guardrail, eval |
+| [Dünyada AI Nasıl Kullanılıyor](yapay-zeka-cagi/dunyada-ai-kullanimi.md) | Benimseme, üretim mimarileri, kullanım kalıpları, ekonomi, riskler & yönetişim, olgunluk modeli |
+
 ### 🛠️ [Pratik — Saha Kılavuzu](pratik/)
 
 Kitap özetlerinin ötesinde, üretim odaklı, sayısal ve karar-verme kılavuzları.
@@ -114,7 +124,8 @@ Kitap özetlerinin ötesinde, üretim odaklı, sayısal ve karar-verme kılavuzl
 
 - **21** kapsamlı kitap/yol haritası rehberi
 - **24** pratik saha dokümanı + 5 yazım şablonu + terim sözlüğü + kaynakça
-- **~64.000+** satır içerik
+- **3** yapay zeka çağı rehberi (agentic mühendislik, otonom sistemler, dünyada AI kullanımı)
+- **~65.000+** satır içerik
 - **17** farklı kitap özeti
 - **3** kariyer yol haritası
 - **%100** Türkçe
