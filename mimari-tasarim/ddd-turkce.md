@@ -106,6 +106,29 @@ SIRALAMA:
   → "İlk Entity ve Repository yapalım" → sınırlar belirsiz → kaos!
 ```
 
+### Strategic vs Tactical DDD Seçim Rehberi
+
+```mermaid
+flowchart TD
+  START{Yeni proje veya\nmevcut sistem?} -->|Yeni| Q1{Domain karmaşık mı?\nCRUD ötesi iş kuralları?}
+  START -->|Mevcut| Q1B{Mevcut ağrı noktası ne?}
+
+  Q1 -->|Hayır - Basit CRUD| M1["DDD KULLANMA\nBasit CRUD + validation yeterli"]
+  Q1 -->|Evet| S1["STRATEGIC DDD ile başla\n1. Event Storming\n2. Bounded Context keşfi\n3. Context Mapping"]
+
+  Q1B -->|Spaghetti code| T1["Tactical refactoring:\nAggregate, Value Object çıkar"]
+  Q1B -->|Ekipler arası kaos| S2["Strategic DDD:\nBounded Context + ownership tanımla"]
+  Q1B -->|Her ikisi| S3["Önce Strategic → sonra Tactical"]
+
+  S1 --> Q2{Core domain\nbelirlendi mi?}
+  Q2 -->|Evet| T2["Core domain'e Tactical DDD uygula\nEntity, Aggregate, Domain Event"]
+  Q2 -->|Hayır| WS["Workshop: Core vs Supporting vs Generic\nayrımını yap"]
+  WS --> Q2
+
+  T2 --> Q3{Supporting / Generic\nsubdomain'ler ne olacak?}
+  Q3 --> M2["Supporting → basit model\nGeneric → satın al / açık kaynak"]
+```
+
 ---
 
 ## 2. 🗣️ Ubiquitous Language (Ortak Dil)
@@ -1192,6 +1215,23 @@ KISA CEVAP: Genellikle EVET, ama her zaman değil!
   4. Gerektiğinde microservice'e AYIR
   → ASLA "her entity'yi microservice yapalım!" YAPMA! ❌
 ```
+
+### 📊 Bounded Context Boyut Rakamları
+
+**Takım boyutu → context boyutu (ampirik veriler):**
+- Amazon two-pizza rule: **5-8 kişi** tek bir bounded context'e sahip olmalı.
+- Spotify Squad modeli: Bir squad (5-9 kişi) bir veya iki bounded context yönetir.
+- Microsoft (Nagappan et al. 2008): Organizasyonel yapı, kod kalitesinin en güçlü prediktörü — takım sınırı = kod sınırı olmalı.
+
+**Satır sayısı (kaba kural):**
+- Core domain context: **10K-50K LOC** (tek takımın kavrayabileceği büyüklük).
+- Daha büyük context'ler > 100K LOC genellikle içinde **gizli sınırlar** barındırır.
+- Daha küçük context'ler < 2K LOC genellikle **ayrı context olmayı hak etmez** (nano-service riski).
+
+**Context mapping overhead:**
+- Her context sınırı geçişi: **+2-5ms latency** (serialization + network).
+- Her yeni context ilişkisi: **integration test maliyeti**, API versiyonlama yükü, shared understanding gereksinimleri.
+- N context arasında potansiyel N×(N-1)/2 ilişki — 10 context = 45 potansiyel mapping. Minimize et!
 
 ---
 

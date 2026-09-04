@@ -1359,7 +1359,7 @@ const card = hotel.checkIn('Ali', 301, 3);
 // 🧹 Oda 301 temizlendi
 // ❄️ Oda 301: 22°C
 // 🍫 Oda 301 minibar dolduruldu
-// 🔑 Oda 301 için Ali'a kart verildi
+// 🔑 Oda 301 için Ali'ye kart verildi
 // 💰 Ali: 3 gece, 1500₺
 // ✅ Check-in tamamlandı!
 ```

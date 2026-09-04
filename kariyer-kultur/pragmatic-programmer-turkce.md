@@ -139,7 +139,7 @@ Harika bir fikrin var ama anlatamıyorsan, **yokmuş gibidir.**
 
 | İlke | Açıklama |
 |---|---|
-| **Dinleyiciyi tanı** | CEO'ya teknik detay anlatma, geliştiriciye iş stratejisi anlatma |
+| **Dinleyiciyi tanı** | CEO'ya teknik detay anlatma, geliştiriciye iş stratejisi anlama |
 | **Ne söylemek istediğini bil** | Konuşmadan/yazmadan önce ana mesajını netleştir |
 | **Zamanı seç** | "Deployment sırasında refactoring önerme" 😅 |
 | **Bir stil seç** | Bazıları görsel ister, bazıları data ister |
@@ -450,7 +450,7 @@ Doğru yaklaşım: "Bir bakmam lazım, yarına döneyim"
 
 #### Tahmin Hassasiyeti 🎯
 
-Tahminin **hassasiyet dereceni** duruma göre ayarla:
+Tahminin **hassasiyet derecesini** duruma göre ayarla:
 
 | Tahmin | Müşterinin Algısı |
 |---|---|
@@ -569,7 +569,7 @@ cat access.log | grep "500" | awk '{print $7}' | sort | uniq -c | sort -rn | hea
 # → En çok 500 hatası veren endpoint'ler!
 ```
 
-> **Her gün 5 dakikanı yeni bir komut öğrenmeye ayır.** 1 yıl sonra komut satırı ninjası olursun! 🥷
+> **Her gün 5 dakikanı yeni bir komut öğrenmeye ayır.** 1 yıl sonra komut satırı ninjiası olursun! 🥷
 
 ### 3.3 Versiyon Kontrolü (Version Control) 📚
 
@@ -643,7 +643,7 @@ test('bakiye negatife düşmemeli (bug #1234)', () => {
 Bir lastik ördeğe (veya herhangi birine) **sorunu baştan anlatmak.** Anlatırken genellikle sorunun cevabını kendin bulursun!
 
 ```
-"Bak ördek, şimdi burda kullanıcı oluşturuyor,
+"Bakk ördek, şimdi burda kullanıcı oluşturuyor,
 sonra şifresini hashliyor, sonra... Dur bir dakika. 
 Hashlemeden ÖNCE kaydediyorum! İşte bug burada!" 🎉🦆
 ```
@@ -1598,6 +1598,17 @@ AMAZON → "Two Pizza Teams" + DRY
 📙 The Missing README    → Kariyer temeli (sıradaki!)
 🌐 teachyourselfcs.com   → CS boşluklarını doldur
 ```
+
+### ⚠️ Pragmatik İlkelerin Kötüye Kullanımı
+
+| İlke | Doğru Kullanım | Kötüye Kullanım | Denge |
+|---|---|---|---|
+| **DRY** | İş mantığı tekrarını önle | Her benzer kodu birleştirme obsesyonu → yanlış soyutlama | Tesadüfi benzerlik ≠ gerçek tekrar. 3 kez görmeden soyutlama yapma |
+| **YAGNI** | Henüz gerekmeyen şeyi kodlama | "YAGNI" diyerek bilinen gereksinimleri görmezden gelme | YAGNI ≠ planlama yapma. Bilinen ihtiyaçları ertele ama unut-ma |
+| **Broken Windows** | Küçük bozuklukları hemen düzelt | "Kırık pencere var" diyerek refactoring sprint'i açma | Boy scout rule: bulduğundan biraz daha temiz bırak, büyük yeniden yazım değil |
+| **Good Enough** | Mükemmeliyeti değil, yeterliliği hedefle | Düşük kaliteyi "good enough" olarak meşrulaştırma | Good enough = kalite kısıtlamalarıyla bilinçli uzlaşma, özürsüzlük değil |
+| **Tracer Bullets** | Hızlı end-to-end prototip | Her şeyi tracer bullet ile başlatıp hiçbirini bitirmeme | Tracer bullet → gerçek koda dönüşmeli, throwaway prototype değil |
+| **Orthogonality** | Bileşenleri bağımsız tut | Aşırı decoupling → dolaylılık labirenti, debug imkânsız | Bağımsızlık ile anlaşılabilirlik arasında denge kur |
 
 ---
 

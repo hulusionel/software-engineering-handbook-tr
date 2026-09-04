@@ -488,6 +488,32 @@ Eski %100 trafik            Trafiği yavaşça yeni'ye         Eski kapanır
 
 ---
 
+## 🎯 Staff+ Karar Verme Kontrol Listesi
+
+### Karar öncesi
+
+- [ ] Karar one-way door mu, two-way door mu? (Geri dönülebilirlik)
+- [ ] Yeterli bilgi var mı, yoksa spike/POC gerekli mi?
+- [ ] Stakeholder'lar belirlenmiş mi? (RACI: Responsible, Accountable, Consulted, Informed)
+- [ ] Alternatifler steel-man argümanla değerlendirilmiş mi?
+- [ ] "Last responsible moment" — kararı ertelemek mümkün mü?
+
+### Karar anında
+
+- [ ] ADR yazıldı mı? (Bağlam, alternatifler, seçim, sonuçlar)
+- [ ] Trade-off'lar açıkça belirtilmiş mi? (Neyi kazanıyoruz, neyi kaybediyoruz)
+- [ ] Ölçülebilir başarı kriteri var mı? (Kararın doğru olduğunu nasıl anlayacağız?)
+- [ ] Rollback planı var mı? (Karar yanlışsa geri dönüş yolu)
+- [ ] Migration stratejisi tanımlı mı? (Mevcut → yeni geçiş nasıl olacak?)
+
+### Karar sonrası
+
+- [ ] 3-6 ay sonra karar review'ı takvimde mi?
+- [ ] Karar sonuçları ölçülüyor mu? (Beklenen vs gerçekleşen)
+- [ ] Öğrenilen dersler dokümante edilmiş mi?
+
+---
+
 ## 📚 İleri Okuma
 
 - *Software Architecture: The Hard Parts* — Ford et al. (2021)
@@ -496,4 +522,4 @@ Eski %100 trafik            Trafiği yavaşça yeni'ye         Eski kapanır
 - Google SRE Workbook bölüm 24 "What's the difference between..."
 - Adrian Cockcroft talks (microservices'e dair en doğru pratisyen)
 
-> [⬅️ Pratik klasörü](README.md) · [📐 ADR şablonu](../templates/adr-sablon.md) · [📄 RFC şablonu](../templates/rfc-design-doc-sablon.md)
+> [⬅️ Pratik klasörü](README.md) · [📚 Sözlük](../glossary/terim-sozlugu.md) · [🔬 Kaynakça](../kaynakca.md) · [📐 ADR şablonu](../templates/adr-sablon.md) · [📄 RFC şablonu](../templates/rfc-design-doc-sablon.md)

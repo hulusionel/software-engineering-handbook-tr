@@ -10,16 +10,17 @@
 1. [Giriş: Algoritma Nedir?](#1--giriş-algoritma-nedir)
 2. [Binary Search (İkili Arama)](#2--binary-search-i̇kili-arama)
 3. [Big O Notation (Büyük O Notasyonu)](#3--big-o-notation-büyük-o-notasyonu)
-4. [Selection Sort (Seçmeli Sıralama)](#4--selection-sort-seçmeli-sıralama)
-5. [Recursion (Özyineleme)](#5--recursion-özyineleme)
-6. [Quicksort (Hızlı Sıralama)](#6--quicksort-hızlı-sıralama)
-7. [Hash Tables (Hash Tabloları)](#7--hash-tables-hash-tabloları)
-8. [Breadth-First Search — BFS (Genişlik Öncelikli Arama)](#8--breadth-first-search--bfs-genişlik-öncelikli-arama)
-9. [Dijkstra's Algorithm (Dijkstra Algoritması)](#9--dijkstras-algorithm-dijkstra-algoritması)
-10. [Greedy Algorithms (Açgözlü Algoritmalar)](#10--greedy-algorithms-açgözlü-algoritmalar)
-11. [Dynamic Programming (Dinamik Programlama)](#11--dynamic-programming-dinamik-programlama)
-12. [K-Nearest Neighbors — KNN (K En Yakın Komşu)](#12--k-nearest-neighbors--knn-k-en-yakın-komşu)
-13. [Sonraki Adımlar](#13--sonraki-adımlar)
+4. [Diziler vs Bağlı Listeler (Arrays vs Linked Lists)](#4--diziler-vs-bağlı-listeler-arrays-vs-linked-lists)
+5. [Selection Sort (Seçmeli Sıralama)](#5--selection-sort-seçmeli-sıralama)
+6. [Recursion (Özyineleme)](#6--recursion-özyineleme)
+7. [Quicksort (Hızlı Sıralama)](#7--quicksort-hızlı-sıralama)
+8. [Hash Tables (Hash Tabloları)](#8--hash-tables-hash-tabloları)
+9. [Breadth-First Search — BFS (Genişlik Öncelikli Arama)](#9--breadth-first-search--bfs-genişlik-öncelikli-arama)
+10. [Dijkstra's Algorithm (Dijkstra Algoritması)](#10--dijkstras-algorithm-dijkstra-algoritması)
+11. [Greedy Algorithms (Açgözlü Algoritmalar)](#11--greedy-algorithms-açgözlü-algoritmalar)
+12. [Dynamic Programming (Dinamik Programlama)](#12--dynamic-programming-dinamik-programlama)
+13. [K-Nearest Neighbors — KNN (K En Yakın Komşu)](#13--k-nearest-neighbors--knn-k-en-yakın-komşu)
+14. [Sonraki Adımlar](#14--sonraki-adımlar)
 
 ---
 
@@ -249,7 +250,7 @@ O(n!)      → ... 🪦                     ⚰️
 
 ---
 
-## 4. � Diziler vs Bağlı Listeler (Arrays vs Linked Lists)
+## 4. 🔗 Diziler vs Bağlı Listeler (Arrays vs Linked Lists)
 
 ### Bellekte Nasıl Saklanır? 🧠
 
@@ -378,7 +379,7 @@ class LinkedList {
 
 ---
 
-## 5. �🗂️ Selection Sort (Seçmeli Sıralama)
+## 5. 🗂️ Selection Sort (Seçmeli Sıralama)
 
 ### Hikaye: Spotify Playlist'ini Sıralamak 🎵
 
@@ -488,7 +489,7 @@ Selection Sort pratikte pek kullanılmaz (çünkü yavaş). Ama şu kavramları 
 
 ---
 
-## 5. 🔄 Recursion (Özyineleme)
+## 6. 🔄 Recursion (Özyineleme)
 
 ### Hikaye: Büyükannenin Sandığı 📦
 
@@ -636,7 +637,7 @@ Bu yüzden:
 
 ---
 
-## 6. ⚡ Quicksort (Hızlı Sıralama)
+## 7. ⚡ Quicksort (Hızlı Sıralama)
 
 ### Ön Bilgi: Divide and Conquer (Böl ve Fethet) 🗡️
 
@@ -761,7 +762,7 @@ Aynı Big O'ya sahip olsalar bile, Quicksort pratikte çok daha hızlıdır çü
 
 ---
 
-## 7. 🗃️ Hash Tables (Hash Tabloları)
+## 8. 🗃️ Hash Tables (Hash Tabloları)
 
 ### Hikaye: Market Kasası 🛒
 
@@ -930,7 +931,7 @@ En kötü durum, her şeyin aynı index'e çakışması durumunda olur (pratikte
 
 ---
 
-## 8. 🌊 Breadth-First Search — BFS (Genişlik Öncelikli Arama)
+## 9. 🌊 Breadth-First Search — BFS (Genişlik Öncelikli Arama)
 
 ### Yeni Veri Yapısı: Graph (Graf) 🕸️
 
@@ -1072,7 +1073,7 @@ Eğer kontrol edilen düğümleri takip etmezsek:
 Ali → Ayşe → Ali → Ayşe → Ali → ... 💥 Sonsuz döngü!
 ```
 
-Bu yüzden `kontolEdildi` (visited) set'i **ŞART**!
+Bu yüzden `kontrolEdildi` (visited) set'i **ŞART**!
 
 ### BFS İki Soruyu Cevaplar 🎯
 
@@ -1097,7 +1098,7 @@ Yani tüm düğümleri ve tüm kenarları bir kez ziyaret edersin.
 
 ---
 
-## 9. 🛤️ Dijkstra's Algorithm (Dijkstra Algoritması)
+## 10. 🛤️ Dijkstra's Algorithm (Dijkstra Algoritması)
 
 ### BFS Yeterli Değil mi? 🤔
 
@@ -1298,7 +1299,7 @@ Negatif ağırlık varsa **Bellman-Ford** algoritmasını kullanman gerekir.
 
 ---
 
-## 10. 🤑 Greedy Algorithms (Açgözlü Algoritmalar)
+## 11. 🤑 Greedy Algorithms (Açgözlü Algoritmalar)
 
 ### Hikaye: Sınıf Programı Hazırlama 📅
 
@@ -1421,7 +1422,7 @@ Bu problemlerde:
 
 ---
 
-## 11. 💎 Dynamic Programming (Dinamik Programlama)
+## 12. 💎 Dynamic Programming (Dinamik Programlama)
 
 ### Hikaye: Hırsız Problemi 🎒
 
@@ -1663,7 +1664,7 @@ function fibonacciBottomUp(n) {
 
 ---
 
-## 12. 🏘️ K-Nearest Neighbors — KNN (K En Yakın Komşu)
+## 13. 🏘️ K-Nearest Neighbors — KNN (K En Yakın Komşu)
 
 ### Hikaye: Film Önerisi 🎬
 
@@ -1793,7 +1794,7 @@ Bu yüzden büyük ölçekli uygulamalarda (Netflix gibi) daha sofistike algorit
 
 ---
 
-## 13. 🚀 Sonraki Adımlar
+## 14. 🚀 Sonraki Adımlar
 
 Bu rehberdeki tüm konuları sindirdiysen, artık sağlam bir **algoritma ve veri yapıları temelin** var! 🎉
 

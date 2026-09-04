@@ -903,7 +903,7 @@ Felsefe: Karmaşıklığı **kullanıcıdan (caller)** al, **uygulayıcının (i
 Kullanıcı sayısı = N (çok), Uygulayıcı = 1
 
 Karmaşıklık kullanıcıda ise:  N kişi × karmaşıklık = ÇOK KÖTÜ
-Karmaşıklık uygulayıcıda ise: 1 kişi × karmaşıklık = İDAREE EDİLEBİLİR
+Karmaşıklık uygulayıcıda ise: 1 kişi × karmaşıklık = İDARE EDİLEBİLİR
 ```
 
 ```javascript

@@ -49,7 +49,7 @@ KOLAY KARAR (Fundamentals kitabı):
 ZOR KARAR (Bu kitap!):
   → "Bu monoliti NASIL parçalayacağız?"
   → "Bu iki servis arasındaki veriyi NASIL paylaştıracağız?"
-  → "Bu iş akışını ORKESTRASYON mu KOREOGRAFI mi ile yönetecağiz?"
+  → "Bu iş akışını ORKESTRASYON mu KOREOGRAFI mi ile yöneteceğiz?"
   → "Bu servisi bölmeli miyiz yoksa birleştirmeli miyiz?"
   → Cevaplar NET DEĞİLDİR. "Duruma bağlı" → AMA NEYE BAĞLI?!
 
@@ -925,7 +925,7 @@ class OrderSaga {
 ### Saga Kompanzasyon Zorlukları
 
 ```
-KOMPANZAsyon = "geri al" ama her zaman MÜMKÜN DEĞİL!
+KOMPANZASYON = "geri al" ama her zaman MÜMKÜN DEĞİL!
 
 SORUN 1: E-posta gönderildi → GERİ ALAMAZSIN!
   → "Siparişiniz onaylandı" e-postası gitti
@@ -958,7 +958,7 @@ SEMANTIC LOCK:
 ### Servisler Arası Kontratlar
 
 ```
-SERVİS İLETIŞIMINDE "KONTRAT" = API şeması
+SERVİS İLETİŞİMİNDE "KONTRAT" = API şeması
 → Siparış servisi, ödeme servisine NE gönderiyor?
 → Ödeme servisi NE döndürüyor?
 → Bu şemalar DEĞİŞİRSE ne olur?

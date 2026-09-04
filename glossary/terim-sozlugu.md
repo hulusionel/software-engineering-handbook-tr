@@ -73,6 +73,7 @@ Bu repo genelinde kullanılan İngilizce-Türkçe terim çiftleri ve kısaltmala
 | Distributed system | Dağıtık sistem |
 | Domain | Alan / *domain* |
 | Drift | Sapma (model/config) |
+| DPoP | Demonstrating Proof-of-Possession — *çevrilmez* |
 | Dual-write | Çift yazma |
 | Durability | Dayanıklılık (kalıcılık) |
 
@@ -122,6 +123,7 @@ Bu repo genelinde kullanılan İngilizce-Türkçe terim çiftleri ve kısaltmala
 | Incident | Olay (üretim olayı) |
 | Infrastructure as code (IaC) | Kod olarak altyapı |
 | Invariant | Değişmez kural |
+| io_uring | Linux asenkron I/O arayüzü — *çevrilmez* |
 
 ### J–K
 | İngilizce | Türkçe / Açıklama |
@@ -239,6 +241,7 @@ Bu repo genelinde kullanılan İngilizce-Türkçe terim çiftleri ve kısaltmala
 | İngilizce | Türkçe / Açıklama |
 |---|---|
 | Watermark (stream) | Su seviyesi (akış) |
+| WASM (WebAssembly) | Taşınabilir ikili komut formatı — *çevrilmez* |
 | Workload | İş yükü |
 | Write amplification | Yazma büyütmesi |
 | Zero-copy | Sıfır kopyalama |
@@ -265,6 +268,7 @@ Bu repo genelinde kullanılan İngilizce-Türkçe terim çiftleri ve kısaltmala
 | CQRS | Command Query Responsibility Segregation | Mimari |
 | CRDT | Conflict-free Replicated Data Type | Dağıtık |
 | DLQ | Dead Letter Queue | Messaging |
+| DPoP | Demonstrating Proof-of-Possession | OAuth |
 | DR | Disaster Recovery | SRE |
 | DTO | Data Transfer Object | API |
 | eBPF | Extended Berkeley Packet Filter | Kernel |
@@ -279,6 +283,7 @@ Bu repo genelinde kullanılan İngilizce-Türkçe terim çiftleri ve kısaltmala
 | IaC | Infrastructure as Code | DevOps |
 | ICS | Incident Command System | Olay yönetimi |
 | IOPS | Input/Output Operations Per Second | Disk |
+| io_uring | Linux async I/O ring buffer | Kernel I/O |
 | JIT | Just-In-Time compilation | Runtime |
 | JMM | Java Memory Model | Eşzamanlılık |
 | JWE / JWS / JWT | JSON Web Encryption / Signature / Token | Güvenlik |

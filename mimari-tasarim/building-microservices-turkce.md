@@ -540,6 +540,31 @@ Newman: "Senkron çağrı zincirleri ne kadar uzunsa,
          sistem o kadar KIRILGANDIR."
 ```
 
+### 📊 Somut Rakamlar: Microservices Maliyeti
+
+**Servisler arası iletişim overhead'i:**
+
+| Senaryo | Latency | Not |
+|---|---|---|
+| In-process method call | ~50ns | Monolith içi |
+| Aynı host, gRPC (Protobuf) | ~0.5ms | 10.000× daha yavaş |
+| Aynı AZ, REST (JSON) | ~1-5ms | Network + serialization |
+| Cross-AZ, REST (JSON) | ~5-15ms | + AZ latency |
+| Cross-region | ~50-150ms | + coğrafi mesafe |
+
+**Serialization format karşılaştırması (1KB payload):**
+
+| Format | Boyut | Encode süresi | Decode süresi |
+|---|---|---|---|
+| JSON | 1.0× (referans) | 1.0× | 1.0× |
+| Protobuf | 0.3-0.5× | 0.3× | 0.2× |
+| Avro | 0.3-0.5× | 0.5× | 0.4× |
+| MessagePack | 0.7× | 0.6× | 0.5× |
+
+> Protobuf, JSON'a göre **3-5× daha küçük** ve **3-5× daha hızlı**. Yüksek-traffic servisler arasında format seçimi fatura ve latency'yi doğrudan etkiler.
+
+**Network partition olasılığı:** Bailis & Kingsbury (2014) çalışmasına göre, büyük ölçekli veri merkezlerinde yılda **ortalama 5-12 network partition** meydana gelir. Google Spanner verilerine göre, multi-region deployment'ta ayda **~1 significant partition event** görülmektedir.
+
 ---
 
 ## 6. 📨 Asenkron İletişim
@@ -1137,7 +1162,7 @@ async function callPaymentService(orderId, amount, correlationId) {
 ### Alerting Stratejisi
 
 ```
-HER metrriğe alert KOYMA! → Alert fatigue (uyarı yorgunluğu)
+HER metriğe alert KOYMA! → Alert fatigue (uyarı yorgunluğu)
 
 İYİ alerting:
   → USE Method (Brendan Gregg):
@@ -1496,7 +1521,7 @@ Tek takımla 20 microservice → 💥 FELAKET!
 ```
 1. PLATFORM TAKIMI 🏗️
    → Altyapı sağlar: CI/CD, monitoring, service mesh
-   → Diğer ekiplerin işini KOLAYLAŞTTIRIR
+   → Diğer ekiplerin işini KOLAYLAŞTIRIR
    → "Internal Developer Platform"
 
 2. STREAM-ALIGNED TAKIMI 🏊
@@ -1505,7 +1530,7 @@ Tek takımla 20 microservice → 💥 FELAKET!
    → End-to-end sahiplenme (you build it, you run it!)
 
 3. ENABLING TAKIMI 📚
-   → Diğer takımlara yeni beceriler KAZANDTIRIR
+   → Diğer takımlara yeni beceriler KAZANDIRIR
    → "Observability guild" → ekiplere tracing öğretir
    → Geçici (beceri kazandırınca geri çekilir)
 
@@ -1655,9 +1680,28 @@ Newman: "Microservices bir HEDEF değildir!
          Aracı kullanmanın maliyetini hesapla!"
 ```
 
+### Monolith → Microservices Geçiş Karar Ağacı
+
+```mermaid
+flowchart TD
+  Q1{Ekip büyüklüğü > 25-30 kişi mi?}
+  Q1 -->|Hayır| M1["Monolith / Modular Monolith\nyeterli — karmaşıklık ekleme"]
+  Q1 -->|Evet| Q2{Domain boundary'ler\nnet mi?}
+  Q2 -->|Hayır| A1["Önce DDD Strategic Design yap\nEvent Storming + Context Mapping"]
+  A1 --> Q2
+  Q2 -->|Evet| Q3{Bağımsız deploy\ngerçekten gerekli mi?}
+  Q3 -->|Hayır| M2["Modular Monolith\nPackwerk / ArchUnit ile sınır koru"]
+  Q3 -->|Evet| Q4{Platform ekibi +\nCI/CD + Observability\nhazır mı?}
+  Q4 -->|Hayır| A2["Önce platform yatırımı yap\nService mesh, tracing, CI/CD"]
+  A2 --> Q4
+  Q4 -->|Evet| Q5{Veri tutarlılığı\nnasıl sağlanacak?}
+  Q5 -->|Eventual OK| M3["Microservices\nStrangler Fig ile kademeli geçiş"]
+  Q5 -->|Strong consistency| M4["Dikkat: Distributed TX gerekecek\nSaga / 2PC maliyetini hesapla"]
+```
+
 ---
 
-## 19. � Büyük Şirketlerde Microservices Gerçekleri
+## 19. 🏢 Büyük Şirketlerde Microservices Gerçekleri
 
 ### Amazon — Microservices'in Doğduğu Yer
 
@@ -1854,7 +1898,7 @@ FAZ 3 — Mimari & Ölçek (12-18 ay)
 > kabul ettikten sonra yapılan BİLİNÇLİ bir seçimdir.
 > Eğer bu zorlukları göze ALAMIYORSANIZ,
 > eğer ekibiniz bu karmaşıklığı YÖNETEMİYORSA,
-> eğer domain'inizi yeterince ANLAMADIYISANIZ:
+> eğer domain'inizi yeterince ANLAMADIYORSANIZ:
 > MONOLITH ile kalmak DOĞRU karardır.
 > Microservices bir SON değil, bir ARAÇTIR.
 > Ve her araç gibi, YANLIŞ kullanıldığında

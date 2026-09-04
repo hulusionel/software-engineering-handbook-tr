@@ -1,0 +1,4 @@
+# .github/ klasörünü Git'e gönderme (agent'lar, talimatlar, review takip)
+.github/agents/
+.github/instructions/
+.github/REVIEW-FINDINGS.md

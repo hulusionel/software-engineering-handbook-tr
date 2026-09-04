@@ -347,6 +347,8 @@ Disadvantage:
 
 #### Saga Pattern (Modern Approach)
 
+> 📖 **Ayrıca bkz.**: [Senior Backend Developer Roadmap — Saga Pattern](senior-backend-developer-roadmap.md#saga-pattern-distributed-transactions)
+
 Neden "Modern Approach" diyoruz? Çünkü dağıtık sistemlerde transaction yönetiminin eski yöntemi **Two-Phase Commit (2PC)** idi. 2PC'yi düşünün: bir düğün organizatörü gibi — "Herkes hazır mı? Evet? Tamam, hep birlikte başlıyoruz!" Kulağa güzel geliyor ama pratikte **ölçeklenmiyor**. Bir servis yanıt vermezse tüm sistem kilitleniyor, coordinator çökerse herkes askıda kalıyor. Microservices dünyasında 10-20 servisin aynı anda 2PC ile koordine olmasını hayal edin — kabus!
 
 Saga Pattern, microservices'in bu soruna verdiği **modern cevap**. Temel fikir şu: büyük bir distributed transaction'ı küçük, birbirini takip eden **lokal transaction'lara** böl. Her servis kendi işini yapsın, başarısız olursa **compensating action** (telafi edici işlem) çalıştırsın.
@@ -1294,6 +1296,8 @@ app.get('/products/:id', async (req, res) => {
 ```
 
 #### Connection Pooling Optimization
+
+> 📖 **Ayrıca bkz.**: [Senior Backend Developer Roadmap — Connection Pooling](senior-backend-developer-roadmap.md#postgresql)
 
 Connection pooling'i anlamanın en güzel yolu **havaalanı taksi kuyruğu** analojisidir. Düşünün: havaalanından çıktınız, taksi lazım. İki senaryo var:
 
@@ -4136,6 +4140,8 @@ Circuit Breaker'ın üç state'i vardır:
 - **CLOSED (Normal):** İstekler geçer. Hatalar sayılır.
 - **OPEN (Devre açık):** İstekler BLOKLANIR. Fallback çalışır (cache'ten veri, default değer, vs.)
 - **HALF-OPEN (Test):** resetTimeout sonrası birkaç istek denenir. Başarılıysa CLOSED'a döner, değilse OPEN kalır.
+
+> 📖 **Ayrıca bkz.**: [Senior Backend Developer Roadmap — Circuit Breaker Pattern](senior-backend-developer-roadmap.md#circuit-breaker-pattern)
 
 **Retry with Exponential Backoff + Jitter:** "İlk denemede olmadı, bir daha dene" — ama NASIL denediğin önemli! 
 - **Sabit aralıkla retry:** 100 client aynı anda 1 saniye sonra tekrar dener → **thundering herd** — sunucu yine çöker!

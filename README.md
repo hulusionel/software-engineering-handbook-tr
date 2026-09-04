@@ -59,14 +59,44 @@ Yazılım mühendisliği alanındaki en önemli kitapların **Türkçe kapsamlı
 
 Kitap özetlerinin ötesinde, üretim odaklı, sayısal ve karar-verme kılavuzları.
 
+**Temel Saha Kılavuzları**
+
 | Doküman | İçerik |
 |--------|--------|
 | [Latency Numaraları & Kapasite Matematiği](pratik/latency-numbers-ve-kapasite-matematigi.md) | Jeff Dean tablosu, Little's Law, p99 tail-at-scale, sizing |
 | [Postmortem Arşivi](pratik/postmortem-arsivi.md) | 20 ünlü kesinti yapılandırılmış (Knight Capital → CrowdStrike 2024) |
-| [Karar Çerçevesi Matrisleri](pratik/karar-cercevesi-matrisleri.md) | DB, sync/async, monolith/microservice, build/buy, cache, vb. 12 matris |
+| [Karar Çerçevesi Matrisleri](pratik/karar-cercevesi-matrisleri.md) | DB, sync/async, monolith/microservice, build/buy, cache |
 | [API Tasarım Derinliği](pratik/api-tasarim-derinligi.md) | Idempotency, pagination, RFC 9457, rate limiting, webhook |
 | [Staff+ Yazma Kültürü](pratik/staff-yazma-kulturu.md) | Design Doc, ADR, RFC, 6-pager, PRFAQ, postmortem disiplini |
 | [Anti-Pattern Kataloğu](pratik/anti-pattern-katalogu.md) | 60+ anti-pattern (mimari, veri, API, dağıtık, ops, kod, test, güvenlik) |
+
+**Derinlemesine Sistem Konuları**
+
+| Doküman | İçerik |
+|--------|--------|
+| [Dağıtık Sistemler Derinlemesine](pratik/dagitik-sistemler-derinlemesine.md) | 8 fallacy, FLP, CAP/PACELC, consensus, CRDT, idempotency/outbox |
+| [Storage Engine İç Yapısı](pratik/storage-engine-ic-yapisi.md) | WAL, B-tree, LSM-tree, MVCC, snapshot/checkpoint, indexing |
+| [Performance Engineering](pratik/performance-engineering.md) | USE/RED/Four Golden Signals, profiling, flame graph, mechanical sympathy |
+| [Eşzamanlılık Primitifleri](pratik/eszamanlilik-primitifleri.md) | Threading, memory model, locks, lock-free, async/await, backpressure |
+| [Networking Derinlemesine](pratik/networking-derinlemesine.md) | OSI, TCP, TLS, HTTP/1.1/2/3, DNS, LB, gRPC, WebSocket, CDN |
+| [Güvenlik Derinlemesine](pratik/guvenlik-derinlemesine.md) | STRIDE, OWASP Top 10, AuthN/Z, crypto, secret mgmt, supply chain |
+| [Veri Mühendisliği](pratik/veri-muhendisligi.md) | OLTP/OLAP, lakehouse, ETL/ELT, Lambda/Kappa, CDC, schema evolution |
+
+**Pratik Disiplinler & Modern Stack**
+
+| Doküman | İçerik |
+|--------|--------|
+| [SRE Pratiği](pratik/sre-pratigi.md) | SLI/SLO/SLA, error budget, toil, on-call, incident, chaos |
+| [Build, Release & Supply Chain](pratik/build-release-supply-chain.md) | CI/CD, deterministic build, SLSA/SBOM/Sigstore, deployment |
+| [Test Stratejileri](pratik/test-stratejileri.md) | Test pyramid, contract test, property-based, mutation, fuzzing |
+| [FinOps & Cloud Maliyet](pratik/finops-cloud-maliyet.md) | Inform/optimize/operate, unit economics, compute/storage optimization |
+| [Hukuk, Uyumluluk, Etik](pratik/hukuk-uyumluluk-etik.md) | GDPR, KVKK, PCI-DSS, SOC 2, lisans hijyeni, AI etiği |
+| [Modern Teknoloji Radarı](pratik/modern-teknoloji-radari.md) | Adopt/Trial/Assess/Hold: eBPF, WASM, Rust, edge, modern data, LLM |
+| [AI/ML Mühendislik Pratiği](pratik/ai-ml-muhendisligi.md) | MLOps, feature store, drift, RAG, LLM eval, cost & latency |
+| [Mimari Eleştiri](pratik/mimari-elestiri.md) | Microservices/DDD/Clean/Event Sourcing eleştirisi, over-engineering |
+| [Domain Mimarileri](pratik/domain-mimarileri.md) | Exchange/LMAX, Ad-tech/RTB, Gaming, IoT, Multi-tenancy |
+| [Operasyonel Derinlik](pratik/operasyonel-derinlik.md) | Connection storm, idempotency key API, operasyonel kalıplar |
+| [Staff+ Soft Skills](pratik/staff-soft-skills.md) | Glue work, promotion/impact, executive communication |
 
 ### 📐 [Şablonlar](templates/) · 📚 [Terim Sözlüğü](glossary/terim-sozlugu.md) · 🔬 [Kaynakça](kaynakca.md)
 
@@ -82,8 +112,8 @@ Kitap özetlerinin ötesinde, üretim odaklı, sayısal ve karar-verme kılavuzl
 ## 📊 İstatistikler
 
 - **21** kapsamlı kitap/yol haritası rehberi
-- **6** pratik saha dokümanı + 4 yazım şablonu + terim sözlüğü + kaynakça
-- **~50.000+** satır içerik
+- **24** pratik saha dokümanı + 4 yazım şablonu + terim sözlüğü + kaynakça
+- **~63.000+** satır içerik
 - **17** farklı kitap özeti
 - **3** kariyer yol haritası
 - **%100** Türkçe

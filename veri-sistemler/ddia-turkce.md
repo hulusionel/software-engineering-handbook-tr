@@ -506,6 +506,29 @@ BONUS: Sütun sıkıştırma çok etkili!
   → 10x-100x sıkıştırma!
 ```
 
+### 📊 Depolama Katmanı Latency Tablosu
+
+| Ortam | Okuma Latency | Throughput (seq.) | Not |
+|---|---|---|---|
+| **L1 Cache** | ~1ns | — | CPU çekirdek içi |
+| **L2 Cache** | ~4ns | — | CPU içi |
+| **L3 Cache** | ~10ns | — | CPU paylaşımlı |
+| **Main Memory (RAM)** | ~100ns | ~50 GB/s | DRAM |
+| **NVMe SSD (random)** | ~10-25µs | ~3-7 GB/s | 100× RAM'den yavaş |
+| **SATA SSD (random)** | ~50-100µs | ~500 MB/s | |
+| **HDD (random)** | ~5-10ms | ~200 MB/s | 100.000× RAM'den yavaş |
+| **Network (same AZ)** | ~0.5-1ms | ~10 Gbps | |
+| **Network (cross-region)** | ~50-150ms | ~1 Gbps | Coğrafi mesafe |
+
+**Replication lag istatistikleri (2020-2024 production verileri):**
+- **Senkron replikasyon**: 0 lag (garanti) ama write latency +1 RTT artar (~1-5ms same-AZ).
+- **Asenkron replikasyon**: Normal koşullarda **< 1s** lag; yük altında **saniyeler-dakikalar** olabilir.
+- **PostgreSQL streaming replication**: Tipik lag < 100ms (same-AZ), monitoring: `pg_stat_replication`.
+- **MySQL semi-sync**: En az 1 replica onayı bekler; lag ≈ 1 RTT ama failover'da veri kaybı sıfır.
+- **MongoDB**: Write concern `majority` ile sıfır kayıp; `w:1` ile lag secondaries'e bağlı.
+
+> **Pratik kural:** Read-after-write consistency gerekiyorsa, yazımı yapan kullanıcının okumalarını **leader'dan** yap; diğer kullanıcılar replica'dan okuyabilir.
+
 ---
 
 ## 4. 📦 Encoding ve Evrim
@@ -1551,7 +1574,7 @@ Event-Driven: Pub/Sub
 Geleneksel: Mevcut durumu tut, üzerine yaz
   users tablosu: {id: 1, name: "Ali", email: "ali@mail.com"}
   UPDATE users SET email = 'ali@yeni.com' WHERE id = 1;
-  → ESKİ email KAYBOLDUl!
+  → ESKİ email KAYBOLDU!
 
 Event Sourcing: TÜM DEĞİŞİKLİKLERİ kronolojik olarak sakla
 
@@ -1849,6 +1872,19 @@ Sıradaki (Faz 2 sonu):
 📙 Unit Testing (Khorikov)       → Test stratejisi
 📗 Refactoring (Fowler)          → Referans kitap
 ```
+
+### ⚠️ Dağıtık Sistem Yanılgıları
+
+| Yanılgı | Gerçek |
+|---|---|
+| **"CAP'ten C seçerim"** | CAP teoremi böyle çalışmaz. Partition olduğunda C veya A arasında seçersin; partition yokken ikisi de vardır. PACELC daha doğru model. |
+| **"Eventual = hemen"** | Eventual consistency = "bir süre sonra tutarlı"; bu süre milisaniye olabilir, **dakikalar** da olabilir. SLA tanımla. |
+| **"Consensus = yavaş"** | Raft/Paxos 1 RTT'de commit eder (~1ms same-AZ). Yavaş olan distributed transaction (2PC), consensus değil. |
+| **"Replication = backup"** | Replication bug'ları anında tüm replica'lara yayılır. Backup = zaman noktası kurtarma (PITR); replication bunu sağlamaz. |
+| **"Kafka exactly-once"** | Kafka idempotent producer + transactional consumer ile **effectively-once** sağlar; gerçek exactly-once fiziksel olarak imkânsız. |
+| **"NoSQL = ölçeklenir"** | Scale horizontal olur ama JOIN, transaction, consistency trade-off'ları vardır. Yanlış veri modeli NoSQL'de de ölçeklenmez. |
+| **"Daha fazla shard = daha hızlı"** | Cross-shard query maliyeti, hotspot riski, rebalancing overhead. Shard sayısı ≠ performans. |
+| **"Network güvenilirdir"** | Fallacies of Distributed Computing #1. Network **her zaman** arızalanabilir; timeout, retry, idempotency zorunlu. |
 
 ---
 

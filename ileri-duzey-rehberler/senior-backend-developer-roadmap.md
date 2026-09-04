@@ -3082,6 +3082,8 @@ services:
 
 ### Circuit Breaker Pattern
 
+> 📖 **Ayrıca bkz.**: [Advanced Backend Engineering — Circuit Breaker](advanced-backend-engineering.md#resilience-patterns)
+
 Circuit Breaker (Devre Kesici) pattern'ını anlamak için evinizdeki **sigorta kutusunu** düşünün. ⚡ Elektrik hattında aşırı akım olduğunda (kısa devre, aşırı yük) sigorta ATLANIR ve elektriği keser. Neden? Çünkü kesmezse kablolar erir, yangın çıkar, tüm ev yanar. Circuit Breaker pattern'ı da yazılımda aynısını yapar: bir servis sürekli hata veriyorsa, o servise istek GÖNDERMEYİ DURDURUR. Çünkü hatalı bir servise istek göndermeye devam etmek, tüm sistemi çökertebilir.
 
 **Cascade Failure: Domino Etkisi 🎯**
@@ -4539,6 +4541,8 @@ const pool = new Pool({
 const result = await pool.query('SELECT * FROM users WHERE id = $1', [userId]);
 ```
 
+> 📖 **Ayrıca bkz.**: [Advanced Backend Engineering — Connection Pooling Optimization](advanced-backend-engineering.md#connection-pooling-optimization)
+
 #### MySQL/MariaDB
 **When to use:**
 - Simple read-heavy workloads
@@ -4959,6 +4963,8 @@ BASE (NoSQL):
 ```
 
 #### Saga Pattern (Distributed Transactions)
+
+> 📖 **Ayrıca bkz.**: [Advanced Backend Engineering — Saga Pattern](advanced-backend-engineering.md#saga-pattern-modern-approach)
 
 Monolith dünyada hayat güzeldi. Tek bir veritabanın vardı ve transaction'lar basitti: `BEGIN → işlemler → COMMIT veya ROLLBACK`. Bitti. Ama microservices dünyasına geçtiğinde, **her servisin kendi veritabanı var** ve servisler arası tek bir transaction YAPAMAZSIN. Neden? Çünkü distributed transaction (2-Phase Commit / 2PC) çok yavaş, çok kırılgan ve ölçeklenmiyor. Bir servis yanıt vermezse tüm sistem kilitlenir. İşte bu yüzden **Saga Pattern** icat edildi.
 

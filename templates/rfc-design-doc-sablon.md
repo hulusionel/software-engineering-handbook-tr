@@ -118,7 +118,7 @@ En az **3 alternatif**, her biri için artılar/eksiler/neden seçilmedi. "Hiç 
 
 ## 7. Açık Sorular
 
-Bilerek cevapsız bırakılan sorular. *Henüz karar verilmedi*. Her birinin kararsalama tarihi ve sahibi olmalı.
+Bilerek cevapsız bırakılan sorular. *Henüz karar verilmedi*. Her birinin kararlaştırma tarihi ve sahibi olmalı.
 
 ## 8. Risk Kaydı
 

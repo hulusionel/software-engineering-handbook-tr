@@ -484,6 +484,19 @@ Yıllık eşdeğer **400.000+ saat simulation**. Hata bulunursa stack trace + se
 
 ---
 
+## ⚠️ Postmortem Anti-Pattern'leri
+
+| Anti-Pattern | Neden Tehlikeli | Doğru Yaklaşım |
+|---|---|---|
+| **Blame culture** | İnsanlar hata gizler, incident raporlanmaz; öğrenme durur | Blameless postmortem: "sistem insanı başarısız kıldı" perspektifi |
+| **Action item takipsizliği** | Postmortem yazılır, 15 action item çıkar, hiçbiri yapılmaz | Her action item'a owner + deadline + Jira ticket; haftalık takip |
+| **Sadece son tetikleyiciye odaklanma** | "Deploy geri alındı, sorun çözüldü" → root cause'a inilmez | 5 Whys / Ishikawa: contributing factors zinciri çıkar |
+| **Hero culture** | "Ali 3 saatte düzeltti" → Ali tatile çıkınca aynı sorun tekrar | Runbook + automation; tek kişiye bağımlılık = SPOF |
+| **Postmortem yazmamak** | Küçük incident'lar kayıt dışı kalır; pattern'ler görülmez | Severity ne olursa olsun mini-postmortem: timeline + 3 action item |
+| **Copy-paste postmortem** | Template doldurulur ama gerçek analiz yapılmaz; "improved monitoring" her seferinde | Spesifik, ölçülebilir action: "X metriğine Y eşik ile alarm ekle" |
+
+---
+
 ## 📚 İleri Okuma
 
 - *Awesome Postmortems* — github.com/danluu/post-mortems (canon liste)
@@ -493,4 +506,4 @@ Yıllık eşdeğer **400.000+ saat simulation**. Hata bulunursa stack trace + se
 - *Resilience Engineering* — Hollnagel, Woods, Leveson
 - TigerBeetle blog — *Simulation Testing*
 
-> [⬅️ Pratik klasörü](README.md) · [📋 Postmortem şablonu](../templates/postmortem-sablon.md)
+> [⬅️ Pratik klasörü](README.md) · [📚 Sözlük](../glossary/terim-sozlugu.md) · [🔬 Kaynakça](../kaynakca.md) · [📋 Postmortem şablonu](../templates/postmortem-sablon.md)

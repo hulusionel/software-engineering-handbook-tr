@@ -1375,7 +1375,7 @@ KURAL:
 ```
 Mimar aynı zamanda İLETİŞİMCİDİR!
 
-1. Hedef kitlseyi tanı:
+1. Hedef kitlesini tanı:
    → CTO'ya: Maliyet, risk, timeline
    → Geliştirilere: Teknik detay, trade-off
    → Ürün yöneticisine: İş etkisi, hız
@@ -1535,7 +1535,7 @@ AI'ın GÜÇLERİ:
 AI'ın ZAYIFLIKLARI:
   ❌ "Bu ekip microservices yönetebilir mi?" sorusunu cevaplayamaz
   ❌ Politik/organizasyonel trade-off'ları bilmez
-  ❌ "İlk mimariyi BASİT seç, sonra evrilsin" ← bu SEZG gerektiri
+  ❌ "İlk mimariyi BASİT seç, sonra evrilsin" ← bu SEZGİ gerektirir
 ```
 
 ### AI ile Mimari Değerlendirme Promptları
@@ -1629,6 +1629,31 @@ Sam Newman (Building Microservices yazarı):
 └────────────────┴─────┴──────┴──────┴──────┴─────┴──────┴───────┘
 
 "En iyi" mimari YOK! Sadece durumuna en UYGUN olan var.
+```
+
+### Mimari Stil Seçim Karar Ağacı
+
+```mermaid
+flowchart TD
+  Q1{Sistemin ölçek\nbeklentisi nedir?}
+  Q1 -->|Küçük ekip, tek deploy| Q2{Domain karmaşıklığı?}
+  Q1 -->|Orta ölçek, birkaç ekip| Q3{Bağımsız deploy\ngerekli mi?}
+  Q1 -->|Büyük ölçek, çok ekip| Q4{Ana driver ne?}
+
+  Q2 -->|Basit| M1["Layered / Modular Monolith"]
+  Q2 -->|Karmaşık iş kuralları| M2["Layered + Domain Model\nveya Microkernel"]
+
+  Q3 -->|Hayır| M3["Service-Based Architecture\n4-12 coarse-grained servis"]
+  Q3 -->|Evet| M4["Service-Based → Microservices\nkademeli geçiş"]
+
+  Q4 -->|Elastik ölçeklenme| M5["Space-Based Architecture"]
+  Q4 -->|Event processing / async| M6["Event-Driven Architecture\nBroker veya Mediator"]
+  Q4 -->|Bağımsızlık + esneklik| M7["Microservices\nPlatform yatırımı zorunlu!"]
+  Q4 -->|Hepsi lazım| M8["Hybrid:\nMicroservices + Event-Driven\nEn karmaşık, en pahalı"]
+
+  style M1 fill:#4a4,stroke:#333,color:#fff
+  style M5 fill:#c66,stroke:#333,color:#fff
+  style M8 fill:#c33,stroke:#333,color:#fff
 ```
 
 ### 7 Altın Kural 🏆

@@ -83,7 +83,7 @@ Will Larson'ın tanımladığı 4 archetype:
    → Kritik, karmaşık SORUNLARI çözer
    → Bir takıma kalıcı değil, soruna kalıcı
    → "Bu performans sorunu ÇÖZÜLMELI → gidip çöz!"
-   → Zor problem UZMANICISI
+   → Zor problem UZMANCISI
 
 4. RIGHT HAND 🤝
    → VP/Director'ün teknik ELİ
@@ -294,7 +294,7 @@ Her Staff engineer'ın yazması gereken DOKÜMAN:
 Staff engineer projeyi "yönetmez" AMA:
   → Teknik YÖNÜ belirler
   → Riskleri ERKEN tespit eder
-  → Engellereri KALDIRIR
+  → Engelleri KALDIRIR
   → Diğer takımlarla KOORDINE eder
 
 "Teknik proje liderliği = 
@@ -633,7 +633,7 @@ Staff engineer olarak YAZMAN gerekenler:
    → Sistemi, kültürü, araçları BELGELE
 
 6. RUNBOOK
-   → "X alarmı çaldığında NE YAPACACAKSIN?"
+   → "X alarmı çaldığında NE YAPACAKSIN?"
    → Adım adım talimat → on-call mühendis İÇİN
 ```
 
@@ -692,7 +692,7 @@ FARK:
   → Sponsor: "Bunu DAHA BÜYÜK sahnede yapmalısın!" (kariyer itme)
 
   → Mentor olmak HERKESİN işi (kıdemsiz birisi bile birini mentorlar)
-  → Sponsor olmak EKSTrA SORUMLULUK → birisinin kariyerini SAHİPLENİYORSUN
+  → Sponsor olmak EKSTRA SORUMLULUK → birisinin kariyerini SAHİPLENİYORSUN
 
 STAFF ENGINEER OLARAK:
   → Junior/Mid mühendislere MENTOR ol
@@ -817,7 +817,7 @@ TİPİK BİR HAFTA:
     → RFC yazma/review etme
     → Roadmap planlaması
 
-  %15 → İLETIŞİM ve KOORDİNASYON 🤝
+  %15 → İLETİŞİM ve KOORDİNASYON 🤝
     → Cross-team toplantılar
     → Stakeholder alignment
     → Glue work
@@ -1036,7 +1036,7 @@ OPERASYONELLİK:
 ```
 "Kültür, kimse bakmadığında insanların NE YAPTIĞIDIR."
 
-Staff engineer olarak kültürü ŞEKILLENDIRIRSIN:
+Staff engineer olarak kültürü ŞEKİLLENDİRİRSİN:
 
 1. KOD İNCELEME KÜLTÜRÜ 👀
    ❌ "Gatekeeping" → PR 3 gün bekliyor, 50 yorum, nitpicking
@@ -1146,7 +1146,7 @@ Brag Document örneği:
    → Staff = kod yazmayı BIRAK demek DEĞİL!
    → Teknik becerin KÖRELIR → güvenilirliğin DÜŞER
    → "Mimar telefon açıp dal döşerken parmağı kesmez
-      ama nasıl keseceğini BİLMELİDIR" → dal kesmeye de DEVAM ET!
+      ama nasıl keseceğini BİLMELİDİR" → dal kesmeye de DEVAM ET!
 
 2. "HER ŞEYİ BEN YAPMALIYIM" ❌
    → Tüm mimari kararları BEN vermeliyim → DARBOĞAZ olursun!
@@ -1171,7 +1171,7 @@ Brag Document örneği:
 
 ---
 
-## 16. � Büyük Şirketlerde Staff Engineer Rolü
+## 16. 🏢 Büyük Şirketlerde Staff Engineer Rolü
 
 ### Google — L6+ ve Ötesi
 
@@ -1237,7 +1237,7 @@ AI ARAÇLARI staff engineer'ın hangi yeteneklerini güçlendiriyor?
 
   ✅ DESIGN DOC YAZMA:
      → AI ilk taslağı oluşturur
-     → Staff engineer DÜZENLER ve DERINLESTIRIR
+     → Staff engineer DÜZENLER ve DERİNLEŞTİRİR
      → Zaman kazancı: %40-50
 
   ✅ CODE REVIEW:
@@ -1308,7 +1308,7 @@ Reddit r/experienceddevs:
 
 ---
 
-## 18. �🎬 Son Sözler
+## 18. 🎬 Son Sözler
 
 ### Staff Engineer Özet Kartı
 
@@ -1341,7 +1341,7 @@ Reddit r/experienceddevs:
 │                                                              │
 │ KARİYER:                                                     │
 │  → Brag document TUT                                         │
-│  → KALDRACI işlere odaklan                                  │
+│  → KALDIRACI işlere odaklan                                 │
 │  → Glue work'ü DENGEle (%30 max)                           │
 │  → Enerji yönetimi > zaman yönetimi                         │
 │  → "Bilmiyorum" deme CESARETi                               │
