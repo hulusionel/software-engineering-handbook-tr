@@ -87,6 +87,43 @@ Kritik kelime: "GÖZLEMLENEN DAVRANIŞ DEĞİŞMEZ"
   → AMA dışarıdan bakan biri aynı sonucu görür
 ```
 
+### 🎬 Fowler'ın Açılış Örneği: Video Mağazası (Adım Adım)
+
+> Kitabın birinci bölümü tek bir örnekle refactoring'in *ne olduğunu* gösterir: bir video kiralama mağazasının fatura yazdıran `statement()` fonksiyonu. Fowler'ın önce verdiği "çalışan ama kokan" kod, adım adım temizlenir. Bu örnek tüm kitabın manifestosudur.
+
+```
+BAŞLANGIÇ: Tek dev fonksiyon — statement()
+  → Tüm fiyat hesabı + formatlama TEK yerde
+  → switch (film türü) { REGULAR / NEW_RELEASE / CHILDREN } içeride
+  → Yeni bir çıktı formatı (HTML) istenince → kopyala-yapıştır kâbusu
+  → Yeni film türü eklemek → dev switch'i her yerde değiştir
+
+FOWLER'IN ALTIN KURALI:
+  "Bir özellik eklemem gerekiyor ama kod buna elverişli değilse,
+   ÖNCE kodu özelliği eklemeye elverişli hale getiririm (refactor),
+   SONRA özelliği eklerim."
+```
+
+```
+ADIM ADIM (her adımdan sonra TESTLER YEŞİL):
+  1. Extract Function     → switch'i amountFor(rental) fonksiyonuna çıkar
+  2. Rename Variable      → değişkenlere niyet-açıklayan isimler ver
+  3. Move Function        → fiyat mantığını doğru sınıfa (Movie/Rental) taşı
+  4. Replace Temp with Query → geçici değişkenleri sorgu fonksiyonlarına çevir
+  5. Replace Conditional with Polymorphism
+       → tür-bazlı switch'i, her film türü için bir alt sınıfa dönüştür
+       → yeni tür eklemek artık: yeni bir sınıf (switch'e dokunmadan!)
+  6. Sunum mantığını (metin/HTML) hesaplamadan AYIR
+       → aynı hesap, iki farklı renderer → kopya-yapıştır biter
+
+SONUÇ:
+  → Yeni film türü = yeni sınıf (Open-Closed Principle)
+  → Yeni format = yeni renderer
+  → Her parça küçük, isimli, test edilebilir
+```
+
+> **İki temel ders:** (1) Refactoring **küçük, davranış-koruyan adımlarla** yapılır — her adımdan sonra testler yeşil. (2) Güçlü bir **test takımı**, refactoring'in olmazsa olmaz güvenlik ağıdır; testsiz kod "refactor" değil "riskli yeniden yazım"dır.
+
 ---
 
 ## 2. 💡 Neden Refactoring?

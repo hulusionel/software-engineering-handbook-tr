@@ -2136,6 +2136,39 @@ Koku: Feature Envy
 > Her koku bir refactoring fırsatıdır.
 > Kokuları erken fark et, Boy Scout kuralını uygula (dokunduğun yeri temiz bırak).
 
+### 🪜 Successive Refinement (Ardışık İyileştirme) — Uncle Bob'un Args Örneği
+
+> Clean Code'un en öğretici bölümü, `Args` (komut satırı argüman ayrıştırıcı) örneğidir. Martin'in temel iddiası: **Temiz kod bir çırpıda yazılmaz; art arda küçük iyileştirmelerle (successive refinement) ORTAYA ÇIKARILIR.** Önce çalıştır, sonra sürekli temizle.
+
+```
+UNCLE BOB'UN İTİRAFI:
+  "Bu kodu size güzelce sunmuyorum — önce ÇİRKİN halini yazdım,
+   sonra adım adım temizledim. İyi kod böyle doğar."
+
+SÜREÇ:
+  1. ÇALIŞAN ama dağınık ilk sürüm (çalışıyor ama büyüdükçe çürüyor)
+  2. Kod büyüyünce fark et: "artık her ekleme daha zor" → DUR
+  3. Test yaz (kırmadan temizlemek için güvenlik ağı)
+  4. Küçük adımlarla refactor et — her adımda testler YEŞİL kalsın
+  5. Sorumlulukları ayır (her tip için ayrı ArgumentMarshaler)
+
+TEMEL DERS:
+  → "Önce kirlet, sonra temizle" AYIP DEĞİL — DOĞAL süreçtir.
+  → AMA temizliği ERTELEME! "Sonra düzeltirim" = teknik borç.
+  → Refactor'u küçük ve test-korumalı adımlarla yap; büyük "rewrite" riskli.
+```
+
+```
+"MESS" NASIL BİRİKİR (Martin'in uyarısı):
+  → Args'a önce sadece boolean argüman ekledin — temizdi.
+  → Sonra String eklendi → küçük bir if. Sonra int, sonra list...
+  → Her ekleme "sadece bir if daha" gibiydi → ama toplamı ÇÜRÜMEYDİ.
+  → Ders: "Broken Window" — ilk küçük pislik, sonrakine kapı açar.
+     Her eklemede temizlik yapılmalıydı, sona bırakılmamalıydı.
+```
+
+> **Bağlantı:** Bu bölüm, [Emergent Design](#12--ortaya-çıkan-tasarım-emergent-design) (tasarım refactoring'le ortaya çıkar) ile [Refactoring rehberindeki](refactoring-turkce.md) küçük-adım disiplininin Clean Code'daki uygulamalı kanıtıdır.
+
 ---
 
 ## 15. 🎬 Son Sözler

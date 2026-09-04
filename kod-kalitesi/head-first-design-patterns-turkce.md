@@ -2210,6 +2210,47 @@ const request = new RequestBuilder()
 // Her adım ne yaptığını ANLATIYOR! Parametre sırası önemli DEĞİL!
 ```
 
+### 🎼 Bileşik Desen (Compound Pattern): MVC
+
+> Head First'in en sevdiği "grand finale": Tek bir pattern değil, **birkaç desenin birlikte** çalışması bir *bileşik desen* oluşturur. Kitabın yıldız örneği **MVC (Model-View-Controller)** — aslında birkaç GoF deseninin işbirliğidir.
+
+```
+MVC = TEK bir pattern DEĞİL, desenlerin ORKESTRASI:
+
+  ┌─────────┐   gözlemler (Observer)   ┌─────────┐
+  │  VIEW   │◄─────────────────────────│  MODEL  │
+  │(arayüz) │                          │ (durum) │
+  └────┬────┘                          └────▲────┘
+       │ kullanıcı eylemi                   │ günceller
+       │ (Strategy)                         │
+       ▼                                    │
+  ┌─────────┐   komut verir (state değiştir)│
+  │CONTROLLER│──────────────────────────────┘
+  │(mantık) │
+  └─────────┘
+
+HANGİ DESENLER İÇ İÇE?
+  • OBSERVER  → Model değişince View'lar otomatik haberdar olur.
+                Model, View'ları TANIMAZ (gevşek bağ). Birden çok View
+                aynı Model'i dinleyebilir.
+  • STRATEGY  → View + Controller ilişkisi: View "aptal"dır, davranışı
+                Controller stratejisine devreder. Controller'ı değiştir →
+                View'ın davranışı değişir (aynı View, farklı controller).
+  • COMPOSITE → View'ın kendisi genelde iç içe bileşenlerden (pencere →
+                panel → buton) oluşan bir ağaçtır; hepsi tek tip ele alınır.
+```
+
+```
+NEDEN ÖNEMLİ (Staff bakışı):
+  → MVC "kod düzeni" değil, SORUMLULUK AYRIMIDIR: durum (Model), sunum (View),
+    girdi/akış (Controller). Test edilebilirliğin temeli budur.
+  → Modern türevleri aynı fikrin evrimidir: MVP, MVVM (View↔Model binding),
+    ve backend'de MVC (Rails/Spring/Express controller'ları).
+  → Tuzak: "Fat controller" — iş mantığını Controller'a yığmak. İş kuralları
+    Model/domain katmanında yaşamalı; Controller yalnızca yönlendirir.
+    (Bkz. Clean Architecture ve DDD — domain mantığı çerçeveden bağımsız olmalı.)
+```
+
 ---
 
 ## 17. 🗺️ Hangi Pattern'ı Ne Zaman Kullanmalı?

@@ -1509,6 +1509,46 @@ DOMAIN VISION STATEMENT:
    fiyat optimizasyonu ve kişiselleştirilmiş kampanya önerisi."
 ```
 
+### Large-Scale Structure (Büyük Ölçekli Yapı)
+
+> Evans'ın kitabının IV. bölümü, birçok Bounded Context'in olduğu **büyük** sistemlerde, herkesin sistemi bir bütün olarak konuşabilmesi için bir **büyük ölçekli yapı** (context map'in üstünde, tüm sistemi kapsayan bir örüntü) önerir. Amaç: yeni bir mühendis bile "bu parça sistemin neresine düşer?" sorusunu ortak bir dille cevaplayabilsin.
+
+```
+DÖRT ANA KALIP (Evans):
+
+1. EVOLVING ORDER (Gelişen Düzen)
+   → Yapıyı baştan dondurma! Aşırı erken/katı mimari, sistemi boğar.
+   → Yapı, sistem büyüdükçe EVRİLMELİ; "önden büyük tasarım" tuzağına düşme.
+
+2. SYSTEM METAPHOR (Sistem Metaforu)
+   → Tüm sistemi anlatan ortak bir zihinsel imge ("boru hattı", "pazar yeri").
+   → XP'den ödünç; iyi metafor iletişimi hızlandırır, kötüsü yanıltır (opsiyonel).
+
+3. RESPONSIBILITY LAYERS (Sorumluluk Katmanları)
+   → Domain'i, değişim hızına/kavramsal bağımlılığa göre yatay katmanlara ayır.
+   → Örnek (lojistik): Potential (kapasite) → Operations (mevcut iş) →
+     Decision Support (analiz/plan) → Policy (kurallar).
+   → Bir üst katman alta bağımlı; bağımlılık yönü NET ve TEK YÖNLÜ.
+
+4. KNOWLEDGE LEVEL (Bilgi Seviyesi — "meta model")
+   → Kullanıcıların davranış/kuralları ÇALIŞMA ZAMANINDA yapılandırabilmesi
+     için, modelin "nesneleri tanımlayan nesneler" (tipler/roller) katmanı.
+   → Örnek: her müşteriye kod değişmeden yeni "hesap türü/rol" tanımlanabilmesi.
+
+5. PLUGGABLE COMPONENT FRAMEWORK
+   → Olgun, çok ekipli domainlerde: ortak bir soyut çekirdek (abstract core)
+     ve ona takılan bileşenler. Yüksek olgunluk gerektirir; erken uygulama pahalı.
+```
+
+```
+STAFF DERSİ / UYARI:
+  → Büyük ölçekli yapı OPSİYONELDİR ve maliyetlidir. Küçük/orta sistemde
+    context map yeterlidir; bu kalıpları erken uygulamak over-engineering'dir.
+  → Doğru sinyal: Birden çok ekip, birbirini anlamakta zorlanıyor ve
+    "bu parça nereye ait?" tartışması tekrarlıyorsa → bir yapı dili gerekir.
+  → Kural: yapı EVRİLSİN (Evolving Order); en az kısıtlayıcı olanı seç.
+```
+
 ---
 
 ## 16. 🧬 Supple Design (Esnek Tasarım)
@@ -1590,6 +1630,47 @@ class Order {
 // Aggregate invariant'ları koruyan KALE'dir! 🏰
 // Dış dünya ne yaparsa yapsın, invariant'lar HEP GEÇERLİ!
 ```
+
+### Specification Pattern (Şartname Deseni)
+
+> Evans, Supple Design'ın parçası olarak **Specification** desenini anlatır: bir nesnenin **bir kritere uyup uymadığını** söyleyen, iş kuralını (predicate) birinci sınıf bir domain nesnesine dönüştüren desen. Kural, if-else olarak servislere dağılmak yerine tek bir yerde, domain dilinde yaşar.
+
+```
+ÜÇ KULLANIM AMACI (Evans):
+  1. VALIDATION   → "Bu nesne kritere uyuyor mu?" (isSatisfiedBy)
+  2. SELECTION    → "Koleksiyondan kritere uyanları getir" (query)
+  3. CONSTRUCTION → "Kritere uyan bir örnek üret" (spec'e göre inşa)
+
+NEDEN? İş kuralı ("premium müşteri kimdir?") tek bir yerde,
+       ubiquitous language ile, TEST EDİLEBİLİR biçimde yaşasın.
+```
+
+```javascript
+// Domain kuralı bir nesne haline gelir — servise gömülü if değil!
+class PremiumMusteriSpec {
+  isSatisfiedBy(musteri) {
+    return musteri.yillikHarcama >= 10000 && musteri.uyelikAyi >= 12;
+  }
+}
+
+class AktifSiparisiOlanSpec {
+  isSatisfiedBy(musteri) {
+    return musteri.aktifSiparisSayisi > 0;
+  }
+}
+
+// COMBINABLE — spec'ler AND/OR/NOT ile birleşir (kompozisyon!)
+class AndSpec {
+  constructor(a, b) { this.a = a; this.b = b; }
+  isSatisfiedBy(x) { return this.a.isSatisfiedBy(x) && this.b.isSatisfiedBy(x); }
+}
+
+// Kullanım — iş kuralı okunabilir ve yeniden kullanılabilir:
+const hedefKitle = new AndSpec(new PremiumMusteriSpec(), new AktifSiparisiOlanSpec());
+const secilenler = musteriler.filter(m => hedefKitle.isSatisfiedBy(m));
+```
+
+> **Uyarı:** Specification güçlüdür ama her `if`'i spec'e çevirmek over-engineering'dir. Kural (a) tekrar ediyorsa, (b) iş dilinde adı varsa ("uygun sipariş", "riskli işlem") ve (c) birleştirilip test edilmesi gerekiyorsa kullan. Ayrıca selection için spec'i doğrudan SQL/ORM sorgusuna çevirmek (repository ile) N+1 ve bellek sorunlarını önler.
 
 ---
 

@@ -517,6 +517,81 @@ Cons:
 ✗ Idempotency required
 ```
 
+### Event Sourcing (Derinlemesine)
+
+Event Sourcing, durumu (state) **son hâliyle** değil, ona yol açan **değişmez olaylar dizisi** olarak saklar. Mevcut durum, olayların baştan sona yeniden oynatılmasıyla (replay) türetilir. Saga ve CQRS ile sık birlikte kullanılır.
+
+```
+KLASİK (state-oriented)          EVENT SOURCING (event-oriented)
+  balance = 150                    AccountOpened(0)
+  (nasıl 150 olduğu KAYIP)         MoneyDeposited(+200)
+                                   MoneyWithdrawn(-50)
+                                   → replay ⇒ balance = 150 (TÜM tarih korunur)
+```
+
+```javascript
+// Aggregate, olayları uygulayarak durumunu türetir
+class Account {
+  constructor() { this.balance = 0; this.version = 0; this.changes = []; }
+
+  // KOMUT: kural kontrolü → yeni OLAY üretir (state'i doğrudan değiştirmez)
+  withdraw(amount) {
+    if (amount > this.balance) throw new Error('Yetersiz bakiye'); // invariant
+    this.#apply({ type: 'MoneyWithdrawn', amount });
+  }
+
+  // OLAY UYGULAMA: durumu ilerletir (hem replay'de hem yeni komutta çalışır)
+  #apply(event, isNew = true) {
+    if (event.type === 'MoneyDeposited') this.balance += event.amount;
+    if (event.type === 'MoneyWithdrawn') this.balance -= event.amount;
+    this.version++;
+    if (isNew) this.changes.push(event);
+  }
+
+  static replay(events) {           // event store'dan durumu YENİDEN İNŞA ET
+    const acc = new Account();
+    for (const e of events) acc.#apply(e, false);
+    return acc;
+  }
+}
+```
+
+```
+NEDEN? (Faydalar)
+  ✓ EKSİKSİZ DENETİM İZİ (audit): "neden bu durumdayız?" → tüm tarih orada
+  ✓ TEMPORAL SORGU: "geçen salı bakiye neydi?" → o ana kadar replay
+  ✓ CQRS ile mükemmel eş: olaylardan farklı okuma modelleri (projection) üret
+  ✓ Hata ayıklama/onarım: bir bug'ı düzeltip olayları YENİDEN oynat → yeni state
+  ✓ Doğal event yayını: her değişiklik zaten bir event (entegrasyon kolay)
+
+MALİYETLER (Trade-off'lar)
+  ✗ Öğrenme eğrisi + zihinsel model değişimi (CRUD sezgisi bozulur)
+  ✗ Event SCHEMA EVOLUTION: eski olayları sonsuza dek okuyabilmelisin
+     (upcasting/versioning; olay silinmez, yeni sürüm eklenir)
+  ✗ Replay maliyeti → SNAPSHOT gerekir (aşağıda)
+  ✗ Sorgulama zor: "bakiyesi 100'ün üstünde olanlar" → ayrı projeksiyon lazım
+  ✗ GDPR "silme hakkı" ile gerilim (değişmez log vs kişisel veri silme →
+     crypto-shredding: kişinin anahtarını sil, olay okunamaz hale gelsin)
+```
+
+```
+SNAPSHOT (performans):
+  → 1 milyon olayı her seferinde replay etmek PAHALI.
+  → Her N olayda bir "snapshot" (o ana kadarki türetilmiş durum) sakla.
+  → Yükleme: en son snapshot + ondan sonraki olaylar (kısa replay).
+
+PROJECTION (okuma tarafı — CQRS):
+  → Olay akışını dinleyen, sorguya uygun DENORMALİZE okuma modelleri kur.
+  → Read model bozulursa: SIFIRLA ve olayları baştan oynat → yeniden üret.
+
+IDEMPOTENT & SIRALI TÜKETİM:
+  → Projection'lar olayları en-az-bir-kez alabilir → idempotent uygula.
+  → Optimistic concurrency: aggregate'e yazarken beklenen `version` uyuşmazsa
+    reddet (aynı stream'e eşzamanlı yazımı güvenli kıl).
+```
+
+> **Ne zaman KULLANMA:** Basit CRUD domain'lerinde Event Sourcing over-engineering'dir. Değeri; zengin denetim/tarih ihtiyacı, karmaşık iş kuralları, temporal analiz veya doğal event-driven entegrasyon olan domainlerde (finans, sipariş, envanter, oyun) ortaya çıkar. Ayrıca bkz. [DDD rehberi — CQRS ve Event Sourcing](../mimari-tasarim/ddd-turkce.md#18--cqrs-ve-event-sourcing).
+
 ### Clock Synchronization & Ordering
 
 #### Logical Clocks (Lamport Timestamps)

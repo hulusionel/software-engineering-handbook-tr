@@ -1238,6 +1238,47 @@ Eventual Consistency (Son Tutarlılık): 🐢
     - Ürün yorumları
 ```
 
+### Linearizability ≠ Serializability (Sık Karıştırılan İki Kavram)
+
+> Kleppmann bu ikisinin **farklı** garantiler olduğunu özellikle vurgular. İkisi de "en güçlü" diye anılır ama **farklı eksenlerde** güçlüdür.
+
+```
+SERIALIZABILITY — bir İZOLASYON özelliğidir (transaction'lar hakkında):
+  → "Eşzamanlı çalışan transaction'lar, sanki BİR SIRAYLA (seri) çalışmış gibi
+     sonuç verir." (write skew, lost update gibi anomalileri önler)
+  → BİRDEN FAZLA obje + BİRDEN FAZLA işlem içeren transaction'larla ilgilidir.
+  → Seri sıra, GERÇEK ZAMAN sırasıyla aynı olmak ZORUNDA DEĞİL!
+     (T1 zamanca önce commit etse bile, seri sıra T2→T1 olabilir.)
+
+LINEARIZABILITY — bir GÜNCELLİK (recency) garantisidir (tek obje hakkında):
+  → "Bir register/obje üzerinde, yazma tamamlandıktan sonra HER okuma
+     yeni değeri görür." (tek kopya illüzyonu)
+  → TEK obje ile ilgilidir; transaction'ları, çoklu-obje değişmezliklerini
+     kapsamaz.
+  → GERÇEK ZAMAN sırasına saygı duyar (real-time ordering).
+
+  ┌──────────────────┬───────────────────┬───────────────────────┐
+  │                  │ Serializability   │ Linearizability       │
+  ├──────────────────┼───────────────────┼───────────────────────┤
+  │ Ne hakkında?     │ Transaction izole │ Tek objenin güncelliği│
+  │ Kaç obje?        │ Çoklu obje/işlem  │ Tek register          │
+  │ Gerçek-zaman?    │ Şart değil        │ Şart (recency)        │
+  │ Önlediği         │ Write skew, lost  │ Bayat (stale) okuma   │
+  │                  │ update, phantom   │                       │
+  └──────────────────┴───────────────────┴───────────────────────┘
+
+STRICT SERIALIZABILITY = Serializable + Linearizable (İKİSİ BİRDEN):
+  → Hem seri izolasyon, hem gerçek-zaman sırası.
+  → Örnek: Two-Phase Locking (2PL), Google Spanner (TrueTime ile).
+  → PostgreSQL "SERIALIZABLE" (SSI) tek düğümde serializable sağlar; 
+    dağıtık gerçek-zaman garantisi (linearizability) ayrı bir konudur.
+
+PRATİK SEZGİ:
+  → "Unique constraint / distributed lock / leader election" → LINEARIZABILITY
+  → "Banka havalesinde iki hesabın toplamı bozulmasın" → SERIALIZABILITY
+  → "İkisi de lazım ve gerçek-zaman kritik" → STRICT SERIALIZABILITY (pahalı!)
+```
+
 ### 9.2 CAP Teoremi ⚠️
 
 ```

@@ -951,6 +951,63 @@ SEMANTIC LOCK:
   → Saga bitince (başarı veya kompanzasyon) → kilidi AÇ
 ```
 
+### 8 Transaksiyonel Saga Deseni (Kitabın İmza Katkısı)
+
+> "The Hard Parts"ın en özgün fikri: "Saga" tek bir şey değildir. Üç eksenin kombinasyonu **8 farklı saga deseni** üretir. Yazarlar bunlara akılda kalıcı isimler verir. Doğru olanı seçmek, üç sorunun cevabına bağlıdır:
+
+```
+ÜÇ EKSEN (2×2×2 = 8 desen):
+  1. COMMUNICATION  → Senkron mu, Asenkron mu?
+  2. CONSISTENCY    → Atomic (anında tutarlı) mı, Eventual (sonunda) mı?
+  3. COORDINATION   → Orchestrated (merkezi) mi, Choreographed (dağıtık) mı?
+```
+
+```
+┌──────────────────┬─────────┬───────────┬──────────────┬─────────────────────────┐
+│ Desen            │ İletişim│ Tutarlılık│ Koordinasyon │ Ne zaman?               │
+├──────────────────┼─────────┼───────────┼──────────────┼─────────────────────────┤
+│ Epic Saga        │ Sync    │ Atomic    │ Orchestrated │ "Dağıtık monolit" —     │
+│ (Geleneksel)     │         │           │              │ basit ama sıkı bağlı    │
+│ Phone Tag Saga   │ Sync    │ Atomic    │ Choreographed│ Merkez yok + atomic →   │
+│                  │         │           │              │ karmaşık akış, nadir    │
+│ Fairy Tale Saga  │ Sync    │ Eventual  │ Orchestrated │ ⭐ Çok yaygın, dengeli  │
+│ ("Masal")        │         │           │              │ — sağlam varsayılan     │
+│ Time Travel Saga │ Sync    │ Eventual  │ Choreographed│ Sıralı akış, merkezsiz  │
+│ Fantasy Fiction  │ Async   │ Atomic    │ Orchestrated │ "Hayal" — async+atomic  │
+│ (Fantezi)        │         │           │              │ birlikte çok zor        │
+│ Horror Story     │ Async   │ Atomic    │ Choreographed│ 😱 EN ZOR — kaçının!    │
+│ ("Korku")        │         │           │              │ async+atomic+merkezsiz  │
+│ Parallel Saga    │ Async   │ Eventual  │ Orchestrated │ Yüksek ölçek, paralel   │
+│                  │         │           │              │ adımlar, merkezi kontrol│
+│ Anthology Saga   │ Async   │ Eventual  │ Choreographed│ ⭐ En gevşek bağ, en    │
+│ (Antoloji)       │         │           │              │ ölçeklenir; izlemesi zor│
+└──────────────────┴─────────┴───────────┴──────────────┴─────────────────────────┘
+```
+
+```
+STAFF SEZGİSİ:
+  → "Atomic + Async" (Fantasy Fiction, Horror Story) neredeyse HER ZAMAN
+    yanlış tercih: eşzamanlılık istiyorsan tutarlılığı eventual yap.
+  → Basit sistemde başla: Epic (kolay ama coupling) veya Fairy Tale (dengeli).
+  → Ölçek ve gevşek bağ istiyorsan: Anthology — ama gözlemlenebilirlik (tracing)
+    olmadan hata ayıklaması KÂBUS.
+  → Seçim maliyeti: choreography = düşük coupling + zor debugging;
+    orchestration = kolay debugging + merkezi coupling/tek nokta.
+```
+
+```
+SYSOPS SQUAD VAKASI (kitabın koşan örneği):
+  → Senaryo: Bir "ticket" (arıza kaydı) oluşturulunca birden çok servis
+    (Ticket, Assignment, Notification, Survey, Billing) koordine olmalı.
+  → Yazarlar aynı problemi FARKLI saga desenleriyle çözer ve trade-off'ları
+    ADR (bkz. Bölüm ADR-002) ile belgeler:
+      • Müşteri anında onay bekliyorsa → sync + orchestrated eğilimi (Fairy Tale)
+      • Bildirim/anket gibi adımlar gecikebiliyorsa → async + eventual (Parallel/
+        Anthology) ile ana akışı bloklamadan yürüt.
+  → DERS: "Doğru saga" yoktur; domain'in tutarlılık ve gecikme
+    gereksinimlerine göre SEÇİLİR ve gerekçesi YAZIYA (ADR) dökülür.
+```
+
 ---
 
 ## 10. 📜 Kontrat Yönetimi
