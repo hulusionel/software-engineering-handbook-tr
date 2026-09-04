@@ -108,7 +108,7 @@ Kitap özetlerinin ötesinde, üretim odaklı, sayısal ve karar-verme kılavuzl
 | [Operasyonel Derinlik](pratik/operasyonel-derinlik.md) | Connection storm, idempotency key API, operasyonel kalıplar |
 | [Staff+ Soft Skills](pratik/staff-soft-skills.md) | Glue work, promotion/impact, executive communication |
 
-### 📐 [Şablonlar](templates/) · 📚 [Terim Sözlüğü](glossary/terim-sozlugu.md) · 🔬 [Kaynakça](kaynakca.md)
+### 📐 [Şablonlar](templates/) · 📚 [Terim Sözlüğü](glossary/terim-sozlugu.md) · 🔬 [Kaynakça](kaynakca.md) · 🧭 [Olmazsa Olmaz Kaynaklar](olmazsa-olmaz-kaynaklar.md)
 
 | Şablon | Kullanım |
 |--------|----------|
