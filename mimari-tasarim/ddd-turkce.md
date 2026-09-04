@@ -19,7 +19,7 @@ Ama anladığın her kavram, mühendislik kariyerini KALICI olarak dönüştür�
 3. [Model-Driven Design](#3--model-driven-design)
 4. [Entity (Varlık)](#4--entity-varlık)
 5. [Value Object (Değer Nesnesi)](#5--value-object-değer-nesnesi)
-6. [Aggregate (Küme)](#6--aggregate-küme)
+6. [Aggregate (Agregat)](#6--aggregate-agregat)
 7. [Repository (Depo)](#7--repository-depo)
 8. [Service (Servis)](#8--service-servis)
 9. [Factory (Fabrika)](#9--factory-fabrika)
@@ -517,7 +517,7 @@ KİMLİK ÖNEMLİ Mİ?
 
 ---
 
-## 6. 🧩 Aggregate (Küme)
+## 6. 🧩 Aggregate (Agregat)
 
 ### DDD'nin EN ZOR ama EN ÖNEMLİ Kavramı
 
@@ -1027,7 +1027,7 @@ DOMAIN EVENT = Domain'de gerçekleşen ÖNEMLİ bir olay
 → ProductPriceChanged (Ürün fiyatı değişti)
 
 NEDEN ÖNEMLİ?
-  → Aggregate'ler arası İLETIŞIM
+  → Aggregate'ler arası İLETİŞİM
   → Eventual consistency sağlama
   → Audit trail (iz bırakma)
   → Diğer bounded context'leri bilgilendirme
@@ -1243,7 +1243,7 @@ KISA CEVAP: Genellikle EVET, ama her zaman değil!
 Context'ler İZOLE değil → birbirleriyle İLETIŞİR!
 Context Map = bu ilişkilerin HARİTASI
 
-İLIŞKI PATTERNLERİ:
+İLİŞKİ PATTERNLERİ:
 
 1. SHARED KERNEL (Paylaşılan Çekirdek) 🤝
    → İki context AYNI modeli paylaşıyor
@@ -1882,7 +1882,7 @@ class Order {
 
 ---
 
-## 21. � Büyük Şirketlerde DDD
+## 21. 🏢 Büyük Şirketlerde DDD
 
 ### Amazon — Bounded Context = Microservice
 
@@ -2027,7 +2027,7 @@ Reddit r/softwaredevelopment:
 
 ---
 
-## 23. �🎬 Son Sözler
+## 23. 🎬 Son Sözler
 
 ### DDD Özet Kartı
 

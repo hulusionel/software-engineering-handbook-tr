@@ -8,7 +8,7 @@ Bu doküman mühendisin **bilmek zorunda olduğu** hukuki / regülatif çerçeve
 
 ## 📑 İçindekiler
 
-1. [Niye Mühendis İlgilenir?](#1-niye-mühendis-ilgilenir)
+1. [Niye Mühendis İlgilenir?](#1-niye-mühendis-i̇lgilenir)
 2. [GDPR — AB Veri Koruması](#2-gdpr--ab-veri-koruması)
 3. [KVKK — Türkiye Kişisel Verileri Koruma](#3-kvkk--türkiye-kişisel-verileri-koruma)
 4. [Diğer Major Düzenlemeler](#4-diğer-major-düzenlemeler)

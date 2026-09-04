@@ -1273,7 +1273,7 @@ GÜN 180+: KADEMELI BÜYÜME
 
 ---
 
-## 16. � Büyük Şirketlerde Hard Parts Kararları
+## 16. 🏢 Büyük Şirketlerde Hard Parts Kararları
 
 ### Amazon — Monolith'e GERİ Dönüş
 
@@ -1393,7 +1393,7 @@ Reddit r/softwarearchitecture:
 
 ---
 
-## 18. �🎬 Son Sözler
+## 18. 🎬 Son Sözler
 
 ### Kitabın Özet Kartı
 

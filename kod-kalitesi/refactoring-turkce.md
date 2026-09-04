@@ -1490,7 +1490,7 @@ test('mysteryCalc — mevcut davranışı koruma', () => {
 
 ---
 
-## 15. � Büyük Şirketlerde Refactoring
+## 15. 🏢 Büyük Şirketlerde Refactoring
 
 ### Google — Large-Scale Changes (LSC)
 
@@ -1644,7 +1644,7 @@ Martin Fowler'ın kendisi (2023 blog):
 
 ---
 
-## 17. �🎬 Son Sözler
+## 17. 🎬 Son Sözler
 
 ### Fowler'ın Altın Kuralları 🏆
 

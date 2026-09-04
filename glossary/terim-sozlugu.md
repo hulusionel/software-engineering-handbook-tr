@@ -55,7 +55,7 @@ Bu repo genelinde kullanılan İngilizce-Türkçe terim çiftleri ve kısaltmala
 | Consistency | Tutarlılık |
 | Container | Konteyner |
 | Coordinated omission | Eşgüdümlü atlama |
-| Coupling | Bağlılık |
+| Coupling | Bağlılık / bağlanma |
 | CRDT | Çakışmasız çoğaltılabilir veri tipi |
 | CRUD | Create-Read-Update-Delete — *çevrilmez* |
 

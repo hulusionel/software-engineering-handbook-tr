@@ -9,7 +9,7 @@ Bu doküman OSI'den HTTP/3'e, TLS'ten gRPC'ye kadar **modern uygulama mühendisi
 ## 📑 İçindekiler
 
 1. [Katman Modeli — Niye Hâlâ Önemli?](#1-katman-modeli--niye-hâlâ-önemli)
-2. [TCP'nin İç Yapısı](#2-tcpnin-iç-yapısı)
+2. [TCP'nin İç Yapısı](#2-tcpnin-i̇ç-yapısı)
 3. [TLS/SSL](#3-tlsssl)
 4. [HTTP/1.1, HTTP/2, HTTP/3](#4-http11-http2-http3)
 5. [DNS](#5-dns)

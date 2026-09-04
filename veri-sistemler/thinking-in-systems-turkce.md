@@ -29,8 +29,8 @@ ama okuduktan sonra HER ŞEYİ farklı GÖRÜRSÜN. 🔭
 5. [Güçlendirici Döngüler (Reinforcing Loops)](#5--güçlendirici-döngüler)
 6. [Gecikmeler (Delays)](#6--gecikmeler-delays)
 7. [Sistem Davranış Kalıpları (Archetypes)](#7--sistem-davranış-kalıpları)
-8. [Kaldıraç Noktaları (Leverage Points)](#8--kaldıraç-noktaları)
-9. [Sınırlı Rasyonellik (Bounded Rationality)](#9--sınırlı-rasyonellik)
+8. [Kaldıraç Noktaları (Leverage Points)](#8--kaldıraç-noktaları-leverage-points)
+9. [Sınırlı Rasyonellik (Bounded Rationality)](#9--sınırlı-rasyonellik-bounded-rationality)
 10. [Dayanıklılık (Resilience)](#10--dayanıklılık-resilience)
 11. [Kendini Organize Etme (Self-Organization)](#11--kendini-organize-etme)
 12. [Hiyerarşi](#12--hiyerarşi)
@@ -1242,7 +1242,7 @@ BU KİTAPTAN ALINACAK PRATİK ARAÇLAR:
 
 4. KALDIRAC NOKTALARINI BUL 🎯
    → En AZ eforla en BÜYÜK etkiyi nereden sağlarsın?
-   → Parametrelerle oynama → kuralları DEĞIŞTIR!
+   → Parametrelerle oynama → kuralları DEĞİŞTİR!
    → Kuralları değiştirME → HEDEFI DEĞİŞTIR!
 
 5. SİSTEM SINIRLARINI SORGULA 🔲
@@ -1324,7 +1324,7 @@ PRATIKTE:
 
 ---
 
-## 16. � Büyük Şirketlerde Sistem Düşüncesi
+## 16. 🏢 Büyük Şirketlerde Sistem Düşüncesi
 
 ### Toyota — Lean'in Doğuşu = Sistem Düşüncesi
 
@@ -1450,7 +1450,7 @@ Reddit r/SystemsThinking:
 
 ---
 
-## 18. �🎬 Son Sözler
+## 18. 🎬 Son Sözler
 
 ### Kitabın Altın Kuralları Özeti
 

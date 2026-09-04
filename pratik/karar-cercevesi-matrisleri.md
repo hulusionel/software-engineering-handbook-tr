@@ -9,7 +9,7 @@ Bu doküman, üretim ortamında yıllarca tekrar eden **mimari kararlar** için 
 ## 📑 İçindekiler
 
 1. [Veritabanı Seçimi](#1--veritabanı-seçimi)
-2. [Sync vs Async İletişim](#2--sync-vs-async-iletişim)
+2. [Sync vs Async İletişim](#2--sync-vs-async-i̇letişim)
 3. [Monolith vs Microservices vs Modular Monolith](#3--monolith-vs-microservices-vs-modular-monolith)
 4. [Build vs Buy](#4--build-vs-buy)
 5. [Cache Stratejisi](#5--cache-stratejisi)

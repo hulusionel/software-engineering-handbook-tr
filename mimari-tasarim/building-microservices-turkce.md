@@ -1842,7 +1842,7 @@ Reddit r/microservices'te en çok paylaşılan:
 
 ---
 
-## 21. �🎬 Son Sözler
+## 21. 🎬 Son Sözler
 
 ### Newman'ın Altın Kuralları 🏆
 

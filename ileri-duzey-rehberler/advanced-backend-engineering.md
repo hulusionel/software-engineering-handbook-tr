@@ -2,7 +2,7 @@
 
 ## 📋 İçindekiler
 
-1. [Giriş](#giriş)
+1. [Giriş](#-giriş)
 2. [Distributed Systems Deep Dive](#-distributed-systems-deep-dive)
 3. [Performance Engineering](#-performance-engineering)
 4. [Advanced Database Architectures](#-advanced-database-architectures)

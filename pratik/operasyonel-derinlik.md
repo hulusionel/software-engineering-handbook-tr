@@ -12,7 +12,7 @@
 2. [Idempotency Keys — API Tasarımı](#2-idempotency-keys--api-tasarımı)
 3. [Anti-Pattern'ler](#3-anti-patternler)
 4. [Staff+ Kontrol Listesi](#-staff-operasyonel-derinlik-kontrol-listesi)
-5. [İleri Okuma](#-ileri-okuma)
+5. [İleri Okuma](#-i̇leri-okuma)
 
 ---
 

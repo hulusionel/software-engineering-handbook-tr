@@ -183,12 +183,12 @@ Neden?
   → Yeniden kullanım: Parçaları başka yerlerde kullanma
 
 Modülerlik ölçütleri:
-  1. Cohesion (Bağdaşıklık)
+  1. Cohesion (Bağlaşıklık)
   2. Coupling (Bağlanma)
   3. Connascence (Birlikte Değişim)
 ```
 
-### Cohesion (Bağdaşıklık) 🧲
+### Cohesion (Bağlaşıklık) 🧲
 
 ```
 "Bir modül içindeki elemanlar ne kadar İLGİLİ?"
@@ -1467,7 +1467,7 @@ PERFORMING (Performans):
 
 ---
 
-## 20. � Büyük Şirketlerde Mimari Kararlar
+## 20. 🏢 Büyük Şirketlerde Mimari Kararlar
 
 ### Netflix — Event-Driven + Microservices Hibrit
 
@@ -1611,7 +1611,7 @@ Sam Newman (Building Microservices yazarı):
 
 ---
 
-## 22. �🎬 Son Sözler
+## 22. 🎬 Son Sözler
 
 ### Mimari Stil Karşılaştırma Tablosu 🏆
 

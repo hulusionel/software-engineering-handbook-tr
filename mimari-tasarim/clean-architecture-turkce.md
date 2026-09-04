@@ -1708,7 +1708,7 @@ Uncle Bob'un bazı iddiaları tartışmalıdır:
 
 ---
 
-## 15. � Büyük Şirketlerde Clean Architecture
+## 15. 🏢 Büyük Şirketlerde Clean Architecture
 
 ### Netflix — Hexagonal Architecture
 
@@ -1840,7 +1840,7 @@ Mark Richards (Fund. of SA yazarı):
 
 ---
 
-## 17. �🎬 Son Sözler
+## 17. 🎬 Son Sözler
 
 ### Clean Architecture Akıl Haritası 🧠
 

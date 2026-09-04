@@ -1,7 +1,7 @@
 # 🚀 Senior Backend Developer Yol Haritası
 
 ## 📋 İçindekiler
-1. [Giriş](#giriş)
+1. [Giriş](#-giriş)
 2. [Cloud Infrastructure & DevOps](#-cloud-infrastructure--devops)
 3. [Kubernetes & Container Orchestration](#-kubernetes--container-orchestration)
 4. [Event-Driven Architecture](#-event-driven-architecture)

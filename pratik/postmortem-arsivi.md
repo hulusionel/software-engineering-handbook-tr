@@ -19,18 +19,18 @@ Bu doküman tarihin en öğretici ~20 üretim olayını **yapı-temelli** analiz
 | 5 | [Cloudflare regex](#5-cloudflare-2019--regex-cpu-tükenmesi) | 2019 | Edge | ReDoS + global rollout |
 | 6 | [Cloudflare BGP leak](#6-cloudflare-2019-haziran--verizon-bgp-leak) | 2019 | Networking | BGP route filter eksikliği |
 | 7 | [GitLab gitaly](#7-gitlab-2020--shared-storage-failure) | 2020 | DevOps | Single point of failure |
-| 8 | [Slack auth meltdown](#8-slack-2021-ocak--baglanti-fırtınası) | 2021 | SaaS | Connection storm + thundering herd |
+| 8 | [Slack auth meltdown](#8-slack-2021-ocak--bağlantı-fırtınası) | 2021 | SaaS | Connection storm + thundering herd |
 | 9 | [Fastly config](#9-fastly-2021-haziran--tek-müşteri-config-ile-internet-yarısı) | 2021 | Edge | Tek tetikleyicinin küresel etkisi |
 | 10 | [Akamai DNS](#10-akamai-2021-temmuz--dns-config-rollback-yok) | 2021 | Edge | Rollback prosedürünün eksikliği |
 | 11 | [Roblox Consul](#11-roblox-2021-ekim--consul-cascading-failure) | 2021 | Gaming | Service discovery cascading failure |
-| 12 | [Facebook BGP withdraw](#12-facebookmeta-2021-ekim--kendini-internetten-cıkardı) | 2021 | Sosyal | İçeride dış araçlara bağımlılık |
-| 13 | [AWS us-east-1 Kinesis](#13-aws-us-east-1-2021-aralık--ic-bagımlılık-zinciri) | 2021 | Cloud | Bölge içi bağımlılık fan-out |
-| 14 | [log4shell](#14-log4shell-cve-2021-44228--gunluğun-kod-calıstırması) | 2021 | Güvenlik | Log girdisinde JNDI injection |
+| 12 | [Facebook BGP withdraw](#12-facebookmeta-2021-ekim--kendini-internetten-çıkardı) | 2021 | Sosyal | İçeride dış araçlara bağımlılık |
+| 13 | [AWS us-east-1 Kinesis](#13-aws-us-east-1-2021-aralık--i̇ç-bağımlılık-zinciri) | 2021 | Cloud | Bölge içi bağımlılık fan-out |
+| 14 | [log4shell](#14-log4shell-cve-2021-44228--günlüğün-kod-çalıştırması) | 2021 | Güvenlik | Log girdisinde JNDI injection |
 | 15 | [Atlassian veri kaybı](#15-atlassian-2022-nisan--maintenance-script-müşterileri-sildi) | 2022 | SaaS | Soft delete'siz sahip silme |
 | 16 | [Datadog uzantısı](#16-datadog-2023-mart--bölgesel-systemd-bug) | 2023 | Observability | Çekirdek-üstü yan etki |
 | 17 | [Discord journal](#17-discord-2023-haziran--mongodb-snapshot-recovery) | 2023 | Sosyal | Recovery testinin yokluğu |
-| 18 | [CrowdStrike Falcon](#18-crowdstrike-2024-temmuz--dünya-kernel-driver-ile-durdu) | 2024 | Güvenlik | Kernel driver canary'siz rollout |
-| 19 | [Google Cloud Universe](#19-google-cloud-2024-mayıs--unicredit-musteri-projesi-silindi) | 2024 | Cloud | Replikasyon ≠ backup |
+| 18 | [CrowdStrike Falcon](#18-crowdstrike-falcon-2024-temmuz--dünya-kernel-driver-ile-durdu) | 2024 | Güvenlik | Kernel driver canary'siz rollout |
+| 19 | [Google Cloud Universe](#19-google-cloud-2024-mayıs--unicredit-müşteri-projesi-silindi) | 2024 | Cloud | Replikasyon ≠ backup |
 | 20 | [TigerBeetle simulation finds](#20-tigerbeetle-yöntemi--simulation-driven-development) | 2024 | Finans | Simulation testing örneği (pozitif vaka) |
 
 ---

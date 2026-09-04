@@ -1275,7 +1275,7 @@ Pratikte:
   → Ürün yorumu: Eventually consistent (gecikebilir)
 ```
 
-### 9.3 Konsensus (Uzlaşma) 🤝
+### 9.3 Konsensus (Uzlaşı) 🤝
 
 > **"Birden fazla node'un bir değer üzerinde ANLAŞMASI."**
 
