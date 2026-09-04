@@ -10,6 +10,7 @@ Yazılım mimarisi, sistem tasarımı ve domain-driven design konularında kapsa
 | [Building Microservices](building-microservices-turkce.md) | Sam Newman — *Building Microservices* |
 | [Domain-Driven Design (DDD)](ddd-turkce.md) | Eric Evans — *Domain-Driven Design* |
 | [System Design Interview](system-design-interview-turkce.md) | Alex Xu — *System Design Interview Vol 1* |
+| [Release It!](release-it-turkce.md) | Michael Nygard — *Release It! Design and Deploy Production-Ready Software* |
 
 ---
 
