@@ -1,0 +1,31 @@
+name: Kalite Kontrol
+
+on:
+  push:
+    branches: [master, main]
+  pull_request:
+    branches: [master, main]
+
+permissions:
+  contents: read
+
+jobs:
+  dahili-linkler-ve-karakterler:
+    name: Bozuk karakter & kırık dahili link denetimi
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Denetleyiciyi çalıştır (stdlib, bağımlılık yok)
+        run: python3 .github/scripts/check_links.py
+
+  markdownlint:
+    name: Markdown biçim denetimi (bilgilendirici)
+    runs-on: ubuntu-latest
+    # Stil uyarıları PR'ı bloklamaz; yalnızca görünürlük sağlar.
+    continue-on-error: true
+    steps:
+      - uses: actions/checkout@v4
+      - name: markdownlint-cli2
+        uses: DavidAnson/markdownlint-cli2-action@v16
+        with:
+          globs: "**/*.md"
