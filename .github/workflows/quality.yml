@@ -19,10 +19,8 @@ jobs:
         run: python3 .github/scripts/check_links.py
 
   markdownlint:
-    name: Markdown biçim denetimi (bilgilendirici)
+    name: Markdown biçim denetimi
     runs-on: ubuntu-latest
-    # Stil uyarıları PR'ı bloklamaz; yalnızca görünürlük sağlar.
-    continue-on-error: true
     steps:
       - uses: actions/checkout@v4
       - name: markdownlint-cli2
