@@ -422,7 +422,7 @@ GÜVENLİK SINIRI (agentic coding'de olmazsa olmaz):
 - Model Context Protocol — resmi spesifikasyon (standart araç/veri arayüzü)
 - Lewis et al. 2020 — *Retrieval-Augmented Generation* (RAG)
 - Liu et al. 2023 — *Lost in the Middle: How Language Models Use Long Contexts*
-- Bu repo: [Otonom & Öz-Gelişen Sistemler](otonom-ve-oz-gelisen-sistemler.md) · [Dünyada AI Kullanımı](dunyada-ai-kullanimi.md) · [AI/ML Mühendislik Pratiği](../pratik/ai-ml-muhendisligi.md)
+- Bu repo: [En İyi Pratikler](en-iyi-pratikler.md) · [AI ile Neler Yapılabiliyor](ai-ile-neler-yapilabilir.md) · [Otonom & Öz-Gelişen Sistemler](otonom-ve-oz-gelisen-sistemler.md) · [Gelecek ve Pozisyon](gelecek-ve-pozisyon.md) · [Dünyada AI Kullanımı](dunyada-ai-kullanimi.md) · [AI/ML Mühendislik Pratiği](../pratik/ai-ml-muhendisligi.md)
 
 ---
 

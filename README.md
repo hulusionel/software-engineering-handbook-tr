@@ -65,7 +65,10 @@ Bir developer'ın el kitabında olması gereken **niş, uygulayıcı odaklı** A
 | Doküman | İçerik |
 |--------|--------|
 | [Agentic Mühendislik](yapay-zeka-cagi/agentic-muhendislik.md) | Token ekonomisi, context mühendisliği, agentic loop, tool/skill tasarımı, MCP, compaction, AI ile kodlama |
+| [AI ile Doğru Çalışma — En İyi Pratikler](yapay-zeka-cagi/en-iyi-pratikler.md) | Workflow vs agent (5 desen), prompt mühendisliği, reasoning modelleri, tool tasarımı, eval-driven development, model routing |
+| [AI ile Neler Yapılabiliyor](yapay-zeka-cagi/ai-ile-neler-yapilabilir.md) | Yetenek kataloğu: kod, RAG, computer use, multimodal, iş akışı otomasyonu, veri; ne inşa edilebilir + sınırlar |
 | [Otonom & Öz-Gelişen Sistemler](yapay-zeka-cagi/otonom-ve-oz-gelisen-sistemler.md) | Çoklu-agent orkestrasyon, gece çalışan otonom agent'ler, öz-düzelten/öğrenen yapılar, guardrail, eval |
+| [Geleceğe Bakış ve Pozisyon Alma](yapay-zeka-cagi/gelecek-ve-pozisyon.md) | Nereye evriliyor, senaryolar, mühendisin değişen rolü, ne öğrenmeli, ekip/org pozisyonu, no-regret hamleler |
 | [Dünyada AI Nasıl Kullanılıyor](yapay-zeka-cagi/dunyada-ai-kullanimi.md) | Benimseme, üretim mimarileri, kullanım kalıpları, ekonomi, riskler & yönetişim, olgunluk modeli |
 
 ### 🛠️ [Pratik — Saha Kılavuzu](pratik/)
@@ -127,8 +130,8 @@ Kitap özetlerinin ötesinde, üretim odaklı, sayısal ve karar-verme kılavuzl
 
 - **24** kapsamlı kitap/yol haritası rehberi
 - **24** pratik saha dokümanı + 5 yazım şablonu + terim sözlüğü + kaynakça
-- **3** yapay zeka çağı rehberi (agentic mühendislik, otonom sistemler, dünyada AI kullanımı)
-- **~65.000+** satır içerik
+- **6** yapay zeka çağı rehberi (agentic mühendislik, en iyi pratikler, yetenek kataloğu, otonom sistemler, gelecek & pozisyon, dünyada AI kullanımı)
+- **~67.000+** satır içerik
 - **20** farklı kitap özeti
 - **3** kariyer yol haritası
 - **%100** Türkçe
