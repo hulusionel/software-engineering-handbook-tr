@@ -14,6 +14,7 @@ Kullanım:
 Çıkış kodu 0 = temiz, 1 = en az bir sorun bulundu.
 `.github/` altındaki agent/talimat dosyaları (bozuk karakterleri örnek olarak
 içerebildiği için) yalnızca link kontrolünden geçer, FFFD taramasından muaftır.
+`.github/eval/` kasıtlı bozuk golden set'tir; hem FFFD hem link taramasından muaftır.
 """
 import glob
 import io
@@ -57,7 +58,9 @@ def heading_anchors(text: str) -> set:
 
 def main() -> int:
     md_files = [
-        f for f in glob.glob("**/*.md", recursive=True) if not f.startswith(".git/")
+        f
+        for f in glob.glob("**/*.md", recursive=True)
+        if not f.startswith((".git/", ".github/eval/"))
     ]
     anchors_by_file = {f: heading_anchors(io.open(f, encoding="utf-8").read()) for f in md_files}
 

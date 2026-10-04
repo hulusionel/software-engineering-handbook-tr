@@ -17,6 +17,8 @@ jobs:
       - uses: actions/checkout@v4
       - name: Denetleyiciyi çalıştır (stdlib, bağımlılık yok)
         run: python3 .github/scripts/check_links.py
+      - name: Golden eval fixture işaretleri duruyor mu
+        run: python3 .github/eval/verify_fixture.py
 
   markdownlint:
     name: Markdown biçim denetimi
