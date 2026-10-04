@@ -37,5 +37,5 @@
     "MD051": false  // link-fragment — check_links.py bunu doğru yapar
   },
   "globs": ["**/*.md"],
-  "ignores": [".git", "node_modules"]
+  "ignores": [".git", "node_modules", ".github/eval", ".github/eval/**"]
 }

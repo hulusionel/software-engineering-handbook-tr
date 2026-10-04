@@ -2,6 +2,8 @@
 
 Yazılım mühendisliği alanındaki en önemli kitapların **Türkçe kapsamlı rehberleri**, kariyer yol haritaları ve pratik notlar.
 
+> 📝 **Bu projenin hikâyesi:** [67.000 Satırlık Türkçe Bir Handbook Yazarken Öğrendiklerim](https://medium.com/@hulusi.onel/67-000-sat%C4%B1rl%C4%B1k-t%C3%BCrk%C3%A7e-bir-handbook-yazarken-%C3%B6%C4%9Frendiklerim-115eeb7baf2e) — neden yazdım, AI'ı nasıl kullandım ve kitabı nasıl agent'lara review ettirdim.
+
 ## 🗂️ İçindekiler
 
 ### 🗺️ [Yol Haritası](yol-haritasi/)
@@ -135,6 +137,22 @@ Kitap özetlerinin ötesinde, üretim odaklı, sayısal ve karar-verme kılavuzl
 - **20** farklı kitap özeti
 - **3** kariyer yol haritası
 - **%100** Türkçe
+
+---
+
+## 🤖 Bu Handbook Nasıl Review Ediliyor?
+
+~67.000 satırı tutarlı tutmak için küçük bir agent ekibi ve iki katmanlı bir kalite kapısı kullanılıyor:
+
+| Katman | Ne yapar |
+|--------|----------|
+| **CI (deterministik)** | Her commit'te kırık karakter, kırık dahili link ve markdownlint kontrolü — [`quality.yml`](.github/workflows/quality.yml) |
+| **Reviewer agent** | Salt-okunur; klasör bazında içerik, güncellik ve teknik doğruluk incelemesi |
+| **Fixer agent** | Onaylanan bulguları uygulayan **tek yazar** |
+| **Orchestrator agent** | Tüm kitap için reviewer'ları paralel, fixer'ı sıralı çalıştırır |
+| **Kör eval seti** | Reviewer'ın kendisini ölçer: 10 kasıtlı hata, geçer not ≥ 8/10 |
+
+Ayrıntılar: [`.github/agents/`](.github/agents/) · [`.github/instructions/`](.github/instructions/) · [`.github/eval/`](.github/eval/)
 
 ---
 
